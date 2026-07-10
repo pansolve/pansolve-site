@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payer &amp; Provider Solutions — Pansolve</title>
+<meta name="description" content="Pansolve's payer and provider services: payment integrity, risk adjustment, chart review, and coding audits — expert human review behind every clean claim.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAFAF7;
+    --ink:#16202E;
+    --ink-soft:#4C5666;
+    --pencil:#C8362B;
+    --pencil-soft:#F3D9D6;
+    --highlight:#FFE86B;
+    --line:#DDDDD5;
+    --serif:'Newsreader', Georgia, serif;
+    --sans:'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
+    --mono:'IBM Plex Mono', 'SF Mono', monospace;
+    --hand:'Caveat', cursive;
+    --max:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--highlight);color:var(--ink)}
+  a{color:inherit}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--pencil);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(250,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .wordmark{font-family:var(--serif);font-weight:600;font-size:1.5rem;letter-spacing:-.01em;text-decoration:none}
+  .wordmark .dot{color:var(--pencil)}
+  .nav-links{display:flex;gap:30px;align-items:center;list-style:none}
+  .nav-links a{text-decoration:none;font-size:.92rem;color:var(--ink-soft);transition:color .15s}
+  .nav-links a:hover{color:var(--ink)}
+  .btn{display:inline-block;background:var(--ink);color:var(--paper);font-weight:500;font-size:.95rem;padding:13px 26px;border-radius:3px;text-decoration:none;border:1px solid var(--ink);transition:background .15s,color .15s}
+  .btn:hover{background:var(--pencil);border-color:var(--pencil)}
+  .btn-ghost{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+  .nav .btn{padding:9px 18px;font-size:.88rem}
+  .dropdown{position:relative}
+  .dropdown > a::after{content:" ▾";font-size:.7em;color:var(--pencil)}
+  .dropdown-menu{
+    position:absolute;top:calc(100% + 6px);left:-14px;background:#fff;
+    border:1px solid var(--line);border-radius:3px;min-width:264px;padding:8px 0;
+    display:none;box-shadow:0 10px 28px rgba(22,32,46,.10);
+  }
+  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:block}
+  .dropdown-menu a{display:block;padding:10px 18px;font-size:.9rem;color:var(--ink-soft)}
+  .dropdown-menu a:hover{background:var(--paper);color:var(--pencil)}
+
+  .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:22px}
+  .eyebrow .tick{color:var(--pencil)}
+  .eyebrow a{text-decoration:none;color:var(--ink-soft)}
+  .eyebrow a:hover{color:var(--pencil)}
+  mark{background:linear-gradient(104deg,transparent 2%,var(--highlight) 6%,var(--highlight) 94%,transparent 98%);padding:.05em .15em;color:var(--ink);border-radius:1px}
+
+  /* hero */
+  .hero{padding:96px 0 80px;border-bottom:1px solid var(--line)}
+  h1{font-family:var(--serif);font-weight:500;letter-spacing:-.02em;font-size:clamp(2.3rem,5.6vw,4rem);line-height:1.08;max-width:18ch}
+  .hero p.lede{margin-top:30px;max-width:60ch;font-size:1.14rem;color:var(--ink-soft)}
+  .hero-cta{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  .hero-note{font-family:var(--hand);font-size:1.3rem;color:var(--pencil);transform:rotate(-2deg)}
+
+  /* flow diagram */
+  .flow-section{padding:84px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:500;letter-spacing:-.015em;font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.15;max-width:26ch}
+  .sec-head{margin-bottom:48px}
+  .flow{display:flex;flex-direction:column;align-items:center;gap:0}
+  .flow-node{
+    border:1px solid var(--ink);background:#fff;border-radius:3px;
+    padding:14px 30px;font-family:var(--mono);font-size:.86rem;letter-spacing:.04em;
+    text-align:center;
+  }
+  .flow-arrow{font-family:var(--mono);color:var(--pencil);font-size:1.1rem;padding:8px 0;line-height:1}
+  .flow-branches{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:14px;width:100%;margin-top:6px;
+  }
+  .flow-q{
+    border:1px solid var(--line);border-top:3px solid var(--pencil);background:var(--paper);
+    padding:18px 16px;text-align:center;border-radius:3px;text-decoration:none;
+    transition:background .15s, transform .15s;
+  }
+  .flow-q:hover{background:#fff;transform:translateY(-2px)}
+  .flow-q .name{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pencil);display:block;margin-bottom:8px}
+  .flow-q .q{font-family:var(--serif);font-size:1.02rem;line-height:1.35;color:var(--ink)}
+  .flow-connector{width:100%;display:flex;justify-content:center}
+  .flow-connector svg{width:76%;height:34px;overflow:visible}
+  .flow-connector path{fill:none;stroke:var(--line);stroke-width:1.5}
+  .flow-connector .drop{stroke:var(--pencil)}
+
+  /* service detail sections */
+  .svc-detail{padding:92px 0;border-bottom:1px solid var(--line)}
+  .svc-detail .num{
+    font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;color:var(--pencil);
+    text-transform:uppercase;display:block;margin-bottom:18px;
+  }
+  .svc-grid{display:grid;grid-template-columns:5fr 4fr;gap:64px;align-items:start;margin-top:44px}
+  .svc-copy h3{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin:30px 0 10px}
+  .svc-copy h3:first-child{margin-top:0}
+  .svc-copy p{color:var(--ink-soft);font-size:1rem;margin-bottom:8px}
+  .svc-copy ul{list-style:none;margin:6px 0 0}
+  .svc-copy li{
+    color:var(--ink-soft);font-size:.98rem;padding-left:26px;position:relative;margin-bottom:8px;
+  }
+  .svc-copy li::before{
+    content:"✓";font-family:var(--hand);color:var(--pencil);font-size:1.25rem;
+    position:absolute;left:0;top:-2px;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .chips span{font-family:var(--mono);font-size:.74rem;color:var(--ink-soft);border:1px solid var(--line);border-radius:20px;padding:4px 12px}
+
+  /* example card = the signature "worked example" annotation */
+  .example{
+    border:1px solid var(--line);border-left:3px solid var(--pencil);
+    background:#fff;border-radius:3px;padding:28px 28px 24px;position:relative;
+  }
+  .example .ex-tag{
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--pencil);display:block;margin-bottom:16px;
+  }
+  .example .line{font-size:.98rem;color:var(--ink-soft);margin-bottom:10px}
+  .example .line strong{color:var(--ink);font-weight:600}
+  .strike{position:relative;color:var(--ink-soft);white-space:nowrap}
+  .strike::after{content:"";position:absolute;left:-1%;right:-1%;top:52%;height:2.5px;background:var(--pencil);transform:rotate(-1.4deg);border-radius:2px}
+  .rewrite{font-family:var(--hand);color:var(--pencil);font-weight:600;font-size:1.25em;white-space:nowrap}
+  .example .verdict{
+    margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);
+    font-family:var(--hand);font-size:1.35rem;color:var(--pencil);line-height:1.3;
+  }
+
+  /* outcomes strip */
+  .outcomes{padding:80px 0;border-bottom:1px solid var(--line)}
+  .out-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:44px}
+  .out h3{font-family:var(--serif);font-weight:600;font-size:1.35rem;margin-bottom:10px}
+  .out p{color:var(--ink-soft);font-size:.97rem}
+
+  /* cta */
+  .cta{padding:104px 0;text-align:center}
+  .cta h2{margin:0 auto 20px}
+  .cta p{max-width:54ch;margin:0 auto 38px;color:var(--ink-soft);font-size:1.06rem}
+  .cta-mail{font-family:var(--serif);font-size:1.2rem;margin-top:26px;display:block;color:var(--ink-soft)}
+  .cta-mail a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:4px}
+
+  footer{border-top:1px solid var(--line);padding:34px 0}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .foot span{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft)}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+  @media (max-width:900px){
+    .flow-branches{grid-template-columns:1fr 1fr}
+    .flow-connector{display:none}
+    .flow-branches{margin-top:14px}
+  }
+  @media (max-width:860px){
+    .svc-grid{grid-template-columns:1fr;gap:36px}
+    .out-grid{grid-template-columns:1fr;gap:32px}
+    .nav-links li:not(.keep){display:none}
+    .svc-detail,.flow-section,.outcomes{padding:66px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="wordmark" href="index.html">Pansolve<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li class="dropdown"><a href="index.html#services">Services</a>
+        <div class="dropdown-menu">
+          <a href="payer-provider.html">Payer &amp; Provider Solutions</a>
+          <a href="accounting.html">Accounting &amp; Finance Outsourcing</a>
+          <a href="ai-training.html">AI Training &amp; Data Services</a>
+        </div>
+      </li>
+      <li><a href="index.html#approach">Approach</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li class="keep"><a class="btn" href="#contact">Book a consultation</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <span class="eyebrow"><a href="index.html#services">Services</a> <span class="tick">/</span> Payer &amp; Provider Solutions</span>
+      <h1>The four checks behind every clean claim.</h1>
+      <p class="lede">
+        Between a patient's chart and a paid claim sit thousands of rules — and millions of
+        chances to get it wrong. Pansolve deploys <mark>certified coders and clinical reviewers</mark>
+        across the four disciplines that keep payers and providers accurate, compliant, and correctly paid.
+      </p>
+      <div class="hero-cta">
+        <a class="btn" href="#contact">Talk to our team</a>
+        <a class="btn btn-ghost" href="#payment-integrity">Explore the services</a>
+        <span class="hero-note">humans check the math ↗</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOW -->
+  <section class="flow-section" aria-label="How the four services connect">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">The pipeline</span>
+        <h2>One record, four questions.</h2>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-node">MEDICAL RECORD (CHART)</div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-node">CODING PROCESS</div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-node">INSURANCE CLAIM SUBMITTED</div>
+        <div class="flow-connector" aria-hidden="true">
+          <svg viewBox="0 0 600 34" preserveAspectRatio="none">
+            <path d="M300 0 L300 12 M300 12 L38 12 L38 34 M300 12 L212 12 L212 34 M300 12 L388 12 L388 34 M300 12 L562 12 L562 34" class="drop"/>
+          </svg>
+        </div>
+        <div class="flow-branches">
+          <a class="flow-q" href="#payment-integrity">
+            <span class="name">Payment integrity</span>
+            <span class="q">"Did we pay correctly?"</span>
+          </a>
+          <a class="flow-q" href="#risk-adjustment">
+            <span class="name">Risk adjustment</span>
+            <span class="q">"Did we capture how sick the patient is?"</span>
+          </a>
+          <a class="flow-q" href="#chart-review">
+            <span class="name">Chart review</span>
+            <span class="q">"Does documentation support the claim?"</span>
+          </a>
+          <a class="flow-q" href="#coding-audits">
+            <span class="name">Coding audits</span>
+            <span class="q">"Was coding done correctly?"</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. PAYMENT INTEGRITY -->
+  <section class="svc-detail" id="payment-integrity">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="num">01 / Payment Integrity</span>
+        <h2>Pay what's owed. Not more, not less, not twice.</h2>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-copy reveal">
+          <h3>What it is</h3>
+          <p>Payment integrity ensures a claim was billed correctly and paid according to
+          policy rules — before or after the money moves.</p>
+          <h3>Why it matters</h3>
+          <p>Payers process millions of claims, and errors are routine: duplicate billing,
+          wrong procedure codes, upcoded services, unbundled procedures billed separately,
+          and non-covered services paid by mistake. Each one is money leaking from the system.</p>
+          <h3>What our team does</h3>
+          <ul>
+            <li>Verifies the claim was billed correctly against coding standards</li>
+            <li>Checks the payment amount against policy and contract rules</li>
+            <li>Flags duplicates, unbundling, upcoding, and non-covered services</li>
+            <li>Identifies patterns that suggest fraud, waste, or abuse</li>
+          </ul>
+          <div class="chips">
+            <span>Pre-pay review</span><span>Post-pay recovery</span><span>FWA detection</span><span>Contract compliance</span>
+          </div>
+        </div>
+        <div class="example reveal">
+          <span class="ex-tag">Worked example</span>
+          <p class="line">Hospital bills for a surgery:</p>
+          <p class="line"><strong><span class="strike">$2,000</span></strong> &nbsp;<span class="rewrite">$1,500 per policy</span></p>
+          <p class="line">The plan's rules allow $1,500 for this procedure. Automated systems paid the full billed amount.</p>
+          <p class="verdict">Overpayment of $500 identified and recovered. ✓</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. RISK ADJUSTMENT -->
+  <section class="svc-detail" id="risk-adjustment">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="num">02 / Risk Adjustment</span>
+        <h2>Sicker patients cost more. Prove it, properly.</h2>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-copy reveal">
+          <h3>What it is</h3>
+          <p>Risk adjustment is how insurers — especially Medicare Advantage plans — get paid
+          accurately for how sick their members actually are. Documented chronic conditions
+          translate into risk scores, and risk scores translate into payment.</p>
+          <h3>Why it matters</h3>
+          <p>If a condition isn't documented and coded, the plan is underpaid for that member's
+          real cost of care. If it's coded without support, the plan is exposed in an audit.
+          Accuracy has to cut both ways.</p>
+          <h3>What our team does</h3>
+          <ul>
+            <li>Reviews medical records for chronic conditions — diabetes, hypertension, COPD, kidney disease, heart failure, and more</li>
+            <li>Confirms each condition is properly documented and supported by physician notes</li>
+            <li>Assigns the correct ICD-10 codes mapped to the right HCC categories</li>
+            <li>Flags unsupported codes before they become audit findings</li>
+          </ul>
+          <div class="chips">
+            <span>Medicare Advantage</span><span>ICD-10 / HCC</span><span>Retrospective review</span><span>RADV readiness</span>
+          </div>
+        </div>
+        <div class="example reveal">
+          <span class="ex-tag">Worked example</span>
+          <p class="line">Physician's note reads:</p>
+          <p class="line"><strong>"Patient has Type 2 Diabetes with complications."</strong></p>
+          <p class="line">But the submitted claim missed the diagnosis entirely — the member's risk score doesn't reflect their real condition.</p>
+          <p class="verdict">Coder adds the supported ICD-10 code. Payment now matches the patient. ✓</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. CHART REVIEW -->
+  <section class="svc-detail" id="chart-review">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="num">03 / Chart Review</span>
+        <h2>The claim says one thing. What does the chart say?</h2>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-copy reveal">
+          <h3>What it is</h3>
+          <p>Chart review is the careful reading of a patient's full medical record — doctor
+          notes, lab reports, diagnoses, procedures, and medications — to verify that what was
+          claimed is what actually happened.</p>
+          <h3>Why it matters</h3>
+          <p>Documentation is the evidence behind every claim. When the chart and the claim
+          disagree, someone is being paid for care that isn't supported — or a patient's record
+          is missing something that matters.</p>
+          <h3>What our team does</h3>
+          <ul>
+            <li>Validates diagnosis and procedure accuracy against the full record</li>
+            <li>Confirms medical necessity for services billed</li>
+            <li>Identifies missing or contradictory documentation</li>
+            <li>Ensures compliance with payer and regulatory rules</li>
+          </ul>
+          <div class="chips">
+            <span>Clinical validation</span><span>Medical necessity</span><span>Documentation gaps</span><span>Compliance</span>
+          </div>
+        </div>
+        <div class="example reveal">
+          <span class="ex-tag">Worked example</span>
+          <p class="line">The claim states:</p>
+          <p class="line"><strong><span class="strike">Patient had pneumonia</span></strong> &nbsp;<span class="rewrite">suspected, not confirmed</span></p>
+          <p class="line">The chart shows only suspected pneumonia — no confirming imaging or lab result in the record.</p>
+          <p class="verdict">Inconsistency flagged before it becomes a compliance problem. ✓</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CODING AUDITS -->
+  <section class="svc-detail" id="coding-audits">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="num">04 / Coding Audits</span>
+        <h2>Who checks the coders? We do.</h2>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-copy reveal">
+          <h3>What it is</h3>
+          <p>A coding audit is a structured quality check on coding itself — whether done by
+          your in-house team, a vendor, or an AI tool. Even trained coders make mistakes:
+          wrong ICD-10 codes, missed secondary diagnoses, incorrect CPT codes, upcoding and undercoding.</p>
+          <h3>Why it matters</h3>
+          <p>Coding errors compound. A pattern of small mistakes becomes denied revenue,
+          overpayment liability, or an external audit finding. Measuring accuracy is the only
+          way to improve it.</p>
+          <h3>What our team does</h3>
+          <ul>
+            <li>Independently recodes a statistically meaningful sample of claims</li>
+            <li>Compares results against the original coding and measures the error rate</li>
+            <li>Identifies patterns — by coder, code family, or service line</li>
+            <li>Delivers targeted coder training and process fixes to prevent repeats</li>
+          </ul>
+          <div class="chips">
+            <span>Sample recoding</span><span>Error-rate reporting</span><span>Coder education</span><span>AI-output audits</span>
+          </div>
+        </div>
+        <div class="example reveal">
+          <span class="ex-tag">Worked example</span>
+          <p class="line">Audit sample: <strong>100 records</strong> independently recoded.</p>
+          <p class="line"><strong>92 correct · 8 incorrect → 8% error rate</strong></p>
+          <p class="line">Six of the eight errors trace to one code family — a training gap, not a people problem.</p>
+          <p class="verdict">Coders retrained, process fixed, next audit: cleaner. ✓</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTCOMES -->
+  <section class="outcomes">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Why Pansolve</span>
+        <h2>Built for the era of AI-assisted claims.</h2>
+      </div>
+      <div class="out-grid">
+        <div class="out reveal">
+          <h3>Credentialed reviewers</h3>
+          <p>Certified coding professionals and clinically experienced reviewers — people who
+          can read a chart, not just run a rule set.</p>
+        </div>
+        <div class="out reveal">
+          <h3>Human + AI, honestly</h3>
+          <p>We use technology to work faster, and humans to be right. Every finding is
+          reviewed by a person who signs their name to it.</p>
+        </div>
+        <div class="out reveal">
+          <h3>Flexible engagement</h3>
+          <p>Project-based audits, ongoing dedicated teams, or overflow capacity during peak
+          season — scaled to payers and provider groups of any size.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="wrap reveal">
+      <span class="eyebrow"><span class="tick">●</span>&nbsp; Start here</span>
+      <h2>Show us a sample of your claims.</h2>
+      <p>We'll review a small batch, walk you through what we find, and you decide if it's
+      worth going further. No obligation — just a clear look at your accuracy.</p>
+      <a class="btn" href="mailto:hello@pansolve.com?subject=Payer%2FProvider%20consultation">Book a consultation</a>
+      <span class="cta-mail">or write to <a href="mailto:hello@pansolve.com">hello@pansolve.com</a></span>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="wordmark" href="index.html" style="font-size:1.15rem">Pansolve<span class="dot">.</span></a>
+    <span>AI answers. Humans solve.</span>
+    <span>© 2026 Pansolve LLC</span>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

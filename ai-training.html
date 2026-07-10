@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Training &amp; Data Services &mdash; Pansolve</title>
+<meta name="description" content="Pansolve's AI data services: annotation, model evaluation, RLHF and human feedback, and domain-expert review by credentialed specialists.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAFAF7;
+    --ink:#16202E;
+    --ink-soft:#4C5666;
+    --pencil:#C8362B;
+    --pencil-soft:#F3D9D6;
+    --highlight:#FFE86B;
+    --line:#DDDDD5;
+    --serif:'Newsreader', Georgia, serif;
+    --sans:'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
+    --mono:'IBM Plex Mono', 'SF Mono', monospace;
+    --hand:'Caveat', cursive;
+    --max:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--highlight);color:var(--ink)}
+  a{color:inherit}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--pencil);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(250,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .wordmark{font-family:var(--serif);font-weight:600;font-size:1.5rem;letter-spacing:-.01em;text-decoration:none}
+  .wordmark .dot{color:var(--pencil)}
+  .nav-links{display:flex;gap:30px;align-items:center;list-style:none}
+  .nav-links a{text-decoration:none;font-size:.92rem;color:var(--ink-soft);transition:color .15s}
+  .nav-links a:hover{color:var(--ink)}
+  .btn{display:inline-block;background:var(--ink);color:var(--paper);font-weight:500;font-size:.95rem;padding:13px 26px;border-radius:3px;text-decoration:none;border:1px solid var(--ink);transition:background .15s,color .15s}
+  .btn:hover{background:var(--pencil);border-color:var(--pencil)}
+  .btn-ghost{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+  .nav .btn{padding:9px 18px;font-size:.88rem}
+  .dropdown{position:relative}
+  .dropdown > a::after{content:" ▾";font-size:.7em;color:var(--pencil)}
+  .dropdown-menu{
+    position:absolute;top:calc(100% + 6px);left:-14px;background:#fff;
+    border:1px solid var(--line);border-radius:3px;min-width:264px;padding:8px 0;
+    display:none;box-shadow:0 10px 28px rgba(22,32,46,.10);
+  }
+  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:block}
+  .dropdown-menu a{display:block;padding:10px 18px;font-size:.9rem;color:var(--ink-soft)}
+  .dropdown-menu a:hover{background:var(--paper);color:var(--pencil)}
+
+  .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:22px}
+  .eyebrow .tick{color:var(--pencil)}
+  .eyebrow a{text-decoration:none;color:var(--ink-soft)}
+  .eyebrow a:hover{color:var(--pencil)}
+  mark{background:linear-gradient(104deg,transparent 2%,var(--highlight) 6%,var(--highlight) 94%,transparent 98%);padding:.05em .15em;color:var(--ink);border-radius:1px}
+
+  /* hero */
+  .hero{padding:96px 0 80px;border-bottom:1px solid var(--line)}
+  h1{font-family:var(--serif);font-weight:500;letter-spacing:-.02em;font-size:clamp(2.3rem,5.6vw,4rem);line-height:1.08;max-width:18ch}
+  .hero p.lede{margin-top:30px;max-width:60ch;font-size:1.14rem;color:var(--ink-soft)}
+  .hero-cta{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  .hero-note{font-family:var(--hand);font-size:1.3rem;color:var(--pencil);transform:rotate(-2deg)}
+
+  /* flow diagram */
+  .flow-section{padding:84px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:500;letter-spacing:-.015em;font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.15;max-width:26ch}
+  .sec-head{margin-bottom:48px}
+  .flow{display:flex;flex-direction:column;align-items:center;gap:0}
+  .flow-node{
+    border:1px solid var(--ink);background:#fff;border-radius:3px;
+    padding:14px 30px;font-family:var(--mono);font-size:.86rem;letter-spacing:.04em;
+    text-align:center;
+  }
+  .flow-arrow{font-family:var(--mono);color:var(--pencil);font-size:1.1rem;padding:8px 0;line-height:1}
+  .flow-branches{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:14px;width:100%;margin-top:6px;
+  }
+  .flow-q{
+    border:1px solid var(--line);border-top:3px solid var(--pencil);background:var(--paper);
+    padding:18px 16px;text-align:center;border-radius:3px;text-decoration:none;
+    transition:background .15s, transform .15s;
+  }
+  .flow-q:hover{background:#fff;transform:translateY(-2px)}
+  .flow-q .name{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pencil);display:block;margin-bottom:8px}
+  .flow-q .q{font-family:var(--serif);font-size:1.02rem;line-height:1.35;color:var(--ink)}
+  .flow-connector{width:100%;display:flex;justify-content:center}
+  .flow-connector svg{width:76%;height:34px;overflow:visible}
+  .flow-connector path{fill:none;stroke:var(--line);stroke-width:1.5}
+  .flow-connector .drop{stroke:var(--pencil)}
+
+  /* service detail sections */
+  .svc-detail{padding:92px 0;border-bottom:1px solid var(--line)}
+  .svc-detail .num{
+    font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;color:var(--pencil);
+    text-transform:uppercase;display:block;margin-bottom:18px;
+  }
+  .svc-grid{display:grid;grid-template-columns:5fr 4fr;gap:64px;align-items:start;margin-top:44px}
+  .svc-copy h3{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin:30px 0 10px}
+  .svc-copy h3:first-child{margin-top:0}
+  .svc-copy p{color:var(--ink-soft);font-size:1rem;margin-bottom:8px}
+  .svc-copy ul{list-style:none;margin:6px 0 0}
+  .svc-copy li{
+    color:var(--ink-soft);font-size:.98rem;padding-left:26px;position:relative;margin-bottom:8px;
+  }
+  .svc-copy li::before{
+    content:"✓";font-family:var(--hand);color:var(--pencil);font-size:1.25rem;
+    position:absolute;left:0;top:-2px;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .chips span{font-family:var(--mono);font-size:.74rem;color:var(--ink-soft);border:1px solid var(--line);border-radius:20px;padding:4px 12px}
+
+  /* example card = the signature "worked example" annotation */
+  .example{
+    border:1px solid var(--line);border-left:3px solid var(--pencil);
+    background:#fff;border-radius:3px;padding:28px 28px 24px;position:relative;
+  }
+  .example .ex-tag{
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--pencil);display:block;margin-bottom:16px;
+  }
+  .example .line{font-size:.98rem;color:var(--ink-soft);margin-bottom:10px}
+  .example .line strong{color:var(--ink);font-weight:600}
+  .strike{position:relative;color:var(--ink-soft);white-space:nowrap}
+  .strike::after{content:"";position:absolute;left:-1%;right:-1%;top:52%;height:2.5px;background:var(--pencil);transform:rotate(-1.4deg);border-radius:2px}
+  .rewrite{font-family:var(--hand);color:var(--pencil);font-weight:600;font-size:1.25em;white-space:nowrap}
+  .example .verdict{
+    margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);
+    font-family:var(--hand);font-size:1.35rem;color:var(--pencil);line-height:1.3;
+  }
+
+  /* outcomes strip */
+  .outcomes{padding:80px 0;border-bottom:1px solid var(--line)}
+  .out-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:44px}
+  .out h3{font-family:var(--serif);font-weight:600;font-size:1.35rem;margin-bottom:10px}
+  .out p{color:var(--ink-soft);font-size:.97rem}
+
+  /* cta */
+  .cta{padding:104px 0;text-align:center}
+  .cta h2{margin:0 auto 20px}
+  .cta p{max-width:54ch;margin:0 auto 38px;color:var(--ink-soft);font-size:1.06rem}
+  .cta-mail{font-family:var(--serif);font-size:1.2rem;margin-top:26px;display:block;color:var(--ink-soft)}
+  .cta-mail a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:4px}
+
+  footer{border-top:1px solid var(--line);padding:34px 0}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .foot span{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft)}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+  @media (max-width:900px){
+    .flow-branches{grid-template-columns:1fr 1fr}
+    .flow-connector{display:none}
+    .flow-branches{margin-top:14px}
+  }
+  @media (max-width:860px){
+    .svc-grid{grid-template-columns:1fr;gap:36px}
+    .out-grid{grid-template-columns:1fr;gap:32px}
+    .nav-links li:not(.keep){display:none}
+    .svc-detail,.flow-section,.outcomes{padding:66px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="wordmark" href="index.html">Pansolve<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li class="dropdown"><a href="index.html#services">Services</a>
+        <div class="dropdown-menu">
+          <a href="payer-provider.html">Payer &amp; Provider Solutions</a>
+          <a href="accounting.html">Accounting &amp; Finance Outsourcing</a>
+          <a href="ai-training.html">AI Training &amp; Data Services</a>
+        </div>
+      </li>
+      <li><a href="index.html#approach">Approach</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li class="keep"><a class="btn" href="#contact">Book a consultation</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <span class="eyebrow"><a href="index.html#services">Services</a> <span class="tick">/</span> AI Training &amp; Data Services</span>
+      <h1>Models learn from people. Ours are experts.</h1>
+      <p class="lede">Every capable AI system is built on human judgment — labeled data, careful evaluation,
+        and expert feedback. Pansolve supplies <mark>trained, domain-fluent human teams</mark> for the
+        work that makes models genuinely better.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#contact">Talk to our team</a>
+        <a class="btn btn-ghost" href="#annotation">Explore the services</a>
+        <span class="hero-note">quality in, quality out &#8599;</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="svc-detail" id="annotation">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="num">01 / Data Annotation &amp; Labeling</span>
+        <h2>Labels a model can actually learn from.</h2>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-copy reveal">
+          <h3>What it is</h3>
+          <p>High-quality annotation across text, documents, images, and structured data —
+          classification, entity tagging, transcription review, and complex domain labeling.</p>
+          <h3>Why it matters</h3>
+          <p>Noisy labels put a hard ceiling on model performance. The difficult 10% of examples —
+          the ambiguous, the edge cases — are exactly where cheap labeling fails and where
+          model quality is decided.</p>
+          <h3>What our team does</h3>
+          <ul>
+            <li>Builds and refines labeling guidelines with your team before scaling up</li>
+            <li>Routes ambiguous and edge-case items to senior reviewers instead of guessing</li>
+            <li>Runs multi-pass review with measured inter-annotator agreement</li>
+            <li>Reports quality metrics openly — you see our error rate, not just our throughput</li>
+          </ul>
+          <div class="chips">
+            <span>Text &amp; documents</span><span>Image &amp; multimodal</span><span>Guideline design</span><span>QA sampling</span>
+          </div>
+        </div>
+        <div class="example reveal">
+          <span class="ex-tag">Worked example</span>
+          <p class="line">A client's previous vendor labeled clinical notes at speed:</p>
+          <p class="line"><strong><span class="strike">"looks done"</span></strong> &nbsp;<span class="rewrite">9% of labels wrong</span></p>
+          <p class="line">Our audit of a 500-item sample found systematic errors on negated conditions ("no evidence of...").
+          We rebuilt the guidelines and re-labeled the affected slices.</p>
+          <p class="verdict">Model accuracy improved on the next fine-tune. &#10003;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-detail" id="evaluation">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="num">02 / Model Evaluation</span>
+        <h2>Someone has to check the model's homework.</h2>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-copy reveal">
+          <h3>What it is</h3>
+          <p>Structured human evaluation of model outputs: accuracy, helpfulness, safety, and
+          fitness for your use case — with rubrics, calibrated raters, and reproducible scoring.</p>
+          <h3>Why it matters</h3>
+          <p>Benchmarks don't measure your use case. Before a model touches customers, someone with
+          judgment needs to read what it produces and say, credibly, whether it's good enough.</p>
+          <h3>What our team does</h3>
+          <ul>
+            <li>Designs evaluation rubrics tied to your real quality bar</li>
+            <li>Calibrates raters against gold examples before scoring begins</li>
+            <li>Scores outputs side-by-side across models, prompts, or versions</li>
+            <li>Flags failure patterns — hallucination, tone, missed instructions — with examples</li>
+          </ul>
+          <div class="chips">
+            <span>Rubric design</span><span>Side-by-side evals</span><span>Safety review</span><span>Regression testing</span>
+          </div>
+        </div>
+        <div class="example reveal">
+          <span class="ex-tag">Worked example</span>
+          <p class="line">A model's answer read as fluent, confident, and well-cited.</p>
+          <p class="line"><strong>The cited study didn't exist.</strong></p>
+          <p class="line">A calibrated evaluator checked the reference — automated metrics had scored the answer highly.</p>
+          <p class="verdict">Hallucination pattern documented before launch, not after. &#10003;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-detail" id="rlhf">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="num">03 / RLHF &amp; Human Feedback</span>
+        <h2>Teaching models what better means.</h2>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-copy reveal">
+          <h3>What it is</h3>
+          <p>Human preference data for fine-tuning and alignment: ranking model responses, writing
+          demonstrations, and giving structured feedback that steers model behavior.</p>
+          <h3>Why it matters</h3>
+          <p>Preference data is only as good as the judgment behind it. Careless rankings teach a model
+          to sound right; thoughtful ones teach it to be right.</p>
+          <h3>What our team does</h3>
+          <ul>
+            <li>Ranks and compares model responses against clear, documented criteria</li>
+            <li>Writes high-quality demonstration responses for supervised fine-tuning</li>
+            <li>Provides granular feedback — what failed, why, and what better looks like</li>
+            <li>Maintains consistency across raters with ongoing calibration sessions</li>
+          </ul>
+          <div class="chips">
+            <span>Preference ranking</span><span>Demonstrations</span><span>Structured critique</span><span>Rater calibration</span>
+          </div>
+        </div>
+        <div class="example reveal">
+          <span class="ex-tag">Worked example</span>
+          <p class="line">Two model responses to the same customer question:</p>
+          <p class="line"><strong>A: fast, polished, slightly wrong. &nbsp;B: plain, correct.</strong></p>
+          <p class="line">Untrained raters preferred A. Our calibrated raters chose B and documented why —
+          correctness outranks polish in the client's rubric.</p>
+          <p class="verdict">The model learned the right lesson. &#10003;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-detail" id="domain-review">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="num">04 / Domain-Expert Review</span>
+        <h2>When the subject is serious, so are our reviewers.</h2>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-copy reveal">
+          <h3>What it is</h3>
+          <p>Specialist review of AI outputs in high-stakes domains — healthcare documentation,
+          medical coding, finance, and accounting — by people credentialed in those fields.</p>
+          <h3>Why it matters</h3>
+          <p>General-purpose raters can't judge whether a clinical summary is safe or a financial
+          answer is compliant. Domain accuracy requires domain experts, and we already employ them
+          across our other practices.</p>
+          <h3>What our team does</h3>
+          <ul>
+            <li>Reviews AI-generated medical coding and clinical documentation for accuracy</li>
+            <li>Verifies finance and accounting outputs against professional standards</li>
+            <li>Creates domain-specific gold datasets for training and evaluation</li>
+            <li>Feeds recurring error patterns back to your ML team with worked examples</li>
+          </ul>
+          <div class="chips">
+            <span>Medical coding review</span><span>Clinical documentation</span><span>Finance &amp; accounting</span><span>Gold datasets</span>
+          </div>
+        </div>
+        <div class="example reveal">
+          <span class="ex-tag">Worked example</span>
+          <p class="line">An AI tool drafted a patient encounter summary. Our certified coder reviewed it:</p>
+          <p class="line"><strong><span class="strike">"hypertension, controlled"</span></strong> &nbsp;<span class="rewrite">not in the chart</span></p>
+          <p class="line">The condition appeared in an old note but not this encounter — a subtle, high-risk error only a trained coder would catch.</p>
+          <p class="verdict">Corrected before it entered the record. &#10003;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="outcomes">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Why Pansolve</span>
+        <h2>The human layer, built for AI teams.</h2>
+      </div>
+      <div class="out-grid">
+        <div class="out reveal">
+          <h3>Experts, not crowds</h3>
+          <p>Trained, managed teams with domain credentials — not an anonymous crowd platform optimizing for speed.</p>
+        </div>
+        <div class="out reveal">
+          <h3>Transparent quality</h3>
+          <p>Inter-annotator agreement, audited error rates, and honest reporting. You always know what you're getting.</p>
+        </div>
+        <div class="out reveal">
+          <h3>Secure by design</h3>
+          <p>NDA-bound staff, access controls, and data-handling practices sized for sensitive datasets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <div class="wrap reveal">
+      <span class="eyebrow"><span class="tick">&#9679;</span>&nbsp; Start here</span>
+      <h2>Pilot a batch with us.</h2>
+      <p>Send a small labeling or evaluation task. We'll return it with quality metrics and
+      our honest read on your guidelines — then you decide whether to scale.</p>
+      <a class="btn" href="mailto:hello@pansolve.com?subject=AI%20training%20%26%20data%20consultation">Book a consultation</a>
+      <span class="cta-mail">or write to <a href="mailto:hello@pansolve.com">hello@pansolve.com</a></span>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="wordmark" href="index.html" style="font-size:1.15rem">Pansolve<span class="dot">.</span></a>
+    <span>AI answers. Humans solve.</span>
+    <span>&copy; 2026 Pansolve LLC</span>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
