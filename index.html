@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316202E'/%3E%3Ctext x='6.5' y='23' font-family='Georgia,serif' font-size='21' font-weight='700' fill='%23FAFAF7'%3EP%3C/text%3E%3Ccircle cx='24' cy='22' r='2.6' fill='%23C8362B'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pansolve — AI answers. Humans solve.">
+<meta property="og:description" content="Expert human teams for medical coding, accounting, and AI data services. The human layer behind AI.">
+<meta property="og:url" content="https://pansolve.com/">
+<meta property="og:image" content="https://pansolve.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <title>Pansolve — AI answers. Humans solve.</title>
 <meta name="description" content="Pansolve is a global consulting and outsourcing firm that deploys expert human teams to solve business problems — and to make AI solutions actually work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -226,6 +233,76 @@
     .nav-links li:not(.keep){display:none}
     section,.hero{padding:70px 0}
   }
+
+  /* ===== added: rich footer ===== */
+  .site-footer{border-top:1px solid var(--line);background:var(--paper);padding:64px 0 30px}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:40px}
+  .foot-brand .wordmark{font-size:1.4rem}
+  .foot-brand p{margin-top:14px;color:var(--ink-soft);font-size:.92rem;max-width:32ch}
+  .foot-brand .ftag{font-family:var(--hand);color:var(--pencil);font-size:1.3rem;display:block;margin-top:12px}
+  .foot-col h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:16px}
+  .foot-col a{display:block;text-decoration:none;color:var(--ink-soft);font-size:.9rem;margin-bottom:11px;transition:color .15s}
+  .foot-col a:hover{color:var(--pencil)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--line)}
+  .foot-bottom span,.foot-bottom a{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);text-decoration:none}
+  .foot-bottom a:hover{color:var(--pencil)}
+  @media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;gap:30px}}
+
+  /* ===== added: contact form ===== */
+  .contact-grid{display:grid;grid-template-columns:3fr 2fr;gap:56px;text-align:left;margin-top:8px}
+  .cform{display:flex;flex-direction:column;gap:16px}
+  .cform .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .cform label{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:6px}
+  .cform input,.cform select,.cform textarea{width:100%;font-family:var(--sans);font-size:.98rem;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:3px;padding:11px 13px;transition:border-color .15s}
+  .cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-color:var(--pencil)}
+  .cform textarea{resize:vertical;min-height:120px}
+  .cform button{align-self:flex-start;cursor:pointer;margin-top:4px}
+  .form-note{font-size:.82rem;color:var(--ink-soft)}
+  .form-status{font-family:var(--hand);font-size:1.5rem;color:var(--pencil);display:none}
+  .contact-detail .block{margin-bottom:24px}
+  .contact-detail h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:0 0 6px}
+  .contact-detail a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:3px}
+  .contact-detail p{color:var(--ink-soft);font-size:.95rem}
+  .contact-detail .big{font-family:var(--serif);font-size:1.15rem;color:var(--ink)}
+  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px}.cform .row{grid-template-columns:1fr}}
+
+  /* ===== added: process steps ===== */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .step{background:var(--paper);padding:32px 26px 36px;transition:background .2s}
+  .step:hover{background:#fff}
+  .step .n{font-family:var(--mono);font-size:.8rem;color:var(--pencil);letter-spacing:.12em}
+  .step h3{font-family:var(--serif);font-weight:600;font-size:1.22rem;margin:14px 0 8px}
+  .step p{color:var(--ink-soft);font-size:.92rem}
+  @media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+
+  /* ===== added: trust / security ===== */
+  .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:38px}
+  .trust h3{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin-bottom:10px;display:flex;align-items:baseline;gap:10px}
+  .trust h3 .lock{font-family:var(--hand);color:var(--pencil);font-size:1.35rem;line-height:1}
+  .trust p{color:var(--ink-soft);font-size:.94rem}
+  @media(max-width:860px){.trust-grid{grid-template-columns:1fr;gap:28px}}
+
+  /* ===== added: faq ===== */
+  .faq-list{border-top:1px solid var(--line);max-width:860px}
+  .faq-list details{border-bottom:1px solid var(--line)}
+  .faq-list summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--serif);font-size:1.18rem;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px}
+  .faq-list summary::-webkit-details-marker{display:none}
+  .faq-list summary::after{content:"+";font-family:var(--mono);color:var(--pencil);font-size:1.3rem;flex-shrink:0}
+  .faq-list details[open] summary::after{content:"\2013"}
+  .faq-list .ans{padding:0 0 24px;color:var(--ink-soft);font-size:1rem;max-width:72ch}
+
+  /* ===== added: about-teaser link + legal prose ===== */
+  .story-link{display:inline-block;margin-top:26px;font-family:var(--mono);font-size:.82rem;color:var(--pencil);text-decoration:none}
+  .story-link:hover{text-decoration:underline;text-underline-offset:3px}
+  .legal{padding:64px 0 90px}
+  .legal .lead{max-width:70ch;color:var(--ink-soft);font-size:1.05rem;margin-bottom:8px}
+  .legal h2{margin:40px 0 12px;font-size:1.5rem}
+  .legal h3{font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:24px 0 8px}
+  .legal p,.legal li{color:var(--ink-soft);font-size:1rem;margin-bottom:12px;max-width:74ch}
+  .legal ul{padding-left:22px;margin-bottom:12px}
+  .legal .updated{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft);letter-spacing:.06em;margin-bottom:26px}
+  .legal .disclaimer{border-left:3px solid var(--pencil);padding:14px 0 14px 20px;margin:30px 0;font-size:.92rem;color:var(--ink-soft);max-width:74ch}
+
 </style>
 </head>
 <body>
@@ -242,7 +319,7 @@
         </div>
       </li>
       <li><a href="#approach">Approach</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="about.html">About</a></li>
       <li class="keep"><a class="btn" href="#contact">Book a consultation</a></li>
     </ul>
   </div>
@@ -359,6 +436,39 @@
     </div>
   </section>
 
+
+  <!-- HOW WE WORK -->
+  <section id="process">
+    <div class="wrap">
+      <div class="sec-head reveal"><div>
+        <span class="eyebrow">How we work</span>
+        <h2>From first call to steady delivery.</h2>
+      </div></div>
+      <div class="steps">
+        <div class="step reveal"><span class="n">01</span><h3>Discovery call</h3><p>A 30-minute conversation to understand the problem, the volume, and what &ldquo;solved&rdquo; looks like for you.</p></div>
+        <div class="step reveal"><span class="n">02</span><h3>Pilot</h3><p>We take on a small, real sample &mdash; a batch of claims, a month of books, a labeling set &mdash; and show you the quality.</p></div>
+        <div class="step reveal"><span class="n">03</span><h3>Proposal &amp; onboarding</h3><p>A clear scope, transparent pricing, and a named team. We set up secure access and agree how we&rsquo;ll measure success.</p></div>
+        <div class="step reveal"><span class="n">04</span><h3>Ongoing delivery</h3><p>Your dedicated team runs the work on a predictable cadence, with regular reporting and one person accountable.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECURITY -->
+  <section id="security">
+    <div class="wrap">
+      <div class="sec-head reveal"><div>
+        <span class="eyebrow">Security &amp; compliance</span>
+        <h2>Built to be trusted with sensitive work.</h2>
+      </div></div>
+      <div class="trust-grid">
+        <div class="trust reveal"><h3><span class="lock">&#10003;</span>Confidentiality first</h3><p>Every team member works under a signed NDA. Access to your data is role-based, limited to the people doing the work, and revoked the moment an engagement ends.</p></div>
+        <div class="trust reveal"><h3><span class="lock">&#10003;</span>HIPAA-aware processes</h3><p>Our healthcare workflows are designed around HIPAA principles &mdash; minimum-necessary access, audit trails, and careful handling of protected health information at every step.</p></div>
+        <div class="trust reveal"><h3><span class="lock">&#10003;</span>Your systems, your control</h3><p>Wherever possible we work inside your environment and tools, so your data stays under your governance. We adapt to your security requirements, not the other way around.</p></div>
+      </div>
+      <p class="reveal" style="margin-top:34px;color:var(--ink-soft);font-size:.92rem;max-width:72ch">Formal certifications are part of our roadmap as we grow. If your organization has specific compliance requirements, tell us &mdash; we&rsquo;ll walk you through exactly how we meet them.</p>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section id="about">
     <div class="wrap">
@@ -371,42 +481,135 @@
       <div class="about-grid">
         <div class="about-copy reveal">
           <p><strong>Pansolve began the way it operates: with two people who take problems personally.</strong>
-          We started our working lives in the New York–New Jersey corridor
+          Founded by Anu and Vikram, we started our working lives in the New York–New Jersey corridor
           and fell for California along the way — and we've carried both coasts' habits with us:
           East Coast rigor, West Coast optimism.</p>
           <p>The name comes from the Greek <em>pan</em> — "all." All problems, solved by people.
           As we grow into a global firm, that stays the founding rule: a family-run standard of care,
           delivered at whatever scale the work demands.</p>
           <div class="route">NEW YORK / NEW JERSEY <span class="arrow">⟶</span> CALIFORNIA <span class="arrow">⟶</span> WORLDWIDE</div>
+          <a class="story-link" href="about.html">Read our full story &rarr;</a>
         </div>
         <div class="margin-note reveal">
           <span class="hand">"AI is a brilliant first draft.
           We're the people who make it final."</span>
-          <span class="who">— Founders</span>
+          <span class="who">— Anu &amp; Vikram, founders</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head reveal"><div>
+        <span class="eyebrow">FAQ</span>
+        <h2>Questions worth asking a new firm.</h2>
+      </div></div>
+      <div class="faq-list reveal">
+        <details><summary>Where are your teams based?</summary><div class="ans">Pansolve is US-founded, with roots in New Jersey and California, and we build teams to fit each engagement. We&rsquo;re always transparent about who is doing your work and where.</div></details>
+        <details><summary>How do you handle data security and confidentiality?</summary><div class="ans">Every team member signs an NDA, access is role-based and minimum-necessary, and our healthcare workflows follow HIPAA principles. Wherever possible we work inside your systems so your data stays under your control. See the Security &amp; Compliance section above for detail.</div></details>
+        <details><summary>Can we start with a small trial?</summary><div class="ans">Yes &mdash; we prefer it. Most engagements begin with a pilot: a batch of claims, a month of books, or a sample labeling set. You see the quality before committing to anything larger.</div></details>
+        <details><summary>What does pricing look like?</summary><div class="ans">It depends on the service, volume, and turnaround you need. We scope each engagement individually and give you clear, predictable pricing &mdash; with no long-term lock-in required to get started.</div></details>
+        <details><summary>How quickly can you start?</summary><div class="ans">A pilot can usually begin within days of our first call. Full onboarding timelines depend on scope and access setup, and we&rsquo;ll give you a realistic date in the proposal.</div></details>
+        <details><summary>Do you only work with US clients?</summary><div class="ans">No. We&rsquo;re built to serve clients worldwide &mdash; the family started on the East Coast, grew toward California, and designed Pansolve to go global from day one.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section class="cta" id="contact">
     <div class="wrap reveal">
-      <span class="eyebrow"><span class="tick">●</span>&nbsp; Start here</span>
-      <h2>Tell us your problem.<br>Any problem.</h2>
-      <p>Thirty minutes with our team — no pitch deck, no obligation. Bring the process that's
-      breaking, the backlog that's growing, or the AI rollout that isn't landing.</p>
-      <a class="btn" href="mailto:hello@pansolve.com?subject=Consultation%20request">Book a consultation</a>
-      <span class="cta-mail">or write to <a href="mailto:support@pansolve.com">support@pansolve.com</a></span>
+      <div class="sec-head" style="justify-content:flex-start;margin-bottom:38px">
+        <div>
+          <span class="eyebrow"><span class="tick">&#9679;</span>&nbsp; Start here</span>
+          <h2>Tell us your problem. Any problem.</h2>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <form class="cform" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="row">
+            <div><label>Name</label><input name="name" required></div>
+            <div><label>Company</label><input name="company"></div>
+          </div>
+          <div class="row">
+            <div><label>Email</label><input type="email" name="email" required></div>
+            <div><label>Phone</label><input name="phone"></div>
+          </div>
+          <div>
+            <label>What do you need help with?</label>
+            <select name="service">
+              <option>Payer &amp; Provider Solutions</option>
+              <option>Accounting &amp; Finance Outsourcing</option>
+              <option>AI Training &amp; Data Services</option>
+              <option>Something else / not sure yet</option>
+            </select>
+          </div>
+          <div>
+            <label>Tell us more</label>
+            <textarea name="message" placeholder="The process that's breaking, the backlog that's growing, or the AI rollout that isn't landing."></textarea>
+          </div>
+          <button type="submit" class="btn">Send message</button>
+          <p class="form-note">We reply within one business day. No pitch deck, no obligation.</p>
+          <p class="form-status">Thanks &mdash; we&rsquo;ll be in touch within one business day. &#10003;</p>
+        </form>
+        <div class="contact-detail">
+          <div class="block">
+            <h4>Email</h4>
+            <p class="big"><a href="mailto:hello@pansolve.com">hello@pansolve.com</a></p>
+          </div>
+          <div class="block">
+            <h4>Phone</h4>
+            <p class="big"><a href="tel:+10000000000">+1 (000) 000-0000</a></p>
+          </div>
+          <div class="block">
+            <h4>Where we are</h4>
+            <p>New Jersey &amp; California, USA<br>Serving clients worldwide</p>
+          </div>
+          <div class="block">
+            <h4>Response time</h4>
+            <p>One business day &mdash; every inquiry, every time.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
 </main>
 
-<footer>
-  <div class="wrap foot">
-    <a class="wordmark" href="#top" style="font-size:1.15rem">Pansolve<span class="dot">.</span></a>
-    <span>AI answers. Humans solve.</span>
-    <span>© 2026 Pansolve LLC</span>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="wordmark" href="index.html">Pansolve<span class="dot">.</span></a>
+        <p>A global consulting and outsourcing firm deploying expert human teams &mdash; the human layer behind AI.</p>
+        <span class="ftag">AI answers. Humans solve.</span>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="payer-provider.html">Payer &amp; Provider</a>
+        <a href="accounting.html">Accounting &amp; Finance</a>
+        <a href="ai-training.html">AI Training &amp; Data</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="index.html#approach">Approach</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Get in touch</h4>
+        <a href="mailto:hello@pansolve.com">hello@pansolve.com</a>
+        <a href="tel:+10000000000">+1 (000) 000-0000</a>
+        <a href="index.html#contact">Book a consultation</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Pansolve LLC. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms of Service</a></span>
+    </div>
   </div>
 </footer>
 
@@ -416,6 +619,21 @@
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Contact form (Formspree AJAX). Replace YOUR_FORM_ID in the form action first.
+  const cform=document.querySelector('.cform');
+  if(cform){cform.addEventListener('submit',async(e)=>{
+    e.preventDefault();
+    const status=cform.querySelector('.form-status');
+    try{
+      const res=await fetch(cform.action,{method:'POST',body:new FormData(cform),headers:{'Accept':'application/json'}});
+      if(res.ok){
+        cform.querySelectorAll('input,select,textarea,button,.form-note').forEach(el=>el.style.display='none');
+        if(status)status.style.display='block';
+      }else{ window.location.href='mailto:hello@pansolve.com'; }
+    }catch(err){ window.location.href='mailto:hello@pansolve.com'; }
+  });}
+
 </script>
 
 </body>
