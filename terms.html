@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316202E'/%3E%3Ctext x='6.5' y='23' font-family='Georgia,serif' font-size='21' font-weight='700' fill='%23FAFAF7'%3EP%3C/text%3E%3Ccircle cx='24' cy='22' r='2.6' fill='%23C8362B'/%3E%3C/svg%3E">
+<title>Terms of Service &mdash; Pansolve</title>
+<meta name="description" content="The terms governing use of the Pansolve website.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Terms of Service — Pansolve">
+<meta property="og:description" content="The terms governing use of the Pansolve website.">
+<meta property="og:url" content="https://pansolve.com/terms.html">
+<meta property="og:image" content="https://pansolve.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAFAF7;
+    --ink:#16202E;
+    --ink-soft:#4C5666;
+    --pencil:#C8362B;
+    --pencil-soft:#F3D9D6;
+    --highlight:#FFE86B;
+    --line:#DDDDD5;
+    --serif:'Newsreader', Georgia, serif;
+    --sans:'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
+    --mono:'IBM Plex Mono', 'SF Mono', monospace;
+    --hand:'Caveat', cursive;
+    --max:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--highlight);color:var(--ink)}
+  a{color:inherit}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--pencil);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,250,247,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .wordmark{
+    font-family:var(--serif);font-weight:600;font-size:1.5rem;letter-spacing:-.01em;
+    text-decoration:none;display:inline-flex;align-items:baseline;
+  }
+  .wordmark .dot{color:var(--pencil)}
+  .nav-links{display:flex;gap:30px;align-items:center;list-style:none}
+  .nav-links a{
+    text-decoration:none;font-size:.92rem;color:var(--ink-soft);
+    transition:color .15s;
+  }
+  .nav-links a:hover{color:var(--ink)}
+  .btn{
+    display:inline-block;background:var(--ink);color:var(--paper);
+    font-family:var(--sans);font-weight:500;font-size:.95rem;
+    padding:13px 26px;border-radius:3px;text-decoration:none;border:1px solid var(--ink);
+    transition:background .15s,color .15s;
+  }
+  .btn:hover{background:var(--pencil);border-color:var(--pencil)}
+  .btn-ghost{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+  .nav .btn{padding:9px 18px;font-size:.88rem}
+  .menu-note{display:none}
+  .dropdown{position:relative}
+  .dropdown > a::after{content:" ▾";font-size:.7em;color:var(--pencil)}
+  .dropdown-menu{
+    position:absolute;top:calc(100% + 6px);left:-14px;background:#fff;
+    border:1px solid var(--line);border-radius:3px;min-width:264px;padding:8px 0;
+    display:none;box-shadow:0 10px 28px rgba(22,32,46,.10);
+  }
+  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:block}
+  .dropdown-menu a{display:block;padding:10px 18px;font-size:.9rem;color:var(--ink-soft)}
+  .dropdown-menu a:hover{background:var(--paper);color:var(--pencil)}
+
+  /* ---------- hero ---------- */
+  .hero{padding:104px 0 88px;border-bottom:1px solid var(--line)}
+  .eyebrow{
+    font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:26px;
+  }
+  .eyebrow .tick{color:var(--pencil)}
+  h1{
+    font-family:var(--serif);font-weight:500;letter-spacing:-.02em;
+    font-size:clamp(2.6rem,6.4vw,4.6rem);line-height:1.06;max-width:15ch;
+  }
+  h1 .machine{color:var(--ink-soft)}
+  .underlined{position:relative;display:inline-block;white-space:nowrap}
+  .underlined svg{
+    position:absolute;left:-2%;bottom:-.14em;width:104%;height:.32em;overflow:visible;
+  }
+  .underlined path{
+    fill:none;stroke:var(--pencil);stroke-width:5;stroke-linecap:round;
+    stroke-dasharray:900;stroke-dashoffset:900;
+    animation:draw 1s ease-out .5s forwards;
+  }
+  @keyframes draw{to{stroke-dashoffset:0}}
+  .hero p.lede{
+    margin-top:34px;max-width:56ch;font-size:1.16rem;color:var(--ink-soft);
+  }
+  mark{
+    background:linear-gradient(104deg, transparent 2%, var(--highlight) 6%, var(--highlight) 94%, transparent 98%);
+    padding:.05em .15em;color:var(--ink);border-radius:1px;
+  }
+  .hero-cta{margin-top:42px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  .hero-note{
+    font-family:var(--hand);font-size:1.35rem;color:var(--pencil);
+    transform:rotate(-2deg);margin-left:6px;
+  }
+
+  /* ---------- correction strip ---------- */
+  .strip{padding:74px 0;border-bottom:1px solid var(--line)}
+  .strip-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .correction{
+    font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.35;font-weight:400;
+  }
+  .strike{position:relative;color:var(--ink-soft);white-space:nowrap}
+  .strike::after{
+    content:"";position:absolute;left:-1%;right:-1%;top:52%;
+    height:3px;background:var(--pencil);transform:rotate(-1.2deg);border-radius:2px;
+  }
+  .rewrite{
+    font-family:var(--hand);color:var(--pencil);font-weight:600;
+    font-size:1.15em;white-space:nowrap;
+  }
+  .strip p{color:var(--ink-soft);font-size:1.02rem}
+  .strip p + p{margin-top:16px}
+
+  /* ---------- sections ---------- */
+  section{padding:92px 0;border-bottom:1px solid var(--line)}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:52px;flex-wrap:wrap}
+  h2{
+    font-family:var(--serif);font-weight:500;letter-spacing:-.015em;
+    font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.15;max-width:22ch;
+  }
+  .sec-head .eyebrow{margin-bottom:12px}
+
+  /* services */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .svc{
+    background:var(--paper);padding:38px 34px 42px;position:relative;
+    transition:background .2s;display:block;text-decoration:none;color:inherit;
+  }
+  .svc:hover{background:#FFFFFF}
+  .svc .more{
+    font-family:var(--mono);font-size:.78rem;color:var(--pencil);
+    display:inline-block;margin-top:20px;
+  }
+  .svc:hover .more{text-decoration:underline;text-underline-offset:3px}
+  .svc .tag{
+    font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--pencil);display:block;margin-bottom:18px;
+  }
+  .svc h3{font-family:var(--serif);font-weight:600;font-size:1.42rem;letter-spacing:-.01em;margin-bottom:12px}
+  .svc p{color:var(--ink-soft);font-size:.98rem;max-width:46ch}
+  .svc ul{list-style:none;margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+  .svc li{
+    font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);
+    border:1px solid var(--line);border-radius:20px;padding:4px 12px;background:var(--paper);
+  }
+
+  /* approach */
+  .approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px}
+  .approach h3{
+    font-family:var(--serif);font-weight:600;font-size:1.5rem;margin-bottom:14px;
+    display:flex;align-items:baseline;gap:12px;
+  }
+  .approach h3 .check{
+    font-family:var(--hand);color:var(--pencil);font-size:1.6rem;line-height:1;
+  }
+  .approach p{color:var(--ink-soft);font-size:.98rem}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:5fr 4fr;gap:64px;align-items:start}
+  .about-copy p{margin-bottom:18px;font-size:1.05rem;color:var(--ink-soft)}
+  .about-copy p strong{color:var(--ink);font-weight:600}
+  .margin-note{
+    border-left:3px solid var(--pencil);padding:6px 0 6px 22px;margin-top:8px;
+  }
+  .margin-note .hand{
+    font-family:var(--hand);font-size:1.5rem;color:var(--pencil);line-height:1.3;display:block;
+  }
+  .margin-note .who{
+    font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-soft);margin-top:10px;display:block;
+  }
+  .route{
+    margin-top:34px;font-family:var(--mono);font-size:.8rem;color:var(--ink-soft);
+    letter-spacing:.06em;
+  }
+  .route .arrow{color:var(--pencil)}
+
+  /* cta */
+  .cta{padding:110px 0;text-align:center;border-bottom:none}
+  .cta h2{margin:0 auto 20px}
+  .cta p{max-width:52ch;margin:0 auto 40px;color:var(--ink-soft);font-size:1.08rem}
+  .cta-mail{
+    font-family:var(--serif);font-size:1.25rem;margin-top:28px;display:block;color:var(--ink-soft)
+  }
+  .cta-mail a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:4px}
+
+  footer{border-top:1px solid var(--line);padding:34px 0;background:var(--paper)}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .foot span{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft)}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .underlined path{animation:none;stroke-dashoffset:0}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+
+  @media (max-width:860px){
+    .strip-inner,.about-grid{grid-template-columns:1fr;gap:36px}
+    .approach-grid{grid-template-columns:1fr;gap:36px}
+    .svc-grid{grid-template-columns:1fr}
+    .nav-links li:not(.keep){display:none}
+    section,.hero{padding:70px 0}
+  }
+
+  /* ===== added: rich footer ===== */
+  .site-footer{border-top:1px solid var(--line);background:var(--paper);padding:64px 0 30px}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:40px}
+  .foot-brand .wordmark{font-size:1.4rem}
+  .foot-brand p{margin-top:14px;color:var(--ink-soft);font-size:.92rem;max-width:32ch}
+  .foot-brand .ftag{font-family:var(--hand);color:var(--pencil);font-size:1.3rem;display:block;margin-top:12px}
+  .foot-col h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:16px}
+  .foot-col a{display:block;text-decoration:none;color:var(--ink-soft);font-size:.9rem;margin-bottom:11px;transition:color .15s}
+  .foot-col a:hover{color:var(--pencil)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--line)}
+  .foot-bottom span,.foot-bottom a{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);text-decoration:none}
+  .foot-bottom a:hover{color:var(--pencil)}
+  @media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;gap:30px}}
+
+  /* ===== added: contact form ===== */
+  .contact-grid{display:grid;grid-template-columns:3fr 2fr;gap:56px;text-align:left;margin-top:8px}
+  .cform{display:flex;flex-direction:column;gap:16px}
+  .cform .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .cform label{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:6px}
+  .cform input,.cform select,.cform textarea{width:100%;font-family:var(--sans);font-size:.98rem;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:3px;padding:11px 13px;transition:border-color .15s}
+  .cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-color:var(--pencil)}
+  .cform textarea{resize:vertical;min-height:120px}
+  .cform button{align-self:flex-start;cursor:pointer;margin-top:4px}
+  .form-note{font-size:.82rem;color:var(--ink-soft)}
+  .form-status{font-family:var(--hand);font-size:1.5rem;color:var(--pencil);display:none}
+  .contact-detail .block{margin-bottom:24px}
+  .contact-detail h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:0 0 6px}
+  .contact-detail a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:3px}
+  .contact-detail p{color:var(--ink-soft);font-size:.95rem}
+  .contact-detail .big{font-family:var(--serif);font-size:1.15rem;color:var(--ink)}
+  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px}.cform .row{grid-template-columns:1fr}}
+
+  /* ===== added: process steps ===== */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .step{background:var(--paper);padding:32px 26px 36px;transition:background .2s}
+  .step:hover{background:#fff}
+  .step .n{font-family:var(--mono);font-size:.8rem;color:var(--pencil);letter-spacing:.12em}
+  .step h3{font-family:var(--serif);font-weight:600;font-size:1.22rem;margin:14px 0 8px}
+  .step p{color:var(--ink-soft);font-size:.92rem}
+  @media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+
+  /* ===== added: trust / security ===== */
+  .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:38px}
+  .trust h3{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin-bottom:10px;display:flex;align-items:baseline;gap:10px}
+  .trust h3 .lock{font-family:var(--hand);color:var(--pencil);font-size:1.35rem;line-height:1}
+  .trust p{color:var(--ink-soft);font-size:.94rem}
+  @media(max-width:860px){.trust-grid{grid-template-columns:1fr;gap:28px}}
+
+  /* ===== added: faq ===== */
+  .faq-list{border-top:1px solid var(--line);max-width:860px}
+  .faq-list details{border-bottom:1px solid var(--line)}
+  .faq-list summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--serif);font-size:1.18rem;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px}
+  .faq-list summary::-webkit-details-marker{display:none}
+  .faq-list summary::after{content:"+";font-family:var(--mono);color:var(--pencil);font-size:1.3rem;flex-shrink:0}
+  .faq-list details[open] summary::after{content:"\2013"}
+  .faq-list .ans{padding:0 0 24px;color:var(--ink-soft);font-size:1rem;max-width:72ch}
+
+  /* ===== added: about-teaser link + legal prose ===== */
+  .story-link{display:inline-block;margin-top:26px;font-family:var(--mono);font-size:.82rem;color:var(--pencil);text-decoration:none}
+  .story-link:hover{text-decoration:underline;text-underline-offset:3px}
+  .legal{padding:64px 0 90px}
+  .legal .lead{max-width:70ch;color:var(--ink-soft);font-size:1.05rem;margin-bottom:8px}
+  .legal h2{margin:40px 0 12px;font-size:1.5rem}
+  .legal h3{font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:24px 0 8px}
+  .legal p,.legal li{color:var(--ink-soft);font-size:1rem;margin-bottom:12px;max-width:74ch}
+  .legal ul{padding-left:22px;margin-bottom:12px}
+  .legal .updated{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft);letter-spacing:.06em;margin-bottom:26px}
+  .legal .disclaimer{border-left:3px solid var(--pencil);padding:14px 0 14px 20px;margin:30px 0;font-size:.92rem;color:var(--ink-soft);max-width:74ch}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="wordmark" href="index.html">Pansolve<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li class="dropdown"><a href="index.html#services">Services</a>
+        <div class="dropdown-menu">
+          <a href="payer-provider.html">Payer &amp; Provider Solutions</a>
+          <a href="accounting.html">Accounting &amp; Finance Outsourcing</a>
+          <a href="ai-training.html">AI Training &amp; Data Services</a>
+        </div>
+      </li>
+      <li><a href="index.html#approach">Approach</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="keep"><a class="btn" href="index.html#contact">Book a consultation</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <div class="hero" style="padding-bottom:40px">
+    <div class="wrap">
+      <span class="eyebrow"><a href="index.html" style="text-decoration:none;color:inherit">Home</a> <span class="tick">/</span> Terms of Service</span>
+      <h1 style="font-size:clamp(2.2rem,5vw,3.4rem)">Terms of Service</h1>
+    </div>
+  </div>
+  <section class="legal">
+    <div class="wrap">
+      <p class="updated">LAST UPDATED: [DATE] &nbsp;&middot;&nbsp; TEMPLATE FOR REVIEW</p>
+      <div class="disclaimer"><strong>Note to Pansolve:</strong> This is a starting template for website terms, not legal advice, and it does not replace the individual service contracts you sign with clients. Have an attorney review it before publishing.</div>
+      <p class="lead">These Terms of Service (&ldquo;Terms&rdquo;) govern your use of the Pansolve website at pansolve.com. By using this website, you agree to these Terms.</p>
+
+      <h2>Use of the website</h2>
+      <p>This website is provided for general information about Pansolve LLC and its services. You agree to use it lawfully and not to misuse, disrupt, or attempt to gain unauthorized access to it.</p>
+
+      <h2>No professional advice</h2>
+      <p>Content on this website is for general informational purposes and does not constitute medical, legal, financial, tax, or other professional advice. Engagements are governed by separate written agreements between Pansolve and each client.</p>
+
+      <h2>Services and proposals</h2>
+      <p>Any description of services, pilots, timelines, or pricing on this website is indicative and subject to a formal proposal and signed agreement. Nothing on this website is a binding offer.</p>
+
+      <h2>Intellectual property</h2>
+      <p>The Pansolve name, logo, content, and design are the property of Pansolve LLC and may not be copied or used without permission.</p>
+
+      <h2>Third-party links</h2>
+      <p>Our website may link to third-party sites or tools. We are not responsible for their content or practices.</p>
+
+      <h2>Disclaimers and limitation of liability</h2>
+      <p>The website is provided &ldquo;as is&rdquo; without warranties of any kind. To the fullest extent permitted by law, Pansolve is not liable for any indirect or consequential damages arising from your use of the website. [Confirm limitation-of-liability language with counsel.]</p>
+
+      <h2>Governing law</h2>
+      <p>These Terms are governed by the laws of the State of [State], without regard to conflict-of-laws principles. [Confirm jurisdiction.]</p>
+
+      <h2>Changes to these Terms</h2>
+      <p>We may update these Terms from time to time. Continued use of the website means you accept the updated Terms.</p>
+
+      <h2>Contact us</h2>
+      <p>Questions about these Terms? Email <a href="mailto:support@pansolve.com" style="color:var(--ink)">support@pansolve.com</a> or write to Pansolve LLC, [mailing address].</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="wordmark" href="index.html">Pansolve<span class="dot">.</span></a>
+        <p>A global consulting and outsourcing firm deploying expert human teams &mdash; the human layer behind AI.</p>
+        <span class="ftag">AI answers. Humans solve.</span>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="payer-provider.html">Payer &amp; Provider</a>
+        <a href="accounting.html">Accounting &amp; Finance</a>
+        <a href="ai-training.html">AI Training &amp; Data</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="index.html#approach">Approach</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Get in touch</h4>
+        <a href="mailto:support@pansolve.com">support@pansolve.com</a>
+        <a href="tel:+10000000000">+1 (000) 000-0000</a>
+        <a href="index.html#contact">Book a consultation</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Pansolve LLC. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms of Service</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
