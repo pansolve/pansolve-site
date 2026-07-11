@@ -259,6 +259,9 @@
   .cform button{align-self:flex-start;cursor:pointer;margin-top:4px}
   .form-note{font-size:.82rem;color:var(--ink-soft)}
   .form-status{font-family:var(--hand);font-size:1.5rem;color:var(--pencil);display:none}
+  .form-error{font-size:.9rem;color:var(--pencil);display:none}
+  .form-error a{color:var(--pencil)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
   .contact-detail .block{margin-bottom:24px}
   .contact-detail h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:0 0 6px}
   .contact-detail a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:3px}
@@ -481,7 +484,7 @@
       <div class="about-grid">
         <div class="about-copy reveal">
           <p><strong>Pansolve began the way it operates: with two people who take problems personally.</strong>
-          We started our working lives in the New York–New Jersey corridor
+          Founded by Anu and Vikram, we started our working lives in the New York–New Jersey corridor
           and fell for California along the way — and we've carried both coasts' habits with us:
           East Coast rigor, West Coast optimism.</p>
           <p>The name comes from the Greek <em>pan</em> — "all." All problems, solved by people.
@@ -508,7 +511,7 @@
         <h2>Questions worth asking a new firm.</h2>
       </div></div>
       <div class="faq-list reveal">
-        <details><summary>Where are your teams based?</summary><div class="ans">Pansolve is US-founded, with roots in New Jersey, California, and India, and we build teams to fit each engagement. We&rsquo;re always transparent about who is doing your work and where.</div></details>
+        <details><summary>Where are your teams based?</summary><div class="ans">Pansolve is US-founded, with roots in New Jersey and California, and we build teams to fit each engagement. We&rsquo;re always transparent about who is doing your work and where.</div></details>
         <details><summary>How do you handle data security and confidentiality?</summary><div class="ans">Every team member signs an NDA, access is role-based and minimum-necessary, and our healthcare workflows follow HIPAA principles. Wherever possible we work inside your systems so your data stays under your control. See the Security &amp; Compliance section above for detail.</div></details>
         <details><summary>Can we start with a small trial?</summary><div class="ans">Yes &mdash; we prefer it. Most engagements begin with a pilot: a batch of claims, a month of books, or a sample labeling set. You see the quality before committing to anything larger.</div></details>
         <details><summary>What does pricing look like?</summary><div class="ans">It depends on the service, volume, and turnaround you need. We scope each engagement individually and give you clear, predictable pricing &mdash; with no long-term lock-in required to get started.</div></details>
@@ -528,14 +531,14 @@
         </div>
       </div>
       <div class="contact-grid">
-        <form class="cform" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form class="cform" action="YOUR_APPS_SCRIPT_URL" method="POST">
           <div class="row">
-            <div><label>Name</label><input name="name" required></div>
-            <div><label>Company</label><input name="company"></div>
+            <div><label>Name</label><input name="name" maxlength="100" required></div>
+            <div><label>Company</label><input name="company" maxlength="120"></div>
           </div>
           <div class="row">
-            <div><label>Email</label><input type="email" name="email" required></div>
-            <div><label>Phone</label><input name="phone"></div>
+            <div><label>Email</label><input type="email" name="email" maxlength="150" required></div>
+            <div><label>Phone</label><input name="phone" maxlength="40"></div>
           </div>
           <div>
             <label>What do you need help with?</label>
@@ -548,11 +551,16 @@
           </div>
           <div>
             <label>Tell us more</label>
-            <textarea name="message" placeholder="The process that's breaking, the backlog that's growing, or the AI rollout that isn't landing."></textarea>
+            <textarea name="message" maxlength="3000" placeholder="The process that's breaking, the backlog that's growing, or the AI rollout that isn't landing."></textarea>
           </div>
+          <!-- spam trap: hidden honeypot field. Humans never see or fill this. -->
+          <div class="hp" aria-hidden="true"><label>Company website</label><input name="website" tabindex="-1" autocomplete="off"></div>
+          <!-- spam trap: time-trap. Set on page load; bots submit too fast. -->
+          <input type="hidden" name="loaded_at" value="">
           <button type="submit" class="btn">Send message</button>
           <p class="form-note">We reply within one business day. No pitch deck, no obligation.</p>
           <p class="form-status">Thanks &mdash; we&rsquo;ll be in touch within one business day. &#10003;</p>
+          <p class="form-error">Something went wrong. Please email <a href="mailto:support@pansolve.com">support@pansolve.com</a>.</p>
         </form>
         <div class="contact-detail">
           <div class="block">
@@ -620,19 +628,51 @@
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  // Contact form (Formspree AJAX). Replace YOUR_FORM_ID in the form action first.
+  // Contact form -> Google Apps Script. Replace YOUR_APPS_SCRIPT_URL in the form action.
   const cform=document.querySelector('.cform');
-  if(cform){cform.addEventListener('submit',async(e)=>{
-    e.preventDefault();
-    const status=cform.querySelector('.form-status');
-    try{
-      const res=await fetch(cform.action,{method:'POST',body:new FormData(cform),headers:{'Accept':'application/json'}});
-      if(res.ok){
+  if(cform){
+    // time-trap: record when the page loaded
+    const loaded=cform.querySelector('[name="loaded_at"]');
+    if(loaded) loaded.value=Date.now();
+
+    cform.addEventListener('submit',async(e)=>{
+      e.preventDefault();
+      const status=cform.querySelector('.form-status');
+      const error=cform.querySelector('.form-error');
+      const btn=cform.querySelector('button');
+      if(error) error.style.display='none';
+
+      // client-side spam checks (server re-checks these too)
+      const hp=cform.querySelector('[name="website"]');
+      if(hp && hp.value.trim()!==''){ // honeypot filled = bot; fake success
         cform.querySelectorAll('input,select,textarea,button,.form-note').forEach(el=>el.style.display='none');
-        if(status)status.style.display='block';
-      }else{ window.location.href='mailto:support@pansolve.com'; }
-    }catch(err){ window.location.href='mailto:support@pansolve.com'; }
-  });}
+        if(status)status.style.display='block'; return;
+      }
+      const elapsed=Date.now()-Number(loaded && loaded.value || 0);
+      if(elapsed<3000){ // submitted in under 3s = almost certainly a bot
+        cform.querySelectorAll('input,select,textarea,button,.form-note').forEach(el=>el.style.display='none');
+        if(status)status.style.display='block'; return;
+      }
+      // basic email sanity
+      const email=cform.querySelector('[name="email"]').value.trim();
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        if(error){error.textContent='Please enter a valid email address.';error.style.display='block';}
+        return;
+      }
+
+      if(btn){btn.disabled=true;btn.textContent='Sending…';}
+      try{
+        const res=await fetch(cform.action,{method:'POST',body:new FormData(cform)});
+        if(res.ok){
+          cform.querySelectorAll('input,select,textarea,button,.form-note').forEach(el=>el.style.display='none');
+          if(status)status.style.display='block';
+        }else{ throw new Error('bad status'); }
+      }catch(err){
+        if(btn){btn.disabled=false;btn.textContent='Send message';}
+        if(error){error.innerHTML='Something went wrong. Please email <a href="mailto:support@pansolve.com">support@pansolve.com</a>.';error.style.display='block';}
+      }
+    });
+  }
 
 </script>
 
