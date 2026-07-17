@@ -320,6 +320,20 @@
   .legal .updated{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft);letter-spacing:.06em;margin-bottom:26px}
   .legal .disclaimer{border-left:3px solid var(--pencil);padding:14px 0 14px 20px;margin:30px 0;font-size:.92rem;color:var(--ink-soft);max-width:74ch}
 
+  /* advisors & india leadership */
+  .adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .adv{border-top:3px solid var(--pencil);padding-top:18px}
+  .adv .name{font-family:var(--serif);font-weight:600;font-size:1.28rem}
+  .adv .role{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pencil);display:block;margin:5px 0 12px}
+  .adv p{color:var(--ink-soft);font-size:.93rem;margin-bottom:10px}
+  .adv .creds{list-style:none;margin-top:10px;display:flex;flex-wrap:wrap;gap:7px;padding:0}
+  .adv .creds li{font-family:var(--mono);font-size:.68rem;color:var(--ink-soft);border:1px solid var(--line);border-radius:20px;padding:3px 10px}
+  .lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:44px}
+  .lead{border-left:3px solid var(--line);padding-left:20px}
+  .lead .name{font-family:var(--serif);font-weight:600;font-size:1.15rem}
+  .lead .role{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pencil);display:block;margin:4px 0 8px}
+  .lead p{color:var(--ink-soft);font-size:.9rem}
+  @media(max-width:860px){.adv-grid,.lead-grid{grid-template-columns:1fr;gap:30px}}
 </style>
 </head>
 <body>
@@ -363,7 +377,7 @@
         </div>
         <div class="margin-note reveal">
           <span class="hand">&ldquo;AI is a brilliant first draft. We&rsquo;re the people who make it final.&rdquo;</span>
-          <span class="who">&mdash; Founders</span>
+          <span class="who">&mdash; Anu &amp; Vikram, founders</span>
         </div>
       </div>
     </div>
@@ -377,6 +391,17 @@
       </div></div>
       <div class="founders">
         <div class="founder reveal">
+          <span class="name">Anu</span>
+          <span class="role">Clinical insight &amp; data science</span>
+          <p>Anu is a dentist by training, which gives Pansolve something rare in an outsourcing firm: a founder who has actually sat on the clinical side of healthcare and understands what accurate documentation and coding really mean for patients and providers.</p>
+          <p>She went on to earn a Master&rsquo;s majoring in Data Science from NJIT, bridging that clinical experience with the modern methods behind our AI and data work. Clinical judgment and data fluency, in one person.</p>
+          <ul class="creds">
+            <li>Doctor of Dental Surgery</li>
+            <li>MS, Data Science &mdash; NJIT</li>
+            <li>Healthcare &amp; data</li>
+          </ul>
+        </div>
+        <div class="founder reveal">
           <span class="name">Vikram</span>
           <span class="role">Technology, cybersecurity &amp; AI</span>
           <p>Vikram has spent his career in the technology consultancy space, helping organizations solve hard problems in security and, more recently, in how they adopt AI responsibly. That long view &mdash; seeing which technology promises hold up and which don&rsquo;t &mdash; is the backbone of how Pansolve approaches the human layer.</p>
@@ -385,17 +410,6 @@
             <li>MS, Cybersecurity &mdash; Carnegie Mellon</li>
             <li>PhD, Cybersecurity &amp; AI</li>
             <li>Technology consulting</li>
-          </ul>
-        </div>
-        <div class="founder reveal">
-          <span class="name">Anu</span>
-          <span class="role">Clinical insight &amp; data science</span>
-          <p>Anu is a dentist by training, which gives Pansolve something rare in an outsourcing firm: a founder who has actually sat on the clinical side of healthcare and understands what accurate documentation and coding really mean for patients and providers.</p>
-          <p>She went on to earn a Master&rsquo;s majoring in Information Systems from NJIT, bridging that clinical experience with the modern methods behind our AI and data work. Clinical judgment and data fluency, in one person.</p>
-          <ul class="creds">
-            <li>Doctor of Dental Surgery</li>
-            <li>MS, Data Science &mdash; NJIT</li>
-            <li>Healthcare &amp; data</li>
           </ul>
         </div>
       </div>
@@ -417,6 +431,44 @@
         <div class="mission-note reveal">
           <span class="hand">Quality and client satisfaction aren&rsquo;t targets. They&rsquo;re the whole point.</span>
           <span class="who">&mdash; Our core vision</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="advisors">
+    <div class="wrap">
+      <div class="sec-head reveal"><div>
+        <span class="eyebrow">India leadership &amp; advisors</span>
+        <h2>Seasoned guidance, on the ground.</h2>
+      </div></div>
+      <div class="adv-grid">
+        <div class="adv reveal">
+          <span class="name">Prasath Kulothungan</span>
+          <span class="role">Founding Team &middot; India Operations</span>
+          <p>Chartered Accountant (FCA) with CISA and DISA credentials, and founder of his own practice in Villupuram since 2007. His journey &mdash; Villupuram to Chennai and back &mdash; is the Pansolve mission in person: he leads our tier-2 delivery center with a CA&rsquo;s rigor and an auditor&rsquo;s eye, while mentoring the next generation of finance professionals in the towns big firms overlook.</p>
+          <ul class="creds"><li>FCA &middot; Chartered Accountant</li><li>CISA &middot; DISA</li><li>18+ years in practice</li></ul>
+        </div>
+        <div class="adv reveal">
+          <span class="name">Saranya Prasath</span>
+          <span class="role">Founding Team &middot; India Operations</span>
+          <p>A law graduate currently pursuing her LL.M with a specialized focus on cybersecurity law, alongside an MBA and prior years as an assistant professor. She leads people, training, and compliance practice at our India centers &mdash; from courtroom research to legal-aid camps in rural communities, her work has always been rigor applied with care.</p>
+          <ul class="creds"><li>LL.B &middot; LL.M in progress</li><li>Cybersecurity law</li><li>People &amp; training</li></ul>
+        </div>
+      </div>
+      <div class="adv-grid" style="margin-top:44px">
+        <div class="adv reveal">
+          <span class="name">Saravanan Swaminathan</span>
+          <span class="role">Board Advisor &middot; Chennai</span>
+          <p>Cyber risk and compliance leader with 15+ years securing healthcare organizations &mdash; deep in HIPAA, HITRUST, and SOC&nbsp;1&nbsp;/&nbsp;SOC&nbsp;2 assurance. Formerly with PayPal, ServiceNow, and MKPSG, he guides Pansolve&rsquo;s security, privacy, and compliance posture for HCC coding and RCM delivery.</p>
+          <ul class="creds"><li>HIPAA &amp; HITRUST</li><li>SOC 1 / SOC 2</li><li>Cyber risk &amp; governance</li></ul>
+        </div>
+        <div class="adv reveal">
+          <span class="name">Vaishnavi Sureshbabu</span>
+          <span class="role">Board Advisor &middot; Chennai</span>
+          <p>Audit, risk, and technology leader with 14+ years strengthening governance and controls at Infosys, Cisco, and Verizon. She brings a governance-first lens to technology adoption, operational resilience, and enterprise risk across our healthcare services. MS in Information Technology, Anna University.</p>
+          <ul class="creds"><li>Audit &amp; governance</li><li>Enterprise risk</li><li>Digital transformation</li></ul>
         </div>
       </div>
     </div>
@@ -471,7 +523,7 @@
       <div class="foot-col">
         <h4>Get in touch</h4>
         <a href="mailto:support@pansolve.com">support@pansolve.com</a>
-        <a href="tel:+10000000000">+1 (000) 000-0000</a>
+        <a href="tel:+18483275842">+1 (848) 327-5842</a>
         <a href="index.html#contact">Book a consultation</a>
       </div>
     </div>
