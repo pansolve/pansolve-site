@@ -334,6 +334,31 @@
   .lead .role{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pencil);display:block;margin:4px 0 8px}
   .lead p{color:var(--ink-soft);font-size:.9rem}
   @media(max-width:860px){.adv-grid,.lead-grid{grid-template-columns:1fr;gap:30px}}
+
+  /* leadership cards + modal */
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .tcard{background:#fff;border:1px solid var(--line);border-radius:4px;padding:30px 26px 24px;text-align:left;cursor:pointer;transition:transform .18s,box-shadow .18s,border-color .18s;position:relative}
+  .tcard:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(22,32,46,.09);border-color:var(--pencil)}
+  .tcard .mono-av{width:56px;height:56px;border-radius:50%;background:var(--ink);color:var(--paper);font-family:var(--serif);font-weight:600;font-size:1.25rem;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .tcard:hover .mono-av{background:var(--pencil)}
+  .tcard .name{font-family:var(--serif);font-weight:600;font-size:1.22rem;color:var(--ink)}
+  .tcard .role{font-family:var(--mono);font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--pencil);display:block;margin:5px 0 10px;min-height:2.2em}
+  .tcard .teaser{color:var(--ink-soft);font-size:.9rem;min-height:2.6em}
+  .tcard .rm{font-family:var(--mono);font-size:.76rem;color:var(--pencil);margin-top:14px;display:inline-block}
+  .tcard:hover .rm{text-decoration:underline;text-underline-offset:3px}
+  @media(max-width:900px){.team-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:620px){.team-grid{grid-template-columns:1fr}}
+  .bio-overlay{position:fixed;inset:0;background:rgba(22,32,46,.55);display:none;align-items:center;justify-content:center;z-index:100;padding:24px}
+  .bio-overlay.open{display:flex}
+  .bio-modal{background:var(--paper);border-radius:6px;max-width:640px;width:100%;max-height:85vh;overflow-y:auto;padding:40px 42px;position:relative;border-top:4px solid var(--pencil)}
+  .bio-modal .bm-name{font-family:var(--serif);font-weight:600;font-size:1.7rem;color:var(--ink)}
+  .bio-modal .bm-role{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pencil);display:block;margin:8px 0 20px}
+  .bio-modal .bm-body p{color:var(--ink-soft);font-size:.98rem;margin-bottom:14px;line-height:1.65}
+  .bio-modal .creds{list-style:none;margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;padding:0}
+  .bio-modal .creds li{font-family:var(--mono);font-size:.7rem;color:var(--ink-soft);border:1px solid var(--line);border-radius:20px;padding:4px 12px}
+  .bio-close{position:absolute;top:16px;right:18px;background:none;border:none;font-size:1.6rem;color:var(--ink-soft);cursor:pointer;line-height:1;padding:6px}
+  .bio-close:hover{color:var(--pencil)}
+  @media(max-width:620px){.bio-modal{padding:30px 24px}}
 </style>
 </head>
 <body>
@@ -383,39 +408,6 @@
     </div>
   </section>
 
-  <section id="founders">
-    <div class="wrap">
-      <div class="sec-head reveal"><div>
-        <span class="eyebrow">Leadership</span>
-        <h2>Two disciplines, one standard of care.</h2>
-      </div></div>
-      <div class="founders">
-        <div class="founder reveal">
-          <span class="name">Rajalakshmi (Anu)</span>
-          <span class="role">Founder &middot; Clinical insight &amp; data</span>
-          <p>Anu is a dentist by training, which gives Pansolve something rare in this industry: a founder who has actually sat on the clinical side of healthcare and understands what accurate documentation and coding really mean for patients and providers.</p>
-          <p>She went on to earn a Master&rsquo;s in Business Information Systems from NJIT, with a focus on data mining &mdash; bridging clinical experience with the methods behind our AI and data work. Clinical judgment and data fluency, in one person.</p>
-          <ul class="creds">
-            <li>Doctor of Dental Surgery</li>
-            <li>MS, Business Information Systems &mdash; NJIT</li>
-            <li>Healthcare &amp; data</li>
-          </ul>
-        </div>
-        <div class="founder reveal">
-          <span class="name">Vikram</span>
-          <span class="role">Principal Advisor &middot; Technology, cybersecurity &amp; AI</span>
-          <p>Vikram has spent his career in the technology consultancy space, helping organizations solve hard problems in security and, more recently, in how they adopt AI responsibly. That long view &mdash; seeing which technology promises hold up and which don&rsquo;t &mdash; is the backbone of how Pansolve approaches the human layer.</p>
-          <p>He holds a Master&rsquo;s in Cybersecurity from Carnegie Mellon University, and went on to earn his PhD in Cybersecurity and AI &mdash; the same rigor around data protection and machine intelligence that clients rely on when they trust us with sensitive work.</p>
-          <ul class="creds">
-            <li>MS, Cybersecurity &mdash; Carnegie Mellon</li>
-            <li>PhD, Cybersecurity &amp; AI</li>
-            <li>Technology consulting</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="team">
     <div class="wrap">
       <div class="sec-head reveal"><div>
@@ -437,42 +429,102 @@
   </section>
 
 
-  <section id="advisors">
+  <section id="leadership">
     <div class="wrap">
       <div class="sec-head reveal"><div>
-        <span class="eyebrow">India leadership &amp; advisors</span>
-        <h2>Seasoned guidance, on the ground.</h2>
+        <span class="eyebrow">Leadership team &amp; advisors</span>
+        <h2>The people behind the promise.</h2>
       </div></div>
-      <div class="adv-grid">
-        <div class="adv reveal">
-          <span class="name">Prasath Kulothungan</span>
-          <span class="role">Founding Team &middot; India Operations</span>
-          <p>Chartered Accountant (FCA) with CISA and DISA credentials, and founder of his own practice in Villupuram since 2007. His journey &mdash; Villupuram to Chennai and back &mdash; is the Pansolve mission in person: he leads our tier-2 delivery center with a CA&rsquo;s rigor and an auditor&rsquo;s eye, while mentoring the next generation of finance professionals in the towns big firms overlook.</p>
-          <ul class="creds"><li>FCA &middot; Chartered Accountant</li><li>CISA &middot; DISA</li><li>18+ years in practice</li></ul>
-        </div>
-        <div class="adv reveal">
-          <span class="name">Saranya Prasath</span>
-          <span class="role">Founding Team &middot; India Operations</span>
-          <p>A law graduate currently pursuing her LL.M with a specialized focus on cybersecurity law, alongside an MBA and prior years as an assistant professor. She leads people, training, and compliance practice at our India centers &mdash; from courtroom research to legal-aid camps in rural communities, her work has always been rigor applied with care.</p>
-          <ul class="creds"><li>LL.B &middot; LL.M in progress</li><li>Cybersecurity law</li><li>People &amp; training</li></ul>
-        </div>
-      </div>
-      <div class="adv-grid" style="margin-top:44px">
-        <div class="adv reveal">
-          <span class="name">Saravanan Swaminathan</span>
-          <span class="role">Board Advisor &middot; Chennai</span>
-          <p>Cyber risk and compliance leader with 15+ years securing healthcare organizations &mdash; deep in HIPAA, HITRUST, and SOC&nbsp;1&nbsp;/&nbsp;SOC&nbsp;2 assurance. Formerly with PayPal, ServiceNow, and MKPSG, he guides Pansolve&rsquo;s security, privacy, and compliance posture for HCC coding and RCM delivery.</p>
-          <ul class="creds"><li>HIPAA &amp; HITRUST</li><li>SOC 1 / SOC 2</li><li>Cyber risk &amp; governance</li></ul>
-        </div>
-        <div class="adv reveal">
-          <span class="name">Vaishnavi Sureshbabu</span>
-          <span class="role">Board Advisor &middot; Chennai</span>
-          <p>Audit, risk, and technology leader with 14+ years strengthening governance and controls at Infosys, Cisco, and Verizon. She brings a governance-first lens to technology adoption, operational resilience, and enterprise risk across our healthcare services. MS in Information Technology, Anna University.</p>
-          <ul class="creds"><li>Audit &amp; governance</li><li>Enterprise risk</li><li>Digital transformation</li></ul>
-        </div>
+      <div class="team-grid">
+        <button class="tcard reveal" data-bio="bio-anu" aria-haspopup="dialog">
+          <span class="mono-av">AV</span>
+          <span class="name">Anu V</span>
+          <span class="role">President &amp; Chief Operating Officer</span>
+          <span class="teaser">Clinical expertise meets technology leadership.</span>
+          <span class="rm">Read more &rarr;</span>
+        </button>
+        <button class="tcard reveal" data-bio="bio-vikram" aria-haspopup="dialog">
+          <span class="mono-av">VK</span>
+          <span class="name">Vikram K</span>
+          <span class="role">Principal Advisor &middot; Product, Cybersecurity, Technology &amp; AI</span>
+          <span class="teaser">Secure, responsible AI &mdash; from strategy to architecture.</span>
+          <span class="rm">Read more &rarr;</span>
+        </button>
+        <button class="tcard reveal" data-bio="bio-prasath" aria-haspopup="dialog">
+          <span class="mono-av">PK</span>
+          <span class="name">Prasath K</span>
+          <span class="role">Head of Delivery &amp; Chief Financial Officer</span>
+          <span class="teaser">Two decades of finance, governance, and delivery excellence.</span>
+          <span class="rm">Read more &rarr;</span>
+        </button>
+        <button class="tcard reveal" data-bio="bio-saranya" aria-haspopup="dialog">
+          <span class="mono-av">SP</span>
+          <span class="name">Saranya P</span>
+          <span class="role">Chief People &amp; Compliance Officer</span>
+          <span class="teaser">People, training, and a culture of compliance.</span>
+          <span class="rm">Read more &rarr;</span>
+        </button>
+        <button class="tcard reveal" data-bio="bio-saravanan" aria-haspopup="dialog">
+          <span class="mono-av">SS</span>
+          <span class="name">Saravanan S</span>
+          <span class="role">Board Advisor</span>
+          <span class="teaser">Cyber risk, HIPAA, HITRUST &amp; SOC assurance.</span>
+          <span class="rm">Read more &rarr;</span>
+        </button>
+        <button class="tcard reveal" data-bio="bio-vaishnavi" aria-haspopup="dialog">
+          <span class="mono-av">VS</span>
+          <span class="name">Vaishnavi S</span>
+          <span class="role">Board Advisor</span>
+          <span class="teaser">Audit, enterprise risk &amp; technology governance.</span>
+          <span class="rm">Read more &rarr;</span>
+        </button>
       </div>
     </div>
   </section>
+
+  <!-- Bio data (hidden; rendered into modal) -->
+  <div hidden>
+    <div id="bio-anu" data-name="Anu V" data-role="President &amp; Chief Operating Officer">
+      <p>Anu brings a distinctive combination of clinical expertise and technology leadership to Pansolve. Trained as a dentist, she has firsthand experience in patient care and understands the critical role that accurate clinical documentation, coding, and compliance play in both quality outcomes and financial performance.</p>
+      <p>She earned a Master&rsquo;s in Business Information Systems from the New Jersey Institute of Technology (NJIT) with a specialization in Data Mining, equipping her with deep expertise in data analytics and AI-driven solutions. By combining clinical insight with advanced information systems, Anu helps shape Pansolve&rsquo;s vision of delivering intelligent, technology-enabled revenue cycle management solutions that improve operational efficiency and financial outcomes for healthcare organizations.</p>
+      <ul class="creds"><li>Doctor of Dental Surgery</li><li>MS, Business Information Systems &mdash; NJIT</li><li>Data mining &amp; AI</li></ul>
+    </div>
+    <div id="bio-vikram" data-name="Vikram K" data-role="Principal Advisor &middot; Product Development, Cybersecurity, Technology &amp; AI">
+      <p>Vikram brings extensive expertise in product development, cybersecurity, enterprise technology, and artificial intelligence to Pansolve. He has advised organizations across industries on technology strategy, digital transformation, cybersecurity resilience, and the responsible adoption of AI. His ability to align emerging technologies with business objectives enables Pansolve to deliver secure, scalable, and innovative solutions for the healthcare sector.</p>
+      <p>Vikram holds a Master&rsquo;s degree in Cybersecurity from Carnegie Mellon University and a Ph.D. in Cybersecurity and Artificial Intelligence. His expertise spans secure technology architecture, data protection, AI governance, and regulatory compliance. He plays a key role in ensuring that Pansolve&rsquo;s solutions are built on a foundation of security, privacy, and trust, empowering healthcare organizations to confidently adopt AI while protecting sensitive clinical and financial data.</p>
+      <ul class="creds"><li>MS, Cybersecurity &mdash; Carnegie Mellon</li><li>PhD, Cybersecurity &amp; AI</li><li>AI governance &amp; product</li></ul>
+    </div>
+    <div id="bio-prasath" data-name="Prasath K" data-role="Head of Delivery &amp; Chief Financial Officer">
+      <p>Prasath serves as Chief Financial Officer and Head of Delivery at Pansolve, bringing nearly two decades of leadership in finance, governance, and professional services. A Fellow Chartered Accountant (FCA) with CISA and DISA credentials, he founded his own chartered accountancy practice in 2007 and has since advised businesses on audit, taxation, financial reporting, risk management, and regulatory compliance.</p>
+      <p>At Pansolve, he oversees both the company&rsquo;s financial strategy and global delivery operations, ensuring every client engagement is executed with precision, accountability, and operational excellence. His combination of financial discipline and delivery leadership enables Pansolve to scale with confidence while maintaining the highest standards of quality, compliance, and client satisfaction.</p>
+      <ul class="creds"><li>FCA &middot; Chartered Accountant</li><li>CISA &middot; DISA</li><li>Finance &amp; delivery leadership</li></ul>
+    </div>
+    <div id="bio-saranya" data-name="Saranya P" data-role="Chief People &amp; Compliance Officer">
+      <p>Saranya leads People, Training, and Compliance at Pansolve, shaping the organization&rsquo;s talent strategy, learning culture, and governance framework. She oversees workforce development, organizational compliance, and employee engagement, ensuring Pansolve maintains the highest standards of professionalism and operational excellence.</p>
+      <p>A law graduate pursuing her LL.M. in Cybersecurity Law, she also holds an MBA and previously served as an Assistant Professor. Her blend of legal expertise, business acumen, and passion for people development enables her to build a culture of continuous learning, ethical leadership, and compliance that supports Pansolve&rsquo;s long-term growth.</p>
+      <ul class="creds"><li>LL.B &middot; LL.M in progress</li><li>Cybersecurity law</li><li>MBA &middot; People &amp; compliance</li></ul>
+    </div>
+    <div id="bio-saravanan" data-name="Saravanan S" data-role="Board Advisor &middot; Chennai">
+      <p>Saravanan is a cyber risk and compliance leader with more than 15 years of experience in information security, regulatory compliance, and risk advisory, with deep expertise in the healthcare sector. He has led numerous compliance and assurance engagements for healthcare organizations, with extensive experience across HIPAA, HITRUST, and SOC&nbsp;1&nbsp;/&nbsp;SOC&nbsp;2 assessments.</p>
+      <p>He has held key roles with organizations including MKPSG, PayPal, and ServiceNow, advising on cybersecurity strategy, regulatory compliance, and enterprise risk. As Board Advisor, he guides Pansolve&rsquo;s security, privacy, and governance framework, supporting the delivery of secure, compliant HCC coding and revenue cycle management services.</p>
+      <ul class="creds"><li>HIPAA &amp; HITRUST</li><li>SOC 1 / SOC 2</li><li>Cyber risk &amp; governance</li></ul>
+    </div>
+    <div id="bio-vaishnavi" data-name="Vaishnavi S" data-role="Board Advisor &middot; Chennai">
+      <p>Vaishnavi is an audit, risk, and technology leader with more than 14 years of experience strengthening governance, internal controls, and assurance frameworks across global enterprises including Infosys, Cisco, and Verizon. She is passionate about digital transformation and emerging technologies, with a strong focus on aligning innovation with robust governance.</p>
+      <p>As Board Advisor, she brings a governance-first perspective to Pansolve&rsquo;s healthcare services &mdash; strategic oversight on technology adoption, cybersecurity, risk management, and operational excellence. She holds a Master&rsquo;s degree in Information Technology from Anna University.</p>
+      <ul class="creds"><li>Audit &amp; governance</li><li>Enterprise risk</li><li>Digital transformation</li></ul>
+    </div>
+  </div>
+
+  <!-- Modal shell -->
+  <div class="bio-overlay" id="bioOverlay" role="dialog" aria-modal="true" aria-labelledby="bmName">
+    <div class="bio-modal">
+      <button class="bio-close" aria-label="Close">&times;</button>
+      <div class="bm-name" id="bmName"></div>
+      <span class="bm-role" id="bmRole"></span>
+      <div class="bm-body" id="bmBody"></div>
+    </div>
+  </div>
 
   <section id="values">
     <div class="wrap">
@@ -539,6 +591,29 @@
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Leadership bio modal
+  const overlay=document.getElementById('bioOverlay');
+  if(overlay){
+    const bmName=document.getElementById('bmName'),bmRole=document.getElementById('bmRole'),bmBody=document.getElementById('bmBody');
+    let lastFocus=null;
+    function openBio(id){
+      const d=document.getElementById(id); if(!d)return;
+      bmName.textContent=d.dataset.name; bmRole.innerHTML=d.dataset.role; bmBody.innerHTML=d.innerHTML;
+      lastFocus=document.activeElement;
+      overlay.classList.add('open'); document.body.style.overflow='hidden';
+      overlay.querySelector('.bio-close').focus();
+    }
+    function closeBio(){
+      overlay.classList.remove('open'); document.body.style.overflow='';
+      if(lastFocus)lastFocus.focus();
+    }
+    document.querySelectorAll('.tcard').forEach(c=>c.addEventListener('click',()=>openBio(c.dataset.bio)));
+    overlay.querySelector('.bio-close').addEventListener('click',closeBio);
+    overlay.addEventListener('click',e=>{if(e.target===overlay)closeBio();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('open'))closeBio();});
+  }
+
 </script>
 </body>
 </html>
