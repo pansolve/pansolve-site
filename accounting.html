@@ -3,266 +3,199 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316202E'/%3E%3Ctext x='6.5' y='23' font-family='Georgia,serif' font-size='21' font-weight='700' fill='%23FAFAF7'%3EP%3C/text%3E%3Ccircle cx='24' cy='22' r='2.6' fill='%23C8362B'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%2316224A'/%3E%3Crect x='11' y='11' width='20' height='20' rx='7' fill='%2312B7C6'/%3E%3C/svg%3E">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Accounting & Finance Operations — Pansolve">
-<meta property="og:description" content="Expert human teams for medical coding, accounting, and AI data services. The human layer behind AI.">
+<meta property="og:title" content="Client Accounting Services - Pansolve">
+<meta property="og:description" content="Insight-driven finance operations that scale with your business - Procure-to-Pay, Order-to-Cash, and Record-to-Report, delivered by Pansolve.">
 <meta property="og:url" content="https://pansolve.com/accounting.html">
 <meta property="og:image" content="https://pansolve.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<title>Accounting &amp; Finance Operations &mdash; Pansolve</title>
-<meta name="description" content="Pansolve's accounting &amp; finance operations: bookkeeping, month-end close, AP/AR, reconciliation, and reporting by dedicated human teams.">
+<title>Client Accounting Services - Pansolve</title>
+<meta name="description" content="Pansolve's Client Accounting Services: full Procure-to-Pay, Order-to-Cash, and Record-to-Report cycle management with skilled talent, automation, and real-time reporting.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FAFAF7;
-    --ink:#16202E;
-    --ink-soft:#4C5666;
-    --pencil:#C8362B;
-    --pencil-soft:#F3D9D6;
-    --highlight:#FFE86B;
-    --line:#DDDDD5;
-    --serif:'Newsreader', Georgia, serif;
-    --sans:'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
-    --mono:'IBM Plex Mono', 'SF Mono', monospace;
-    --hand:'Caveat', cursive;
-    --max:1080px;
+    --navy-950:#0A1122;--navy-900:#0F1830;--navy-800:#16224A;--navy-700:#25335E;--navy-600:#3A4A78;
+    --teal-500:#12B7C6;--teal-400:#3FD3DD;--teal-100:#E4F8F9;
+    --paper:#F6F8FB;--surface:#FFFFFF;--ink:#0F172A;--ink-soft:#4B5768;--line:#E3E8F0;
+    --on-dark:#F5F8FC;--on-dark-soft:#A9B7CC;--on-dark-line:rgba(255,255,255,.14);
+    --display:'Space Grotesk','IBM Plex Sans',sans-serif;
+    --sans:'IBM Plex Sans',-apple-system,'Segoe UI',sans-serif;
+    --mono:'IBM Plex Mono','SF Mono',monospace;
+    --max:1160px;--radius:14px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
-  ::selection{background:var(--highlight);color:var(--ink)}
+  ::selection{background:var(--teal-100);color:var(--navy-900)}
   a{color:inherit}
-  a:focus-visible,button:focus-visible{outline:2px solid var(--pencil);outline-offset:3px;border-radius:2px}
+  img,svg{display:block;max-width:100%}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--teal-500);outline-offset:3px;border-radius:2px}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  .icon{width:22px;height:22px;flex-shrink:0}
+  h1,h2,h3{font-family:var(--display);font-weight:600;color:inherit}
 
-  header{position:sticky;top:0;z-index:50;background:rgba(250,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .wordmark{font-family:var(--serif);font-weight:600;font-size:1.5rem;letter-spacing:-.01em;text-decoration:none}
-  .wordmark .dot{color:var(--pencil)}
-  .nav-links{display:flex;gap:30px;align-items:center;list-style:none}
-  .nav-links a{text-decoration:none;font-size:.92rem;color:var(--ink-soft);transition:color .15s}
-  .nav-links a:hover{color:var(--ink)}
-  .btn{display:inline-block;background:var(--ink);color:var(--paper);font-weight:500;font-size:.95rem;padding:13px 26px;border-radius:3px;text-decoration:none;border:1px solid var(--ink);transition:background .15s,color .15s}
-  .btn:hover{background:var(--pencil);border-color:var(--pencil)}
-  .btn-ghost{background:transparent;color:var(--ink)}
-  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
-  .nav .btn{padding:9px 18px;font-size:.88rem}
+  /* header */
+  header{position:sticky;top:0;z-index:100;background:rgba(10,17,34,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--on-dark-line);color:var(--on-dark)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+  .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+  .brand .mark{width:32px;height:32px}
+  .brand .word{font-family:var(--display);font-weight:700;font-size:1.18rem;letter-spacing:.02em;color:var(--on-dark);text-transform:uppercase}
+  .brand .word span{color:var(--teal-400)}
+  .nav-links{display:flex;gap:6px;align-items:center;list-style:none}
+  .nav-links>li>a:not(.btn){text-decoration:none;font-size:.94rem;color:var(--on-dark-soft);transition:color .15s;padding:10px 14px;border-radius:8px;display:inline-flex;align-items:center;gap:4px}
+  .nav-links>li>a:not(.btn):hover{color:var(--on-dark);background:rgba(255,255,255,.06)}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal-500);color:var(--navy-950);font-weight:600;font-size:.95rem;padding:12px 22px;border-radius:9px;text-decoration:none;border:1px solid var(--teal-500);transition:background .15s,transform .15s,box-shadow .15s;cursor:pointer}
+  .btn:hover{background:var(--teal-400);border-color:var(--teal-400);transform:translateY(-1px);box-shadow:0 8px 20px rgba(18,183,198,.25)}
+  .btn-ghost{background:transparent;color:var(--on-dark);border-color:var(--on-dark-line)}
+  .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3);box-shadow:none;transform:none}
+  .nav .btn{padding:10px 18px;font-size:.88rem}
+  .caret{width:11px;height:11px;transition:transform .15s}
   .dropdown{position:relative}
-  .dropdown > a::after{content:" ▾";font-size:.7em;color:var(--pencil)}
-  .dropdown-menu{
-    position:absolute;top:calc(100% + 6px);left:-14px;background:#fff;
-    border:1px solid var(--line);border-radius:3px;min-width:264px;padding:8px 0;
-    display:none;box-shadow:0 10px 28px rgba(22,32,46,.10);
-  }
-  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:block}
-  .dropdown-menu a{display:block;padding:10px 18px;font-size:.9rem;color:var(--ink-soft)}
-  .dropdown-menu a:hover{background:var(--paper);color:var(--pencil)}
-
-  .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:22px}
-  .eyebrow .tick{color:var(--pencil)}
-  .eyebrow a{text-decoration:none;color:var(--ink-soft)}
-  .eyebrow a:hover{color:var(--pencil)}
-  mark{background:linear-gradient(104deg,transparent 2%,var(--highlight) 6%,var(--highlight) 94%,transparent 98%);padding:.05em .15em;color:var(--ink);border-radius:1px}
+  .dropdown-menu{position:absolute;top:calc(100% + 10px);left:0;background:var(--navy-800);border:1px solid var(--on-dark-line);border-radius:12px;min-width:340px;padding:10px;display:none;box-shadow:0 24px 48px rgba(5,9,20,.45)}
+  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu,.dropdown.open .dropdown-menu{display:block}
+  .dropdown-menu a{display:flex;gap:12px;align-items:flex-start;text-decoration:none;color:var(--on-dark);padding:11px 12px;border-radius:8px;transition:background .15s}
+  .dropdown-menu a:hover{background:rgba(255,255,255,.06)}
+  .dropdown-menu .icon{color:var(--teal-400);margin-top:2px}
+  .dropdown-menu strong{display:block;font-size:.93rem;font-weight:600}
+  .dropdown-menu small{display:block;color:var(--on-dark-soft);font-size:.8rem;margin-top:2px}
+  .nav-toggle{display:none;background:none;border:none;color:var(--on-dark);cursor:pointer;padding:8px}
 
   /* hero */
-  .hero{padding:96px 0 80px;border-bottom:1px solid var(--line)}
-  h1{font-family:var(--serif);font-weight:500;letter-spacing:-.02em;font-size:clamp(2.3rem,5.6vw,4rem);line-height:1.08;max-width:18ch}
-  .hero p.lede{margin-top:30px;max-width:60ch;font-size:1.14rem;color:var(--ink-soft)}
-  .hero-cta{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-  .hero-note{font-family:var(--hand);font-size:1.3rem;color:var(--pencil);transform:rotate(-2deg)}
+  .hero{background:radial-gradient(1100px 480px at 85% -10%,rgba(18,183,198,.18),transparent 60%),linear-gradient(180deg,var(--navy-900),var(--navy-950));color:var(--on-dark);padding:88px 0 76px}
+  .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-400);display:inline-flex;align-items:center;gap:8px;margin-bottom:22px}
+  .eyebrow a{color:var(--on-dark-soft);text-decoration:none}
+  .eyebrow a:hover{color:var(--on-dark)}
+  h1{font-weight:600;letter-spacing:-.02em;font-size:clamp(2.2rem,4.8vw,3.6rem);line-height:1.1;max-width:19ch}
+  .subhead{margin-top:18px;font-family:var(--display);font-weight:500;font-size:clamp(1.15rem,2.2vw,1.5rem);color:var(--teal-400);max-width:40ch;line-height:1.35}
+  .hero p.lede{margin-top:24px;max-width:64ch;font-size:1.13rem;color:var(--on-dark-soft)}
+  .hero-cta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 
-  /* flow diagram */
-  .flow-section{padding:84px 0;border-bottom:1px solid var(--line)}
-  h2{font-family:var(--serif);font-weight:500;letter-spacing:-.015em;font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.15;max-width:26ch}
-  .sec-head{margin-bottom:48px}
-  .flow{display:flex;flex-direction:column;align-items:center;gap:0}
-  .flow-node{
-    border:1px solid var(--ink);background:#fff;border-radius:3px;
-    padding:14px 30px;font-family:var(--mono);font-size:.86rem;letter-spacing:.04em;
-    text-align:center;
-  }
-  .flow-arrow{font-family:var(--mono);color:var(--pencil);font-size:1.1rem;padding:8px 0;line-height:1}
-  .flow-branches{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:14px;width:100%;margin-top:6px;
-  }
-  .flow-q{
-    border:1px solid var(--line);border-top:3px solid var(--pencil);background:var(--paper);
-    padding:18px 16px;text-align:center;border-radius:3px;text-decoration:none;
-    transition:background .15s, transform .15s;
-  }
-  .flow-q:hover{background:#fff;transform:translateY(-2px)}
-  .flow-q .name{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pencil);display:block;margin-bottom:8px}
-  .flow-q .q{font-family:var(--serif);font-size:1.02rem;line-height:1.35;color:var(--ink)}
-  .flow-connector{width:100%;display:flex;justify-content:center}
-  .flow-connector svg{width:76%;height:34px;overflow:visible}
-  .flow-connector path{fill:none;stroke:var(--line);stroke-width:1.5}
-  .flow-connector .drop{stroke:var(--pencil)}
+  /* section base */
+  h2{font-weight:600;letter-spacing:-.015em;font-size:clamp(1.7rem,3vw,2.25rem);line-height:1.2;max-width:30ch;color:var(--navy-900)}
+  .sec-head{margin-bottom:44px}
+  .sec-head .eyebrow{color:var(--teal-500);margin-bottom:12px}
 
-  /* service detail sections */
-  .svc-detail{padding:92px 0;border-bottom:1px solid var(--line)}
-  .svc-detail .num{
-    font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;color:var(--pencil);
-    text-transform:uppercase;display:block;margin-bottom:18px;
-  }
-  .svc-grid{display:grid;grid-template-columns:5fr 4fr;gap:64px;align-items:start;margin-top:44px}
-  .svc-copy h3{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin:30px 0 10px}
+  /* why grid */
+  .why{padding:84px 0;border-bottom:1px solid var(--line);background:var(--surface)}
+  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px}
+  .why-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px}
+  .why-card h3{font-size:1.14rem;color:var(--navy-900);margin-bottom:8px;display:flex;align-items:center;gap:10px}
+  .why-card h3 .icon{color:var(--teal-500);width:22px;height:22px}
+  .why-card p{color:var(--ink-soft);font-size:.96rem}
+
+  /* service detail */
+  .svc-detail{padding:88px 0;border-bottom:1px solid var(--line)}
+  .svc-detail.on-paper{background:var(--paper)}
+  .svc-detail.on-white{background:var(--surface)}
+  .num{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;color:var(--teal-500);text-transform:uppercase;display:block;margin-bottom:16px}
+  .detail-grid{display:grid;grid-template-columns:5fr 4fr;gap:56px;align-items:start;margin-top:40px}
+  .svc-copy h3{font-family:var(--display);font-weight:600;font-size:1.12rem;margin:26px 0 10px;color:var(--navy-900)}
   .svc-copy h3:first-child{margin-top:0}
-  .svc-copy p{color:var(--ink-soft);font-size:1rem;margin-bottom:8px}
   .svc-copy ul{list-style:none;margin:6px 0 0}
-  .svc-copy li{
-    color:var(--ink-soft);font-size:.98rem;padding-left:26px;position:relative;margin-bottom:8px;
-  }
-  .svc-copy li::before{
-    content:"✓";font-family:var(--hand);color:var(--pencil);font-size:1.25rem;
-    position:absolute;left:0;top:-2px;
-  }
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-  .chips span{font-family:var(--mono);font-size:.74rem;color:var(--ink-soft);border:1px solid var(--line);border-radius:20px;padding:4px 12px}
+  .svc-copy li{color:var(--ink-soft);font-size:.98rem;padding-left:28px;position:relative;margin-bottom:9px}
+  .svc-copy li::before{content:"";position:absolute;left:0;top:4px;width:16px;height:16px;border-radius:50%;background:var(--teal-100)}
+  .svc-copy li::after{content:"";position:absolute;left:4.5px;top:7.5px;width:7px;height:4px;border-left:2px solid var(--teal-500);border-bottom:2px solid var(--teal-500);transform:rotate(-45deg)}
 
-  /* example card = the signature "worked example" annotation */
-  .example{
-    border:1px solid var(--line);border-left:3px solid var(--pencil);
-    background:#fff;border-radius:3px;padding:28px 28px 24px;position:relative;
-  }
-  .example .ex-tag{
-    font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
-    color:var(--pencil);display:block;margin-bottom:16px;
-  }
-  .example .line{font-size:.98rem;color:var(--ink-soft);margin-bottom:10px}
-  .example .line strong{color:var(--ink);font-weight:600}
-  .strike{position:relative;color:var(--ink-soft);white-space:nowrap}
-  .strike::after{content:"";position:absolute;left:-1%;right:-1%;top:52%;height:2.5px;background:var(--pencil);transform:rotate(-1.4deg);border-radius:2px}
-  .rewrite{font-family:var(--hand);color:var(--pencil);font-weight:600;font-size:1.25em;white-space:nowrap}
-  .example .verdict{
-    margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);
-    font-family:var(--hand);font-size:1.35rem;color:var(--pencil);line-height:1.3;
-  }
+  /* outcomes card */
+  .example{border:1px solid var(--line);border-left:3px solid var(--teal-500);background:var(--surface);border-radius:0 var(--radius) var(--radius) 0;padding:28px 28px 26px;position:relative;box-shadow:0 10px 30px rgba(15,23,42,.06)}
+  .svc-detail.on-white .example{background:var(--paper)}
+  .example .ex-tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-500);display:block;margin-bottom:16px}
+  .example .line{font-size:.98rem;color:var(--ink-soft);margin-bottom:12px;display:flex;gap:10px;align-items:flex-start}
+  .example .line .icon{color:var(--teal-500);width:18px;height:18px;margin-top:3px}
+  .example .line strong{color:var(--navy-900);font-weight:600}
 
-  /* outcomes strip */
-  .outcomes{padding:80px 0;border-bottom:1px solid var(--line)}
-  .out-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:44px}
-  .out h3{font-family:var(--serif);font-weight:600;font-size:1.35rem;margin-bottom:10px}
-  .out p{color:var(--ink-soft);font-size:.97rem}
+  /* steps */
+  .process{padding:84px 0;border-bottom:1px solid var(--line);background:var(--surface)}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:40px}
+  .step{background:var(--surface);padding:30px 26px 34px;transition:background .2s}
+  .step:hover{background:var(--paper)}
+  .step .n{font-family:var(--mono);font-size:.8rem;color:var(--teal-500);letter-spacing:.12em}
+  .step h3{font-weight:600;font-size:1.18rem;margin:14px 0 8px;color:var(--navy-900)}
+  .step p{color:var(--ink-soft);font-size:.92rem}
 
   /* cta */
-  .cta{padding:104px 0;text-align:center}
-  .cta h2{margin:0 auto 20px}
-  .cta p{max-width:54ch;margin:0 auto 38px;color:var(--ink-soft);font-size:1.06rem}
-  .cta-mail{font-family:var(--serif);font-size:1.2rem;margin-top:26px;display:block;color:var(--ink-soft)}
-  .cta-mail a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:4px}
+  .cta{padding:104px 0;text-align:center;background:linear-gradient(180deg,var(--navy-900),var(--navy-950));color:var(--on-dark)}
+  .cta h2{margin:0 auto 20px;color:var(--on-dark)}
+  .cta p{max-width:54ch;margin:0 auto 34px;color:var(--on-dark-soft);font-size:1.06rem}
+  .cta-mail{font-size:1rem;margin-top:24px;display:block;color:var(--on-dark-soft)}
+  .cta-mail a{color:var(--on-dark);text-decoration-color:var(--teal-500);text-underline-offset:4px}
+  .cta .eyebrow{color:var(--teal-400)}
 
-  footer{border-top:1px solid var(--line);padding:34px 0}
-  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-  .foot span{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft)}
+  /* footer */
+  footer{border-top:1px solid var(--on-dark-line);padding:34px 0;background:var(--navy-950)}
+  .site-footer{padding:64px 0 30px;color:var(--on-dark)}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:40px}
+  .foot-brand p{margin-top:14px;color:var(--on-dark-soft);font-size:.92rem;max-width:32ch}
+  .foot-brand .ftag{font-family:var(--mono);color:var(--teal-400);font-size:.85rem;display:block;margin-top:14px;letter-spacing:.04em}
+  .foot-col h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark);margin-bottom:16px}
+  .foot-col a{display:block;text-decoration:none;color:var(--on-dark-soft);font-size:.9rem;margin-bottom:11px;transition:color .15s}
+  .foot-col a:hover{color:var(--teal-400)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--on-dark-line)}
+  .foot-bottom span,.foot-bottom a{font-family:var(--mono);font-size:.76rem;color:var(--on-dark-soft);text-decoration:none}
+  .foot-bottom a:hover{color:var(--teal-400)}
 
   .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
   .reveal.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto}
-    .reveal{opacity:1;transform:none;transition:none}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+
+  @media (max-width:980px){
+    .detail-grid{grid-template-columns:1fr;gap:32px}
+    .why-grid{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .svc-detail,.why,.process{padding:64px 0}
+    .nav-toggle{display:block}
+    .nav-links{position:fixed;top:76px;left:0;width:100vw;height:calc(100vh - 76px);background:var(--navy-950);flex-direction:column;align-items:stretch;gap:2px;padding:18px;overflow:auto;box-sizing:border-box;display:none}
+    header.menu-open .nav-links{display:flex}
+    .nav-links>li{width:100%}
+    .nav-links>li>a:not(.btn){width:100%;padding:14px 12px;font-size:1rem}
+    .nav .btn{width:100%;justify-content:center;padding:14px}
+    .dropdown-menu{position:static;display:block;box-shadow:none;background:rgba(255,255,255,.03);margin-top:4px;min-width:0}
   }
-  @media (max-width:900px){
-    .flow-branches{grid-template-columns:1fr 1fr}
-    .flow-connector{display:none}
-    .flow-branches{margin-top:14px}
-  }
-  @media (max-width:860px){
-    .svc-grid{grid-template-columns:1fr;gap:36px}
-    .out-grid{grid-template-columns:1fr;gap:32px}
-    .nav-links li:not(.keep){display:none}
-    .svc-detail,.flow-section,.outcomes{padding:66px 0}
-  }
-
-  /* ===== added: rich footer ===== */
-  .site-footer{border-top:1px solid var(--line);background:var(--paper);padding:64px 0 30px}
-  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:40px}
-  .foot-brand .wordmark{font-size:1.4rem}
-  .foot-brand p{margin-top:14px;color:var(--ink-soft);font-size:.92rem;max-width:32ch}
-  .foot-brand .ftag{font-family:var(--hand);color:var(--pencil);font-size:1.3rem;display:block;margin-top:12px}
-  .foot-col h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:16px}
-  .foot-col a{display:block;text-decoration:none;color:var(--ink-soft);font-size:.9rem;margin-bottom:11px;transition:color .15s}
-  .foot-col a:hover{color:var(--pencil)}
-  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--line)}
-  .foot-bottom span,.foot-bottom a{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);text-decoration:none}
-  .foot-bottom a:hover{color:var(--pencil)}
-  @media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;gap:30px}}
-
-  /* ===== added: contact form ===== */
-  .contact-grid{display:grid;grid-template-columns:3fr 2fr;gap:56px;text-align:left;margin-top:8px}
-  .cform{display:flex;flex-direction:column;gap:16px}
-  .cform .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .cform label{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:6px}
-  .cform input,.cform select,.cform textarea{width:100%;font-family:var(--sans);font-size:.98rem;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:3px;padding:11px 13px;transition:border-color .15s}
-  .cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-color:var(--pencil)}
-  .cform textarea{resize:vertical;min-height:120px}
-  .cform button{align-self:flex-start;cursor:pointer;margin-top:4px}
-  .form-note{font-size:.82rem;color:var(--ink-soft)}
-  .form-status{font-family:var(--hand);font-size:1.5rem;color:var(--pencil);display:none}
-  .contact-detail .block{margin-bottom:24px}
-  .contact-detail h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:0 0 6px}
-  .contact-detail a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:3px}
-  .contact-detail p{color:var(--ink-soft);font-size:.95rem}
-  .contact-detail .big{font-family:var(--serif);font-size:1.15rem;color:var(--ink)}
-  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px}.cform .row{grid-template-columns:1fr}}
-
-  /* ===== added: process steps ===== */
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-  .step{background:var(--paper);padding:32px 26px 36px;transition:background .2s}
-  .step:hover{background:#fff}
-  .step .n{font-family:var(--mono);font-size:.8rem;color:var(--pencil);letter-spacing:.12em}
-  .step h3{font-family:var(--serif);font-weight:600;font-size:1.22rem;margin:14px 0 8px}
-  .step p{color:var(--ink-soft);font-size:.92rem}
-  @media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
-
-  /* ===== added: trust / security ===== */
-  .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:38px}
-  .trust h3{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin-bottom:10px;display:flex;align-items:baseline;gap:10px}
-  .trust h3 .lock{font-family:var(--hand);color:var(--pencil);font-size:1.35rem;line-height:1}
-  .trust p{color:var(--ink-soft);font-size:.94rem}
-  @media(max-width:860px){.trust-grid{grid-template-columns:1fr;gap:28px}}
-
-  /* ===== added: faq ===== */
-  .faq-list{border-top:1px solid var(--line);max-width:860px}
-  .faq-list details{border-bottom:1px solid var(--line)}
-  .faq-list summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--serif);font-size:1.18rem;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px}
-  .faq-list summary::-webkit-details-marker{display:none}
-  .faq-list summary::after{content:"+";font-family:var(--mono);color:var(--pencil);font-size:1.3rem;flex-shrink:0}
-  .faq-list details[open] summary::after{content:"\2013"}
-  .faq-list .ans{padding:0 0 24px;color:var(--ink-soft);font-size:1rem;max-width:72ch}
-
-  /* ===== added: about-teaser link + legal prose ===== */
-  .story-link{display:inline-block;margin-top:26px;font-family:var(--mono);font-size:.82rem;color:var(--pencil);text-decoration:none}
-  .story-link:hover{text-decoration:underline;text-underline-offset:3px}
-  .legal{padding:64px 0 90px}
-  .legal .lead{max-width:70ch;color:var(--ink-soft);font-size:1.05rem;margin-bottom:8px}
-  .legal h2{margin:40px 0 12px;font-size:1.5rem}
-  .legal h3{font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:24px 0 8px}
-  .legal p,.legal li{color:var(--ink-soft);font-size:1rem;margin-bottom:12px;max-width:74ch}
-  .legal ul{padding-left:22px;margin-bottom:12px}
-  .legal .updated{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft);letter-spacing:.06em;margin-bottom:26px}
-  .legal .disclaimer{border-left:3px solid var(--pencil);padding:14px 0 14px 20px;margin:30px 0;font-size:.92rem;color:var(--ink-soft);max-width:74ch}
-
+  @media (max-width:560px){.foot-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <a class="wordmark" href="index.html">Pansolve<span class="dot">.</span></a>
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="3" y="5" width="24" height="24" rx="10" fill="none" stroke="#F5F8FC" stroke-width="2.2"/>
+        <rect x="14" y="14" width="23" height="23" rx="9" fill="#12B7C6"/>
+      </svg>
+      <span class="word">Pan<span>solve</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="icon icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" style="display:none"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
     <ul class="nav-links">
-      <li class="dropdown"><a href="index.html#services">Services</a>
+      <li class="dropdown">
+        <a href="index.html#services">Services
+          <svg class="caret icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
         <div class="dropdown-menu">
-          <a href="payer-provider.html">Payer &amp; Provider Solutions</a>
-          <a href="accounting.html">Accounting &amp; Finance Operations</a>
-          <a href="ai-training.html">AI Training &amp; Data Services</a>
+          <a href="payer-provider.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 8.6c0 5.4-8.8 10.4-8.8 10.4S3.2 14 3.2 8.6a4.6 4.6 0 0 1 8.8-1.9 4.6 4.6 0 0 1 8.8 1.9Z"/><path d="M4 12h3l1.5-3 2 5 1.5-3H18"/></svg>
+            <span><strong>Payer &amp; Provider Services</strong><small>RCM, payer operations &amp; compliance</small></span>
+          </a>
+          <a href="accounting.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-8"/><path d="M15 8h5v5"/></svg>
+            <span><strong>Client Accounting Services</strong><small>Procure-to-Pay, Order-to-Cash &amp; Record-to-Report</small></span>
+          </a>
+          <a href="ai-training.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>
+            <span><strong>AI Training &amp; Data Services</strong><small>Annotation, evaluation &amp; RLHF</small></span>
+          </a>
         </div>
       </li>
       <li><a href="index.html#approach">Approach</a></li>
       <li><a href="about.html">About</a></li>
-      <li class="keep"><a class="btn" href="#contact">Book a consultation</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a class="btn" href="#contact">Book a consultation</a></li>
     </ul>
   </div>
 </header>
@@ -270,192 +203,149 @@
 <main>
   <div class="hero">
     <div class="wrap">
-      <span class="eyebrow"><a href="index.html#services">Services</a> <span class="tick">/</span> Accounting &amp; Finance Operations</span>
-      <h1>Your books, closed on time. Every time.</h1>
-      <p class="lede">Growing companies drown in transactions before they can afford a full finance department.
-        Pansolve gives you a <mark>dedicated, trained accounting team</mark> — bookkeeping, payables,
-        receivables, reconciliation, and reporting — at a fraction of the cost of hiring in-house.</p>
+      <span class="eyebrow"><a href="index.html#services">Services</a> / Accounting &amp; Finance Operations</span>
+      <h1>Client Accounting Services</h1>
+      <p class="subhead">Insight-driven finance operations that scale with your business.</p>
+      <p class="lede">Pansolve&rsquo;s Client Accounting Services help finance leaders move faster, close cleaner, and control cost - by managing the full Procure-to-Pay, Order-to-Cash, and Record-to-Report cycle with a blend of skilled talent, automation, and real-time reporting. Whether you need a single process stabilized or your entire finance back-office run end-to-end, Pansolve gives you the visibility and control to make confident decisions.</p>
       <div class="hero-cta">
         <a class="btn" href="#contact">Talk to our team</a>
-        <a class="btn btn-ghost" href="#bookkeeping">Explore the services</a>
-        <span class="hero-note">numbers that add up &#8599;</span>
+        <a class="btn btn-ghost" href="#p2p">Explore the services</a>
       </div>
     </div>
   </div>
 
-  <section class="svc-detail" id="bookkeeping">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="num">01 / Bookkeeping &amp; Month-End Close</span>
-        <h2>A clean close, without the all-nighters.</h2>
-      </div>
-      <div class="svc-grid">
-        <div class="svc-copy reveal">
-          <h3>What it is</h3>
-          <p>Day-to-day transaction recording and a disciplined month-end close: journal entries,
-          accruals, adjustments, and a locked set of books your leadership can trust.</p>
-          <h3>Why it matters</h3>
-          <p>When the close drags on for weeks, every downstream decision runs on stale numbers.
-          A fast, reliable close is the foundation of financial control.</p>
-          <h3>What our team does</h3>
-          <ul>
-            <li>Records and categorizes transactions daily, in your accounting system</li>
-            <li>Runs a documented close checklist — accruals, prepaids, depreciation, adjustments</li>
-            <li>Delivers a locked close on a fixed calendar, month after month</li>
-            <li>Reviews AI-categorized transactions so automation errors never reach your books</li>
-          </ul>
-          <div class="chips">
-            <span>QuickBooks / Xero / NetSuite</span><span>Close checklist</span><span>Accruals &amp; adjustments</span><span>Fixed calendar</span>
-          </div>
-        </div>
-        <div class="example reveal">
-          <span class="ex-tag">Worked example</span>
-          <p class="line">Before Pansolve, the monthly close took:</p>
-          <p class="line"><strong><span class="strike">12 business days</span></strong> &nbsp;<span class="rewrite">5 days, locked</span></p>
-          <p class="line">A documented checklist, daily bookkeeping, and one accountable team lead cut the close time by more than half.</p>
-          <p class="verdict">Leadership sees real numbers by the 5th. &#10003;</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="svc-detail" id="ap-ar">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="num">02 / Accounts Payable &amp; Receivable</span>
-        <h2>Cash out, carefully. Cash in, faster.</h2>
-      </div>
-      <div class="svc-grid">
-        <div class="svc-copy reveal">
-          <h3>What it is</h3>
-          <p>Full-cycle AP and AR management: invoice intake and approval, vendor payments,
-          customer invoicing, collections follow-up, and aging reports that stay current.</p>
-          <h3>Why it matters</h3>
-          <p>AP errors leak money — duplicates, wrong amounts, missed discounts. Slow AR quietly
-          strangles cash flow. Both are process problems, and both are fixable with disciplined people.</p>
-          <h3>What our team does</h3>
-          <ul>
-            <li>Processes vendor invoices with three-way matching and approval workflows</li>
-            <li>Catches duplicate and inflated invoices before payment goes out</li>
-            <li>Sends customer invoices on time and runs a polite, persistent collections cadence</li>
-            <li>Maintains clean vendor and customer ledgers with weekly aging reports</li>
-          </ul>
-          <div class="chips">
-            <span>3-way matching</span><span>Vendor management</span><span>Collections cadence</span><span>Aging reports</span>
-          </div>
-        </div>
-        <div class="example reveal">
-          <span class="ex-tag">Worked example</span>
-          <p class="line">A vendor submitted the same invoice twice, three weeks apart:</p>
-          <p class="line"><strong><span class="strike">$8,400 paid twice</span></strong> &nbsp;<span class="rewrite">caught before payment</span></p>
-          <p class="line">The AP workflow's duplicate check flagged the second invoice — same PO, same amount, new invoice number.</p>
-          <p class="verdict">$8,400 stayed in the company's account. &#10003;</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="svc-detail" id="reconciliation">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="num">03 / Reconciliation &amp; Controls</span>
-        <h2>Every account, tied out. Every difference, explained.</h2>
-      </div>
-      <div class="svc-grid">
-        <div class="svc-copy reveal">
-          <h3>What it is</h3>
-          <p>Regular reconciliation of bank, credit card, payroll, and balance-sheet accounts —
-          with every variance investigated and documented, not carried forward.</p>
-          <h3>Why it matters</h3>
-          <p>Unreconciled differences are where errors and fraud hide. "We'll figure it out at year-end"
-          is how small discrepancies become expensive audits.</p>
-          <h3>What our team does</h3>
-          <ul>
-            <li>Reconciles bank and credit card accounts weekly or monthly</li>
-            <li>Investigates every variance to the transaction level — no plugged numbers</li>
-            <li>Maintains balance-sheet schedules that match the general ledger</li>
-            <li>Builds simple internal controls sized for a growing business</li>
-          </ul>
-          <div class="chips">
-            <span>Bank &amp; card recs</span><span>Balance-sheet schedules</span><span>Variance analysis</span><span>Internal controls</span>
-          </div>
-        </div>
-        <div class="example reveal">
-          <span class="ex-tag">Worked example</span>
-          <p class="line">Bank balance and books disagreed by <strong>$1,237</strong> for two months running.</p>
-          <p class="line">Our reconciler traced it to unrecorded merchant-processing fees posting in weekly batches.</p>
-          <p class="line">Fees are now auto-accrued and reconciled weekly.</p>
-          <p class="verdict">Books match the bank. Every week. &#10003;</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="svc-detail" id="reporting">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="num">04 / Reporting &amp; Compliance</span>
-        <h2>Numbers your board, bank, and accountant will trust.</h2>
-      </div>
-      <div class="svc-grid">
-        <div class="svc-copy reveal">
-          <h3>What it is</h3>
-          <p>Monthly financial packages — P&amp;L, balance sheet, cash flow, and the KPIs you actually
-          manage by — plus clean, audit-ready support for your CPA at tax time.</p>
-          <h3>Why it matters</h3>
-          <p>Financial statements are only useful if they arrive on time and mean what they say.
-          Investors and lenders notice the difference immediately.</p>
-          <h3>What our team does</h3>
-          <ul>
-            <li>Prepares a consistent monthly reporting package with commentary</li>
-            <li>Tracks the KPIs that matter to your business, not a generic template</li>
-            <li>Keeps documentation organized and audit-ready year-round</li>
-            <li>Works directly with your CPA, bank, or investors on request</li>
-          </ul>
-          <div class="chips">
-            <span>Monthly package</span><span>KPI dashboards</span><span>Audit-ready files</span><span>CPA coordination</span>
-          </div>
-        </div>
-        <div class="example reveal">
-          <span class="ex-tag">Worked example</span>
-          <p class="line">A client entering a funding round needed two years of financials cleaned up:</p>
-          <p class="line"><strong>Restated, documented, and investor-ready in three weeks.</strong></p>
-          <p class="line">Due diligence found no material issues — because we had already found them first.</p>
-          <p class="verdict">The round closed on schedule. &#10003;</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="outcomes">
+  <section class="why">
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="eyebrow">Why Pansolve</span>
-        <h2>A finance department, minus the overhead.</h2>
+        <h2>One partner for the complete finance value chain.</h2>
       </div>
-      <div class="out-grid">
-        <div class="out reveal">
-          <h3>Dedicated teams</h3>
-          <p>Named people who learn your business and stay on your account — not an anonymous rotating pool.</p>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>One partner, full cycle</h3>
+          <p>From vendor invoice to customer cash to closed books, we cover the complete finance value chain instead of a single silo.</p>
         </div>
-        <div class="out reveal">
-          <h3>Your systems, your data</h3>
-          <p>We work inside your accounting stack with role-based access. Your data never leaves your control.</p>
+        <div class="why-card reveal">
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>Automation-first delivery</h3>
+          <p>We combine experienced accountants with workflow automation and data validation tools to cut manual touch-points and error rates.</p>
         </div>
-        <div class="out reveal">
-          <h3>Scales with you</h3>
-          <p>Start with bookkeeping, add AP/AR and reporting as you grow — from a few hours a week to a full team.</p>
+        <div class="why-card reveal">
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>Built-in governance</h3>
+          <p>Every process runs on documented controls, audit trails, and SLA-backed reporting - so compliance isn&rsquo;t an afterthought.</p>
         </div>
+        <div class="why-card reveal">
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>Transparent performance</h3>
+          <p>Dashboards and scorecards give you real-time visibility into cycle times, accuracy, and exceptions - not just a monthly summary.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-detail on-paper" id="p2p">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="num">01 / Procure-to-Pay (P2P)</span>
+        <h2>Take control of spend, strengthen supplier relationships, and eliminate payment leakage.</h2>
+      </div>
+      <div class="detail-grid">
+        <div class="svc-copy reveal">
+          <h3>What we manage</h3>
+          <ul>
+            <li>Purchase requisition and PO management</li>
+            <li>Vendor onboarding and supplier master data upkeep</li>
+            <li>Invoice receipt, three-way matching, and exception handling</li>
+            <li>Payment processing, disbursement, and bank reconciliation support</li>
+            <li>Duplicate-payment prevention, policy enforcement, and tax/regulatory compliance</li>
+            <li>Spend analytics and P2P performance dashboards</li>
+          </ul>
+        </div>
+        <div class="example reveal">
+          <span class="ex-tag">Outcomes clients see</span>
+          <p class="line"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Faster PO turnaround</span></p>
+          <p class="line"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Higher invoice touchless-processing rates</span></p>
+          <p class="line"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Fewer payment errors</span></p>
+          <p class="line"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Stronger audit readiness</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-detail on-white" id="o2c">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="num">02 / Order-to-Cash (O2C)</span>
+        <h2>Accelerate cash conversion and give your revenue cycle the discipline it needs.</h2>
+      </div>
+      <div class="detail-grid">
+        <div class="svc-copy reveal">
+          <h3>What we manage</h3>
+          <ul>
+            <li>Order entry, credit review, and billing accuracy</li>
+            <li>Invoice generation and dispatch</li>
+            <li>Collections management and customer dispute resolution</li>
+            <li>Cash application and reconciliation</li>
+            <li>Credit risk monitoring and bad-debt reporting</li>
+            <li>Revenue and receivables analytics</li>
+          </ul>
+        </div>
+        <div class="example reveal">
+          <span class="ex-tag">Outcomes clients see</span>
+          <p class="line"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Shorter days sales outstanding (DSO)</span></p>
+          <p class="line"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Reduced unapplied cash</span></p>
+          <p class="line"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Cleaner receivables aging</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-detail on-paper" id="r2r">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="num">03 / Record-to-Report (R2R)</span>
+        <h2>Close faster, report with confidence, and keep the books audit-ready every period.</h2>
+      </div>
+      <div class="detail-grid">
+        <div class="svc-copy reveal">
+          <h3>What we manage</h3>
+          <ul>
+            <li>General ledger accounting and journal entry processing</li>
+            <li>Month-end and year-end close management</li>
+            <li>Account reconciliations and balance sheet substantiation</li>
+            <li>Fixed asset and intercompany accounting</li>
+            <li>Financial statement preparation and management reporting</li>
+            <li>Variance analysis and close-cycle analytics</li>
+          </ul>
+        </div>
+        <div class="example reveal">
+          <span class="ex-tag">Outcomes clients see</span>
+          <p class="line"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Shorter close cycles</span></p>
+          <p class="line"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Fewer reconciling items</span></p>
+          <p class="line"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Management reports your leadership team can trust on day one of the new period</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="how-we-work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">How engagements typically work</span>
+        <h2>From assessment to steady-state delivery.</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><span class="n">01</span><h3>Assess</h3><p>We review your current processes, systems, and pain points.</p></div>
+        <div class="step reveal"><span class="n">02</span><h3>Design</h3><p>We define the target operating model: what Pansolve owns, what stays with your team, and the controls in between.</p></div>
+        <div class="step reveal"><span class="n">03</span><h3>Transition</h3><p>We migrate the process with parallel runs to avoid disruption.</p></div>
+        <div class="step reveal"><span class="n">04</span><h3>Run &amp; improve</h3><p>We operate against agreed SLAs, with ongoing automation and process improvement built in.</p></div>
       </div>
     </div>
   </section>
 
   <section class="cta" id="contact">
     <div class="wrap reveal">
-      <span class="eyebrow"><span class="tick">&#9679;</span>&nbsp; Start here</span>
-      <h2>Send us one messy month.</h2>
-      <p>We'll clean up a single month of books, show you exactly what we found and fixed,
-      and quote what ongoing support would cost. No commitment until you've seen the work.</p>
+      <span class="eyebrow"><span style="width:7px;height:7px;border-radius:50%;background:var(--teal-400);display:inline-block"></span>&nbsp; Start here</span>
+      <h2>Tell us which process hurts most.</h2>
+      <p>We&rsquo;ll assess it, show you the target operating model, and quote what it takes to run it - from one stabilized process to your entire finance back-office.</p>
       <a class="btn" href="index.html#contact">Book a consultation</a>
       <span class="cta-mail">or write to <a href="mailto:support@pansolve.com">support@pansolve.com</a></span>
     </div>
@@ -466,8 +356,14 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="wordmark" href="index.html">Pansolve<span class="dot">.</span></a>
-        <p>A global consulting firm deploying expert human teams &mdash; the human layer behind AI.</p>
+        <a class="brand" href="index.html">
+          <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="3" y="5" width="24" height="24" rx="10" fill="none" stroke="#F5F8FC" stroke-width="2.2"/>
+            <rect x="14" y="14" width="23" height="23" rx="9" fill="#12B7C6"/>
+          </svg>
+          <span class="word">Pan<span>solve</span></span>
+        </a>
+        <p>A global consulting firm deploying expert human teams - the human layer behind AI.</p>
         <span class="ftag">AI answers. Humans solve.</span>
       </div>
       <div class="foot-col">
@@ -502,6 +398,38 @@
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  const header=document.querySelector('header');
+  const navToggle=document.querySelector('.nav-toggle');
+  if(navToggle){
+    navToggle.addEventListener('click',()=>{
+      const open=header.classList.toggle('menu-open');
+      navToggle.setAttribute('aria-expanded', open?'true':'false');
+      navToggle.querySelector('.icon-menu').style.display = open?'none':'block';
+      navToggle.querySelector('.icon-close').style.display = open?'block':'none';
+    });
+    document.querySelectorAll('.nav-links a').forEach(a=>{
+      a.addEventListener('click',()=>{
+        header.classList.remove('menu-open');
+        navToggle.setAttribute('aria-expanded','false');
+        navToggle.querySelector('.icon-menu').style.display='block';
+        navToggle.querySelector('.icon-close').style.display='none';
+      });
+    });
+  }
+
+  // Desktop dropdown: brief grace period on mouseleave so moving from the
+  // "Services" trigger down into the menu doesn't close it first.
+  document.querySelectorAll('.dropdown').forEach(dd=>{
+    let closeTimer;
+    dd.addEventListener('mouseenter',()=>{
+      clearTimeout(closeTimer);
+      dd.classList.add('open');
+    });
+    dd.addEventListener('mouseleave',()=>{
+      closeTimer=setTimeout(()=>dd.classList.remove('open'),250);
+    });
+  });
 </script>
 
 </body>

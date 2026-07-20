@@ -3,32 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316202E'/%3E%3Ctext x='6.5' y='23' font-family='Georgia,serif' font-size='21' font-weight='700' fill='%23FAFAF7'%3EP%3C/text%3E%3Ccircle cx='24' cy='22' r='2.6' fill='%23C8362B'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%2316224A'/%3E%3Crect x='11' y='11' width='20' height='20' rx='7' fill='%2312B7C6'/%3E%3C/svg%3E">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Pansolve — AI answers. Humans solve.">
+<meta property="og:title" content="Pansolve - AI answers. Humans solve.">
 <meta property="og:description" content="Expert human teams for medical coding, accounting, and AI data services. The human layer behind AI.">
 <meta property="og:url" content="https://pansolve.com/">
 <meta property="og:image" content="https://pansolve.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<title>Pansolve — AI answers. Humans solve.</title>
-<meta name="description" content="Pansolve is a global consulting firm that deploys expert human teams to solve business problems — and to make AI solutions actually work.">
+<title>Pansolve - AI answers. Humans solve.</title>
+<meta name="description" content="Pansolve is a global consulting firm that deploys expert human teams to solve business problems - and to make AI solutions actually work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FAFAF7;
-    --ink:#16202E;
-    --ink-soft:#4C5666;
-    --pencil:#C8362B;
-    --pencil-soft:#F3D9D6;
-    --highlight:#FFE86B;
-    --line:#DDDDD5;
-    --serif:'Newsreader', Georgia, serif;
+    --navy-950:#0A1122;
+    --navy-900:#0F1830;
+    --navy-800:#16224A;
+    --navy-700:#25335E;
+    --navy-600:#3A4A78;
+    --teal-500:#12B7C6;
+    --teal-400:#3FD3DD;
+    --teal-100:#E4F8F9;
+    --paper:#F6F8FB;
+    --surface:#FFFFFF;
+    --ink:#0F172A;
+    --ink-soft:#4B5768;
+    --line:#E3E8F0;
+    --on-dark:#F5F8FC;
+    --on-dark-soft:#A9B7CC;
+    --on-dark-line:rgba(255,255,255,.14);
+    --display:'Space Grotesk', 'IBM Plex Sans', sans-serif;
     --sans:'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
     --mono:'IBM Plex Mono', 'SF Mono', monospace;
-    --hand:'Caveat', cursive;
-    --max:1080px;
+    --max:1160px;
+    --radius:14px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -40,181 +49,202 @@
     line-height:1.65;
     -webkit-font-smoothing:antialiased;
   }
-  ::selection{background:var(--highlight);color:var(--ink)}
+  ::selection{background:var(--teal-100);color:var(--navy-900)}
   a{color:inherit}
-  a:focus-visible, button:focus-visible{outline:2px solid var(--pencil);outline-offset:3px;border-radius:2px}
+  img,svg{display:block;max-width:100%}
+  a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
+    outline:2px solid var(--teal-500);outline-offset:3px;border-radius:2px;
+  }
   .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  .icon{width:22px;height:22px;flex-shrink:0}
+  h1,h2,h3{font-family:var(--display);font-weight:600;color:inherit}
 
   /* ---------- header ---------- */
   header{
-    position:sticky;top:0;z-index:50;
-    background:rgba(250,250,247,.92);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:100;
+    background:rgba(10,17,34,.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--on-dark-line);
+    color:var(--on-dark);
   }
-  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .wordmark{
-    font-family:var(--serif);font-weight:600;font-size:1.5rem;letter-spacing:-.01em;
-    text-decoration:none;display:inline-flex;align-items:baseline;
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+  .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+  .brand .mark{width:32px;height:32px}
+  .brand .word{
+    font-family:var(--display);font-weight:700;font-size:1.18rem;letter-spacing:.02em;
+    color:var(--on-dark);text-transform:uppercase;
   }
-  .wordmark .dot{color:var(--pencil)}
-  .nav-links{display:flex;gap:30px;align-items:center;list-style:none}
-  .nav-links a{
-    text-decoration:none;font-size:.92rem;color:var(--ink-soft);
-    transition:color .15s;
+  .brand .word span{color:var(--teal-400)}
+  .nav-links{display:flex;gap:6px;align-items:center;list-style:none}
+  .nav-links > li > a:not(.btn){
+    text-decoration:none;font-size:.94rem;color:var(--on-dark-soft);
+    transition:color .15s;padding:10px 14px;border-radius:8px;display:inline-flex;align-items:center;gap:4px;
   }
-  .nav-links a:hover{color:var(--ink)}
+  .nav-links > li > a:not(.btn):hover{color:var(--on-dark);background:rgba(255,255,255,.06)}
   .btn{
-    display:inline-block;background:var(--ink);color:var(--paper);
-    font-family:var(--sans);font-weight:500;font-size:.95rem;
-    padding:13px 26px;border-radius:3px;text-decoration:none;border:1px solid var(--ink);
-    transition:background .15s,color .15s;
+    display:inline-flex;align-items:center;gap:8px;background:var(--teal-500);color:var(--navy-950);
+    font-family:var(--sans);font-weight:600;font-size:.95rem;
+    padding:12px 22px;border-radius:9px;text-decoration:none;border:1px solid var(--teal-500);
+    transition:background .15s,transform .15s,box-shadow .15s;cursor:pointer;
   }
-  .btn:hover{background:var(--pencil);border-color:var(--pencil)}
-  .btn-ghost{background:transparent;color:var(--ink)}
-  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
-  .nav .btn{padding:9px 18px;font-size:.88rem}
-  .menu-note{display:none}
+  .btn:hover{background:var(--teal-400);border-color:var(--teal-400);transform:translateY(-1px);box-shadow:0 8px 20px rgba(18,183,198,.25)}
+  .btn-ghost{background:transparent;color:var(--on-dark);border-color:var(--on-dark-line)}
+  .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3);box-shadow:none;transform:none}
+  .btn-ghost.on-light{color:var(--ink);border-color:var(--line)}
+  .btn-ghost.on-light:hover{background:var(--navy-800);color:var(--on-dark);border-color:var(--navy-800)}
+  .nav .btn{padding:10px 18px;font-size:.88rem}
+  .caret{width:11px;height:11px;transition:transform .15s}
   .dropdown{position:relative}
-  .dropdown > a::after{content:" ▾";font-size:.7em;color:var(--pencil)}
+  .dropdown[aria-expanded="true"] .caret{transform:rotate(180deg)}
   .dropdown-menu{
-    position:absolute;top:calc(100% + 6px);left:-14px;background:#fff;
-    border:1px solid var(--line);border-radius:3px;min-width:264px;padding:8px 0;
-    display:none;box-shadow:0 10px 28px rgba(22,32,46,.10);
+    position:absolute;top:calc(100% + 10px);left:0;background:var(--navy-800);
+    border:1px solid var(--on-dark-line);border-radius:12px;min-width:340px;padding:10px;
+    display:none;box-shadow:0 24px 48px rgba(5,9,20,.45);
   }
-  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:block}
-  .dropdown-menu a{display:block;padding:10px 18px;font-size:.9rem;color:var(--ink-soft)}
-  .dropdown-menu a:hover{background:var(--paper);color:var(--pencil)}
+  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu,.dropdown.open .dropdown-menu{display:block}
+  .dropdown-menu a{
+    display:flex;gap:12px;align-items:flex-start;text-decoration:none;color:var(--on-dark);
+    padding:11px 12px;border-radius:8px;transition:background .15s;
+  }
+  .dropdown-menu a:hover{background:rgba(255,255,255,.06)}
+  .dropdown-menu .icon{color:var(--teal-400);margin-top:2px}
+  .dropdown-menu strong{display:block;font-size:.93rem;font-weight:600}
+  .dropdown-menu small{display:block;color:var(--on-dark-soft);font-size:.8rem;margin-top:2px}
+  .nav-toggle{display:none;background:none;border:none;color:var(--on-dark);cursor:pointer;padding:8px}
 
   /* ---------- hero ---------- */
-  .hero{padding:104px 0 88px;border-bottom:1px solid var(--line)}
+  .hero{
+    position:relative;overflow:hidden;
+    background:radial-gradient(1100px 520px at 82% -10%, rgba(18,183,198,.20), transparent 60%),
+               linear-gradient(180deg, var(--navy-900), var(--navy-950));
+    color:var(--on-dark);
+    padding:96px 0 110px;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
   .eyebrow{
     font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:26px;
+    text-transform:uppercase;color:var(--teal-400);display:inline-flex;align-items:center;gap:8px;margin-bottom:24px;
   }
-  .eyebrow .tick{color:var(--pencil)}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--teal-400);display:inline-block}
+  .eyebrow.on-light{color:#0E8A96}
   h1{
-    font-family:var(--serif);font-weight:500;letter-spacing:-.02em;
-    font-size:clamp(2.6rem,6.4vw,4.6rem);line-height:1.06;max-width:15ch;
+    font-weight:600;letter-spacing:-.02em;
+    font-size:clamp(2.5rem,5.6vw,4rem);line-height:1.08;max-width:16ch;
   }
-  h1 .machine{color:var(--ink-soft)}
-  .underlined{position:relative;display:inline-block;white-space:nowrap}
-  .underlined svg{
-    position:absolute;left:-2%;bottom:-.14em;width:104%;height:.32em;overflow:visible;
-  }
-  .underlined path{
-    fill:none;stroke:var(--pencil);stroke-width:5;stroke-linecap:round;
-    stroke-dasharray:900;stroke-dashoffset:900;
-    animation:draw 1s ease-out .5s forwards;
-  }
-  @keyframes draw{to{stroke-dashoffset:0}}
+  h1 .soft{color:var(--on-dark-soft);display:block}
+  h1 .accent{color:var(--teal-400);display:block}
   .hero p.lede{
-    margin-top:34px;max-width:56ch;font-size:1.16rem;color:var(--ink-soft);
+    margin-top:28px;max-width:52ch;font-size:1.14rem;color:var(--on-dark-soft);
   }
   mark{
-    background:linear-gradient(104deg, transparent 2%, var(--highlight) 6%, var(--highlight) 94%, transparent 98%);
-    padding:.05em .15em;color:var(--ink);border-radius:1px;
+    background:transparent;color:var(--teal-400);font-weight:600;
   }
-  .hero-cta{margin-top:42px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-  .hero-note{
-    font-family:var(--hand);font-size:1.35rem;color:var(--pencil);
-    transform:rotate(-2deg);margin-left:6px;
+  .hero-cta{margin-top:38px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero-tagline{
+    margin-top:34px;display:flex;align-items:center;gap:10px;
+    font-family:var(--mono);font-size:.82rem;color:var(--on-dark-soft);letter-spacing:.04em;
   }
+  .hero-tagline .icon{color:var(--teal-400);width:16px;height:16px}
+
+  /* hero visual: squircle cluster */
+  .hero-visual{position:relative;height:380px;display:block}
+  .sq{position:absolute;border-radius:26%;box-shadow:0 30px 60px rgba(5,9,20,.5)}
+  .sq1{width:190px;height:190px;top:6%;right:8%;background:linear-gradient(155deg,var(--teal-500),#0C8A96);animation:float1 7s ease-in-out infinite}
+  .sq2{width:130px;height:130px;top:42%;right:46%;border:2px solid rgba(255,255,255,.5);background:rgba(255,255,255,.03);animation:float2 8s ease-in-out infinite}
+  .sq3{width:112px;height:112px;bottom:6%;right:14%;background:var(--navy-700);border:1px solid var(--on-dark-line);animation:float3 6.5s ease-in-out infinite}
+  @keyframes float1{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(3deg)}}
+  @keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(14px)}}
+  @keyframes float3{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(-4deg)}}
+  @media (max-width:980px){.hero-visual{display:none}.hero-grid{grid-template-columns:1fr}}
 
   /* ---------- correction strip ---------- */
-  .strip{padding:74px 0;border-bottom:1px solid var(--line)}
+  .strip{padding:78px 0;background:var(--surface);border-bottom:1px solid var(--line)}
   .strip-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
   .correction{
-    font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.35;font-weight:400;
+    font-family:var(--display);font-size:clamp(1.5rem,2.8vw,2.05rem);line-height:1.38;font-weight:600;color:var(--navy-900);
   }
-  .strike{position:relative;color:var(--ink-soft);white-space:nowrap}
+  .strike{position:relative;color:var(--ink-soft);white-space:nowrap;font-weight:400}
   .strike::after{
     content:"";position:absolute;left:-1%;right:-1%;top:52%;
-    height:3px;background:var(--pencil);transform:rotate(-1.2deg);border-radius:2px;
+    height:2px;background:var(--ink-soft);opacity:.5;transform:rotate(-1.2deg);border-radius:2px;
   }
-  .rewrite{
-    font-family:var(--hand);color:var(--pencil);font-weight:600;
-    font-size:1.15em;white-space:nowrap;
-  }
+  .rewrite{color:var(--teal-500);font-weight:700;white-space:nowrap}
   .strip p{color:var(--ink-soft);font-size:1.02rem}
   .strip p + p{margin-top:16px}
 
   /* ---------- sections ---------- */
-  section{padding:92px 0;border-bottom:1px solid var(--line)}
+  section{padding:96px 0;border-bottom:1px solid var(--line)}
+  section.on-paper{background:var(--paper)}
+  section.on-white{background:var(--surface)}
   .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:52px;flex-wrap:wrap}
   h2{
-    font-family:var(--serif);font-weight:500;letter-spacing:-.015em;
-    font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.15;max-width:22ch;
+    font-weight:600;letter-spacing:-.015em;
+    font-size:clamp(1.8rem,3.2vw,2.4rem);line-height:1.2;max-width:22ch;color:var(--navy-900);
   }
   .sec-head .eyebrow{margin-bottom:12px}
 
   /* services */
-  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
   .svc{
-    background:var(--paper);padding:38px 34px 42px;position:relative;
-    transition:background .2s;display:block;text-decoration:none;color:inherit;
+    background:var(--surface);padding:34px 30px 36px;position:relative;
+    transition:transform .2s,box-shadow .2s,border-color .2s;display:block;text-decoration:none;color:inherit;
+    border:1px solid var(--line);border-radius:var(--radius);
   }
-  .svc:hover{background:#FFFFFF}
+  .svc:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(15,23,42,.08);border-color:var(--teal-500)}
+  .svc .ico{
+    width:48px;height:48px;border-radius:12px;background:var(--navy-900);color:var(--teal-400);
+    display:flex;align-items:center;justify-content:center;margin-bottom:22px;
+  }
   .svc .more{
-    font-family:var(--mono);font-size:.78rem;color:var(--pencil);
-    display:inline-block;margin-top:20px;
+    font-family:var(--mono);font-size:.8rem;color:var(--teal-500);font-weight:500;
+    display:inline-flex;align-items:center;gap:6px;margin-top:22px;
   }
-  .svc:hover .more{text-decoration:underline;text-underline-offset:3px}
+  .svc:hover .more .icon{transform:translateX(3px)}
+  .more .icon{transition:transform .15s}
   .svc .tag{
-    font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;
-    color:var(--pencil);display:block;margin-bottom:18px;
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-soft);display:block;margin-bottom:10px;
   }
-  .svc h3{font-family:var(--serif);font-weight:600;font-size:1.42rem;letter-spacing:-.01em;margin-bottom:12px}
+  .svc h3{font-weight:600;font-size:1.32rem;letter-spacing:-.01em;margin-bottom:12px}
   .svc p{color:var(--ink-soft);font-size:.98rem;max-width:46ch}
   .svc ul{list-style:none;margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
   .svc li{
-    font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);
-    border:1px solid var(--line);border-radius:20px;padding:4px 12px;background:var(--paper);
+    font-family:var(--mono);font-size:.74rem;color:var(--navy-800);
+    border:1px solid var(--line);border-radius:20px;padding:5px 12px;background:var(--paper);
   }
 
   /* approach */
   .approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px}
   .approach h3{
-    font-family:var(--serif);font-weight:600;font-size:1.5rem;margin-bottom:14px;
-    display:flex;align-items:baseline;gap:12px;
+    font-weight:600;font-size:1.4rem;margin-bottom:14px;
+    display:flex;align-items:center;gap:12px;color:var(--navy-900);
   }
-  .approach h3 .check{
-    font-family:var(--hand);color:var(--pencil);font-size:1.6rem;line-height:1;
-  }
+  .approach h3 .icon{width:26px;height:26px;color:var(--teal-500)}
   .approach p{color:var(--ink-soft);font-size:.98rem}
 
   /* about */
   .about-grid{display:grid;grid-template-columns:5fr 4fr;gap:64px;align-items:start}
   .about-copy p{margin-bottom:18px;font-size:1.05rem;color:var(--ink-soft)}
-  .about-copy p strong{color:var(--ink);font-weight:600}
-  .margin-note{
-    border-left:3px solid var(--pencil);padding:6px 0 6px 22px;margin-top:8px;
+  .about-copy p strong{color:var(--navy-900);font-weight:600}
+  .quote-card{
+    background:var(--navy-900);color:var(--on-dark);border-radius:var(--radius);
+    padding:34px 30px;position:relative;
   }
-  .margin-note .hand{
-    font-family:var(--hand);font-size:1.5rem;color:var(--pencil);line-height:1.3;display:block;
+  .quote-card .icon{width:30px;height:30px;color:var(--teal-400);margin-bottom:16px}
+  .quote-card p{
+    font-family:var(--display);font-weight:500;font-size:1.28rem;line-height:1.45;color:var(--on-dark);
   }
-  .margin-note .who{
-    font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;
-    color:var(--ink-soft);margin-top:10px;display:block;
+  .quote-card .who{
+    font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--on-dark-soft);margin-top:18px;display:block;
   }
   .route{
     margin-top:34px;font-family:var(--mono);font-size:.8rem;color:var(--ink-soft);
-    letter-spacing:.06em;
+    letter-spacing:.05em;display:flex;align-items:center;gap:8px;flex-wrap:wrap;
   }
-  .route .arrow{color:var(--pencil)}
+  .route .arrow{color:var(--teal-500)}
 
-  /* cta */
-  .cta{padding:110px 0;text-align:center;border-bottom:none}
-  .cta h2{margin:0 auto 20px}
-  .cta p{max-width:52ch;margin:0 auto 40px;color:var(--ink-soft);font-size:1.08rem}
-  .cta-mail{
-    font-family:var(--serif);font-size:1.25rem;margin-top:28px;display:block;color:var(--ink-soft)
-  }
-  .cta-mail a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:4px}
-
-  footer{border-top:1px solid var(--line);padding:34px 0;background:var(--paper)}
-  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-  .foot span{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft)}
+  footer{border-top:1px solid var(--on-dark-line);padding:34px 0;background:var(--navy-950)}
 
   /* reveal on scroll */
   .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
@@ -222,108 +252,139 @@
 
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto}
-    .underlined path{animation:none;stroke-dashoffset:0}
     .reveal{opacity:1;transform:none;transition:none}
+    .sq1,.sq2,.sq3{animation:none}
   }
 
-  @media (max-width:860px){
+  @media (max-width:980px){
     .strip-inner,.about-grid{grid-template-columns:1fr;gap:36px}
     .approach-grid{grid-template-columns:1fr;gap:36px}
     .svc-grid{grid-template-columns:1fr}
-    .nav-links li:not(.keep){display:none}
-    section,.hero{padding:70px 0}
+    section,.hero{padding:64px 0}
+    .nav-toggle{display:block}
+    .nav-links{
+      position:fixed;top:76px;left:0;width:100vw;height:calc(100vh - 76px);background:var(--navy-950);flex-direction:column;
+      align-items:stretch;gap:2px;padding:18px;overflow:auto;box-sizing:border-box;
+      display:none;
+    }
+    header.menu-open .nav-links{display:flex}
+    .nav-links > li{width:100%}
+    .nav-links > li > a:not(.btn){width:100%;padding:14px 12px;font-size:1rem}
+    .nav .btn{width:100%;justify-content:center;padding:14px}
+    .dropdown-menu{position:static;display:block;box-shadow:none;background:rgba(255,255,255,.03);margin-top:4px;min-width:0}
   }
 
-  /* ===== added: rich footer ===== */
-  .site-footer{border-top:1px solid var(--line);background:var(--paper);padding:64px 0 30px}
+  /* ===== rich footer ===== */
+  .site-footer{padding:64px 0 30px;color:var(--on-dark)}
   .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:40px}
-  .foot-brand .wordmark{font-size:1.4rem}
-  .foot-brand p{margin-top:14px;color:var(--ink-soft);font-size:.92rem;max-width:32ch}
-  .foot-brand .ftag{font-family:var(--hand);color:var(--pencil);font-size:1.3rem;display:block;margin-top:12px}
-  .foot-col h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:16px}
-  .foot-col a{display:block;text-decoration:none;color:var(--ink-soft);font-size:.9rem;margin-bottom:11px;transition:color .15s}
-  .foot-col a:hover{color:var(--pencil)}
-  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--line)}
-  .foot-bottom span,.foot-bottom a{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);text-decoration:none}
-  .foot-bottom a:hover{color:var(--pencil)}
+  .foot-brand p{margin-top:14px;color:var(--on-dark-soft);font-size:.92rem;max-width:32ch}
+  .foot-brand .ftag{font-family:var(--mono);color:var(--teal-400);font-size:.85rem;display:block;margin-top:14px;letter-spacing:.04em}
+  .foot-col h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark);margin-bottom:16px}
+  .foot-col a{display:block;text-decoration:none;color:var(--on-dark-soft);font-size:.9rem;margin-bottom:11px;transition:color .15s}
+  .foot-col a:hover{color:var(--teal-400)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--on-dark-line)}
+  .foot-bottom span,.foot-bottom a{font-family:var(--mono);font-size:.76rem;color:var(--on-dark-soft);text-decoration:none}
+  .foot-bottom a:hover{color:var(--teal-400)}
   @media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;gap:30px}}
+  @media(max-width:560px){.foot-grid{grid-template-columns:1fr}}
 
-  /* ===== added: contact form ===== */
+  /* ===== contact ===== */
+  .cta{padding:110px 0;background:linear-gradient(180deg,var(--navy-900),var(--navy-950));color:var(--on-dark);border-bottom:none}
   .contact-grid{display:grid;grid-template-columns:3fr 2fr;gap:56px;text-align:left;margin-top:8px}
   .cform{display:flex;flex-direction:column;gap:16px}
   .cform .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .cform label{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:6px}
-  .cform input,.cform select,.cform textarea{width:100%;font-family:var(--sans);font-size:.98rem;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:3px;padding:11px 13px;transition:border-color .15s}
-  .cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-color:var(--pencil)}
+  .cform label{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--on-dark-soft);display:block;margin-bottom:7px}
+  .cform input,.cform select,.cform textarea{
+    width:100%;font-family:var(--sans);font-size:.98rem;color:var(--on-dark);background:rgba(255,255,255,.05);
+    border:1px solid var(--on-dark-line);border-radius:8px;padding:12px 14px;transition:border-color .15s,background .15s;
+  }
+  .cform select option{color:var(--ink)}
+  .cform input::placeholder,.cform textarea::placeholder{color:#7C8AA3}
+  .cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-color:var(--teal-500);background:rgba(255,255,255,.08)}
   .cform textarea{resize:vertical;min-height:120px}
   .cform button{align-self:flex-start;cursor:pointer;margin-top:4px}
-  .form-note{font-size:.82rem;color:var(--ink-soft)}
-  .form-status{font-family:var(--hand);font-size:1.5rem;color:var(--pencil);display:none}
-  .form-error{font-size:.9rem;color:var(--pencil);display:none}
-  .form-error a{color:var(--pencil)}
+  .form-note{font-size:.82rem;color:var(--on-dark-soft)}
+  .form-status{font-family:var(--sans);font-weight:600;font-size:1.05rem;color:var(--teal-400);display:none}
+  .form-error{font-size:.9rem;color:#FF8A80;display:none}
+  .form-error a{color:#FF8A80}
   .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
   .contact-detail .block{margin-bottom:24px}
-  .contact-detail h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:0 0 6px}
-  .contact-detail a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:3px}
-  .contact-detail p{color:var(--ink-soft);font-size:.95rem}
-  .contact-detail .big{font-family:var(--serif);font-size:1.15rem;color:var(--ink)}
-  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px}.cform .row{grid-template-columns:1fr}}
+  .contact-detail h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-400);margin:0 0 6px}
+  .contact-detail a{color:var(--on-dark);text-decoration-color:var(--teal-500);text-underline-offset:3px}
+  .contact-detail p{color:var(--on-dark-soft);font-size:.95rem}
+  .contact-detail .big{font-family:var(--display);font-weight:600;font-size:1.15rem;color:var(--on-dark)}
+  @media(max-width:980px){.contact-grid{grid-template-columns:1fr;gap:36px}.cform .row{grid-template-columns:1fr}}
 
-  /* ===== added: process steps ===== */
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-  .step{background:var(--paper);padding:32px 26px 36px;transition:background .2s}
-  .step:hover{background:#fff}
-  .step .n{font-family:var(--mono);font-size:.8rem;color:var(--pencil);letter-spacing:.12em}
-  .step h3{font-family:var(--serif);font-weight:600;font-size:1.22rem;margin:14px 0 8px}
+  /* ===== process steps ===== */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .step{background:var(--surface);padding:30px 26px 34px;border:1px solid var(--line);border-radius:var(--radius);transition:border-color .2s,transform .2s}
+  .step:hover{border-color:var(--teal-500);transform:translateY(-3px)}
+  .step .n{font-family:var(--mono);font-size:.82rem;color:var(--teal-500);letter-spacing:.1em;font-weight:500}
+  .step h3{font-weight:600;font-size:1.14rem;margin:16px 0 8px;color:var(--navy-900)}
   .step p{color:var(--ink-soft);font-size:.92rem}
-  @media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:980px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:640px){.steps{grid-template-columns:1fr}}
 
-  /* ===== added: trust / security ===== */
+  /* ===== trust / security ===== */
   .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:38px}
-  .trust h3{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin-bottom:10px;display:flex;align-items:baseline;gap:10px}
-  .trust h3 .lock{font-family:var(--hand);color:var(--pencil);font-size:1.35rem;line-height:1}
+  .trust h3{font-weight:600;font-size:1.18rem;margin-bottom:10px;display:flex;align-items:center;gap:10px;color:var(--navy-900)}
+  .trust h3 .icon{width:24px;height:24px;color:var(--teal-500)}
   .trust p{color:var(--ink-soft);font-size:.94rem}
-  @media(max-width:860px){.trust-grid{grid-template-columns:1fr;gap:28px}}
+  .trust-note{margin-top:34px;color:var(--ink-soft);font-size:.92rem;max-width:72ch;padding:18px 22px;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+  @media(max-width:980px){.trust-grid{grid-template-columns:1fr;gap:28px}}
 
-  /* ===== added: faq ===== */
+  /* ===== faq ===== */
   .faq-list{border-top:1px solid var(--line);max-width:860px}
   .faq-list details{border-bottom:1px solid var(--line)}
-  .faq-list summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--serif);font-size:1.18rem;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px}
+  .faq-list summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--display);font-weight:600;font-size:1.1rem;color:var(--navy-900);display:flex;justify-content:space-between;align-items:center;gap:20px}
   .faq-list summary::-webkit-details-marker{display:none}
-  .faq-list summary::after{content:"+";font-family:var(--mono);color:var(--pencil);font-size:1.3rem;flex-shrink:0}
+  .faq-list summary::after{content:"+";font-family:var(--mono);color:var(--teal-500);font-size:1.4rem;flex-shrink:0}
   .faq-list details[open] summary::after{content:"\2013"}
   .faq-list .ans{padding:0 0 24px;color:var(--ink-soft);font-size:1rem;max-width:72ch}
 
-  /* ===== added: about-teaser link + legal prose ===== */
-  .story-link{display:inline-block;margin-top:26px;font-family:var(--mono);font-size:.82rem;color:var(--pencil);text-decoration:none}
+  .story-link{display:inline-flex;align-items:center;gap:6px;margin-top:26px;font-family:var(--mono);font-size:.82rem;color:var(--teal-500);text-decoration:none;font-weight:500}
   .story-link:hover{text-decoration:underline;text-underline-offset:3px}
-  .legal{padding:64px 0 90px}
-  .legal .lead{max-width:70ch;color:var(--ink-soft);font-size:1.05rem;margin-bottom:8px}
-  .legal h2{margin:40px 0 12px;font-size:1.5rem}
-  .legal h3{font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:24px 0 8px}
-  .legal p,.legal li{color:var(--ink-soft);font-size:1rem;margin-bottom:12px;max-width:74ch}
-  .legal ul{padding-left:22px;margin-bottom:12px}
-  .legal .updated{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft);letter-spacing:.06em;margin-bottom:26px}
-  .legal .disclaimer{border-left:3px solid var(--pencil);padding:14px 0 14px 20px;margin:30px 0;font-size:.92rem;color:var(--ink-soft);max-width:74ch}
-
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <a class="wordmark" href="#top">Pansolve<span class="dot">.</span></a>
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="3" y="5" width="24" height="24" rx="10" fill="none" stroke="#F5F8FC" stroke-width="2.2"/>
+        <rect x="14" y="14" width="23" height="23" rx="9" fill="#12B7C6"/>
+      </svg>
+      <span class="word">Pan<span>solve</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="icon icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" style="display:none"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
     <ul class="nav-links">
-      <li class="dropdown"><a href="#services">Services</a>
+      <li class="dropdown">
+        <a href="#services">Services
+          <svg class="caret icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
         <div class="dropdown-menu">
-          <a href="payer-provider.html">Payer &amp; Provider Solutions</a>
-          <a href="accounting.html">Accounting &amp; Finance Operations</a>
-          <a href="ai-training.html">AI Training &amp; Data Services</a>
+          <a href="payer-provider.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 8.6c0 5.4-8.8 10.4-8.8 10.4S3.2 14 3.2 8.6a4.6 4.6 0 0 1 8.8-1.9 4.6 4.6 0 0 1 8.8 1.9Z"/><path d="M4 12h3l1.5-3 2 5 1.5-3H18"/></svg>
+            <span><strong>Payer &amp; Provider Services</strong><small>RCM, payer operations &amp; compliance</small></span>
+          </a>
+          <a href="accounting.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-8"/><path d="M15 8h5v5"/></svg>
+            <span><strong>Client Accounting Services</strong><small>Procure-to-Pay, Order-to-Cash &amp; Record-to-Report</small></span>
+          </a>
+          <a href="ai-training.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>
+            <span><strong>AI Training &amp; Data Services</strong><small>Annotation, evaluation &amp; RLHF</small></span>
+          </a>
         </div>
       </li>
       <li><a href="#approach">Approach</a></li>
       <li><a href="about.html">About</a></li>
-      <li class="keep"><a class="btn" href="#contact">Book a consultation</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a class="btn" href="#contact">Book a consultation</a></li>
     </ul>
   </div>
 </header>
@@ -332,25 +393,31 @@
 
   <!-- HERO -->
   <div class="hero">
-    <div class="wrap">
-      <span class="eyebrow"><span class="tick">●</span>&nbsp; A global consulting &amp; expert services firm</span>
-      <h1>
-        <span class="machine">AI answers.</span><br>
-        <span class="underlined">Humans solve.
-          <svg viewBox="0 0 400 24" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M4 16 C 80 8, 160 20, 240 12 S 380 14, 396 10"/>
-          </svg>
-        </span>
-      </h1>
-      <p class="lede">
-        Pansolve deploys <mark>expert human teams</mark> to solve business problems — and to make
-        AI solutions actually work. Medical coding, accounting operations, and AI training:
-        done with judgment, accountability, and craft.
-      </p>
-      <div class="hero-cta">
-        <a class="btn" href="#contact">Book a consultation</a>
-        <a class="btn btn-ghost" href="#services">See what we do</a>
-        <span class="hero-note">the human layer ↗</span>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> A global consulting &amp; expert services firm</span>
+        <h1>
+          <span class="soft">AI answers.</span>
+          <span class="accent">Humans solve.</span>
+        </h1>
+        <p class="lede">
+          Pansolve deploys <mark>expert human teams</mark> to solve business problems - and to make
+          AI solutions actually work. Medical coding, accounting operations, and AI training:
+          done with judgment, accountability, and craft.
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="#contact">Book a consultation</a>
+          <a class="btn btn-ghost" href="#services">See what we do</a>
+        </div>
+        <div class="hero-tagline">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 20v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          the human layer - people layered over AI
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="sq sq1"></div>
+        <div class="sq sq2"></div>
+        <div class="sq sq3"></div>
       </div>
     </div>
   </div>
@@ -366,90 +433,92 @@
       <div class="reveal">
         <p>Every vendor now promises that AI will remove the human element. Then the claims get
         denied, the books don't reconcile, and the model confidently ships the wrong answer.</p>
-        <p>We're built for what happens next. Pansolve is the human layer — trained specialists
+        <p>We're built for what happens next. Pansolve is the human layer - trained specialists
         who verify, correct, and improve the work machines start.</p>
       </div>
     </div>
   </div>
 
   <!-- SERVICES -->
-  <section id="services">
+  <section id="services" class="on-white">
     <div class="wrap">
       <div class="sec-head reveal">
         <div>
-          <span class="eyebrow">Services</span>
-          <h2>Three practices. One promise: it gets solved.</h2>
+          <span class="eyebrow on-light">Services</span>
+          <h2>Three practices. One standard: expert-verified work.</h2>
         </div>
       </div>
       <div class="svc-grid">
         <a class="svc reveal" href="payer-provider.html">
+          <span class="ico"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 8.6c0 5.4-8.8 10.4-8.8 10.4S3.2 14 3.2 8.6a4.6 4.6 0 0 1 8.8-1.9 4.6 4.6 0 0 1 8.8 1.9Z"/><path d="M4 12h3l1.5-3 2 5 1.5-3H18"/></svg></span>
           <span class="tag">Healthcare operations</span>
-          <h3>Payer &amp; provider solutions</h3>
-          <p>Certified coders and clinical reviewers for payment integrity, risk adjustment,
-          chart review, and coding audits — human checks behind every clean claim.</p>
-          <ul><li>Payment integrity</li><li>Risk adjustment</li><li>Coding audits</li></ul>
-          <span class="more">Explore the practice →</span>
+          <h3>Payer &amp; provider services</h3>
+          <p>Medical coding, billing, and revenue cycle management, supported by certified coders and
+          clinical reviewers across payment integrity, risk adjustment, and coding audits. Every claim
+          is backed by human review, not automation alone.</p>
+          <ul><li>Provider RCM</li><li>Payer operations</li><li>HIM &amp; coding</li></ul>
+          <span class="more">Explore the practice <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
         <a class="svc reveal" href="accounting.html">
+          <span class="ico"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-8"/><path d="M15 8h5v5"/></svg></span>
           <span class="tag">Finance operations</span>
-          <h3>Accounting &amp; finance operations</h3>
-          <p>Dedicated teams for bookkeeping, reconciliation, AP/AR, and reporting —
-          accurate closes without expanding your headcount.</p>
-          <ul><li>Bookkeeping</li><li>AP / AR</li><li>Month-end close</li></ul>
-          <span class="more">Explore the practice →</span>
+          <h3>Client accounting services</h3>
+          <p>Client Accounting Services spanning Procure-to-Pay, Order-to-Cash, and Record-to-Report,
+          together with CFO Services covering Financial Planning &amp; Analysis and CFO business advisory -
+          accurate, timely finance operations delivered without expanding your headcount.</p>
+          <ul><li>Procure-to-Pay</li><li>Order-to-Cash</li><li>Record-to-Report</li></ul>
+          <span class="more">Explore the practice <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
         <a class="svc reveal" href="ai-training.html">
+          <span class="ico"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></span>
           <span class="tag">AI operations</span>
           <h3>AI training &amp; data services</h3>
-          <p>Human expertise that makes models better: data annotation, evaluation,
-          RLHF support, and domain review by people who know the subject.</p>
+          <p>Domain-expert human review for data annotation, model evaluation, and RLHF support,
+          delivered by professionals who understand the subject matter, not only the labeling task.</p>
           <ul><li>Annotation</li><li>Model evaluation</li><li>RLHF support</li></ul>
-          <span class="more">Explore the practice →</span>
+          <span class="more">Explore the practice <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
       </div>
     </div>
   </section>
 
   <!-- APPROACH -->
-  <section id="approach">
+  <section id="approach" class="on-paper">
     <div class="wrap">
       <div class="sec-head reveal">
         <div>
-          <span class="eyebrow">Approach</span>
-          <h2>What machines can't sign their name to.</h2>
+          <span class="eyebrow on-light">Approach</span>
+          <h2>Accuracy, accountability, and scale.</h2>
+          <p style="margin-top:16px;max-width:62ch;color:var(--ink-soft);font-size:1.05rem">Pansolve executes to a disciplined, quality-first standard, grounded in trained expertise and reinforced by the deliberate adoption of AI and automation as our capabilities mature. Our model rests on three commitments:</p>
         </div>
       </div>
       <div class="approach-grid">
         <div class="approach reveal">
-          <h3><span class="check">✓</span>Judgment</h3>
-          <p>Context, exceptions, and edge cases are where automation quietly fails.
-          Our specialists are trained to notice — and to know when the confident answer is wrong.</p>
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>Accuracy</h3>
+          <p>Every engagement is reviewed by trained specialists, ensuring outputs are audit-ready and compliant, not simply automated.</p>
         </div>
         <div class="approach reveal">
-          <h3><span class="check">✓</span>Accountability</h3>
-          <p>Every engagement has a named team and a person who answers for the outcome.
-          When you call, a human who knows your account picks up.</p>
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>Accountability</h3>
+          <p>We take ownership of outcomes, not just deliverables, so clients can rely on the work that reaches them.</p>
         </div>
         <div class="approach reveal">
-          <h3><span class="check">✓</span>Craft</h3>
-          <p>We treat coding a claim, closing the books, and labeling a dataset as skilled work,
-          because it is. Quality is reviewed by people, not sampled by scripts.</p>
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>Scalability</h3>
+          <p>Our delivery model adapts to the needs of each engagement, from a single dedicated reviewer to a full-scale, cross-functional team, with AI-enabled tools on our roadmap to support that growth.</p>
         </div>
       </div>
     </div>
   </section>
 
-
   <!-- HOW WE WORK -->
-  <section id="process">
+  <section id="process" class="on-white">
     <div class="wrap">
       <div class="sec-head reveal"><div>
-        <span class="eyebrow">How we work</span>
+        <span class="eyebrow on-light">How we work</span>
         <h2>From first call to steady delivery.</h2>
       </div></div>
       <div class="steps">
         <div class="step reveal"><span class="n">01</span><h3>Discovery call</h3><p>A 30-minute conversation to understand the problem, the volume, and what &ldquo;solved&rdquo; looks like for you.</p></div>
-        <div class="step reveal"><span class="n">02</span><h3>Pilot</h3><p>We take on a small, real sample &mdash; a batch of claims, a month of books, a labeling set &mdash; and show you the quality.</p></div>
+        <div class="step reveal"><span class="n">02</span><h3>Pilot</h3><p>We take on a small, real sample - a batch of claims, a month of books, a labeling set - and show you the quality.</p></div>
         <div class="step reveal"><span class="n">03</span><h3>Proposal &amp; onboarding</h3><p>A clear scope, transparent pricing, and a named team. We set up secure access and agree how we&rsquo;ll measure success.</p></div>
         <div class="step reveal"><span class="n">04</span><h3>Ongoing delivery</h3><p>Your dedicated team runs the work on a predictable cadence, with regular reporting and one person accountable.</p></div>
       </div>
@@ -457,66 +526,35 @@
   </section>
 
   <!-- SECURITY -->
-  <section id="security">
+  <section id="security" class="on-paper">
     <div class="wrap">
       <div class="sec-head reveal"><div>
-        <span class="eyebrow">Security &amp; compliance</span>
+        <span class="eyebrow on-light">Security &amp; compliance</span>
         <h2>Built to be trusted with sensitive work.</h2>
       </div></div>
       <div class="trust-grid">
-        <div class="trust reveal"><h3><span class="lock">&#10003;</span>Confidentiality first</h3><p>Every team member works under a signed NDA. Access to your data is role-based, limited to the people doing the work, and revoked the moment an engagement ends.</p></div>
-        <div class="trust reveal"><h3><span class="lock">&#10003;</span>HIPAA-aware processes</h3><p>Our healthcare workflows are designed around HIPAA principles &mdash; minimum-necessary access, audit trails, and careful handling of protected health information at every step.</p></div>
-        <div class="trust reveal"><h3><span class="lock">&#10003;</span>Your systems, your control</h3><p>Wherever possible we work inside your environment and tools, so your data stays under your governance. We adapt to your security requirements, not the other way around.</p></div>
+        <div class="trust reveal"><h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>Confidentiality first</h3><p>Every team member works under a signed NDA. Access to your data is role-based, limited to the people doing the work, and revoked the moment an engagement ends.</p></div>
+        <div class="trust reveal"><h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>HIPAA-aware processes</h3><p>Our healthcare workflows are designed around HIPAA principles - minimum-necessary access, audit trails, and careful handling of protected health information at every step.</p></div>
+        <div class="trust reveal"><h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>Your systems, your control</h3><p>Wherever possible we work inside your environment and tools, so your data stays under your governance. We adapt to your security requirements, not the other way around.</p></div>
       </div>
-      <p class="reveal" style="margin-top:34px;color:var(--ink-soft);font-size:.92rem;max-width:72ch">Our security and compliance posture is guided by board advisors with deep HIPAA, HITRUST, and SOC&nbsp;1&nbsp;/&nbsp;SOC&nbsp;2 assurance backgrounds. Formal certifications are part of our roadmap as we grow. If your organization has specific compliance requirements, tell us &mdash; we&rsquo;ll walk you through exactly how we meet them.</p>
+      <p class="reveal trust-note">Our security and compliance posture is guided by board advisors with deep HIPAA, HITRUST, and SOC&nbsp;1&nbsp;/&nbsp;SOC&nbsp;2 assurance backgrounds. Formal certifications are part of our roadmap as we grow. If your organization has specific compliance requirements, tell us - we&rsquo;ll walk you through exactly how we meet them.</p>
     </div>
   </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <div>
-          <span class="eyebrow">About</span>
-          <h2>A family firm, built to go anywhere.</h2>
-        </div>
-      </div>
-      <div class="about-grid">
-        <div class="about-copy reveal">
-          <p><strong>Pansolve began the way it operates: with two people who take problems personally.</strong>
-          Founded by Anu, and guided by Vikram as principal advisor, our family started its working lives in the New York–New Jersey corridor
-          and fell for California along the way — and we've carried both coasts' habits with us:
-          East Coast rigor, West Coast optimism.</p>
-          <p>The name comes from the Greek <em>pan</em> — "all." All problems, solved by people.
-          As we grow into a global firm, that stays the founding rule: a family-run standard of care,
-          delivered at whatever scale the work demands.</p>
-          <div class="route">NEW YORK / NEW JERSEY <span class="arrow">⟶</span> CALIFORNIA <span class="arrow">⟶</span> WORLDWIDE</div>
-          <a class="story-link" href="about.html">Read our full story &rarr;</a>
-        </div>
-        <div class="margin-note reveal">
-          <span class="hand">"AI is a brilliant first draft.
-          We're the people who make it final."</span>
-          <span class="who">— The Pansolve founding team</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <!-- FAQ -->
-  <section id="faq">
+  <section id="faq" class="on-paper">
     <div class="wrap">
       <div class="sec-head reveal"><div>
-        <span class="eyebrow">FAQ</span>
+        <span class="eyebrow on-light">FAQ</span>
         <h2>Questions worth asking a new firm.</h2>
       </div></div>
       <div class="faq-list reveal">
         <details><summary>Where are your teams based?</summary><div class="ans">Pansolve is US-founded, with roots in New Jersey and California, and we build teams to fit each engagement. We&rsquo;re always transparent about who is doing your work and where.</div></details>
         <details><summary>How do you handle data security and confidentiality?</summary><div class="ans">Every team member signs an NDA, access is role-based and minimum-necessary, and our healthcare workflows follow HIPAA principles. Wherever possible we work inside your systems so your data stays under your control. See the Security &amp; Compliance section above for detail.</div></details>
-        <details><summary>Can we start with a small trial?</summary><div class="ans">Yes &mdash; we prefer it. Most engagements begin with a pilot: a batch of claims, a month of books, or a sample labeling set. You see the quality before committing to anything larger.</div></details>
-        <details><summary>What does pricing look like?</summary><div class="ans">It depends on the service, volume, and turnaround you need. We scope each engagement individually and give you clear, predictable pricing &mdash; with no long-term lock-in required to get started.</div></details>
+        <details><summary>Can we start with a small trial?</summary><div class="ans">Yes - we prefer it. Most engagements begin with a pilot: a batch of claims, a month of books, or a sample labeling set. You see the quality before committing to anything larger.</div></details>
+        <details><summary>What does pricing look like?</summary><div class="ans">It depends on the service, volume, and turnaround you need. We scope each engagement individually and give you clear, predictable pricing - with no long-term lock-in required to get started.</div></details>
         <details><summary>How quickly can you start?</summary><div class="ans">A pilot can usually begin within days of our first call. Full onboarding timelines depend on scope and access setup, and we&rsquo;ll give you a realistic date in the proposal.</div></details>
-        <details><summary>Do you only work with US clients?</summary><div class="ans">No. We&rsquo;re built to serve clients worldwide &mdash; the family started on the East Coast, grew toward California, and designed Pansolve to go global from day one.</div></details>
+        <details><summary>Do you only work with US clients?</summary><div class="ans">No. We&rsquo;re built to serve clients worldwide - the family started on the East Coast, grew toward California, and designed Pansolve to go global from day one.</div></details>
       </div>
     </div>
   </section>
@@ -526,12 +564,12 @@
     <div class="wrap reveal">
       <div class="sec-head" style="justify-content:flex-start;margin-bottom:38px">
         <div>
-          <span class="eyebrow"><span class="tick">&#9679;</span>&nbsp; Start here</span>
-          <h2>Tell us your problem. Any problem.</h2>
+          <span class="eyebrow"><span class="dot"></span> Start here</span>
+          <h2 style="color:var(--on-dark)">Tell us your problem. Any problem.</h2>
         </div>
       </div>
       <div class="contact-grid">
-        <form class="cform" action="YOUR_APPS_SCRIPT_URL" method="POST">
+        <form class="cform" action="https://script.google.com/macros/s/AKfycbxVps7tuIfXqucs5ddl-zDiwc_Rij_Op4e5YzVX4ncUd8MpSav6rDPw2av2jHGGLFeL/exec" method="POST">
           <div class="row">
             <div><label>Name</label><input name="name" maxlength="100" required></div>
             <div><label>Company</label><input name="company" maxlength="120"></div>
@@ -543,8 +581,8 @@
           <div>
             <label>What do you need help with?</label>
             <select name="service">
-              <option>Payer &amp; Provider Solutions</option>
-              <option>Accounting &amp; Finance Operations</option>
+              <option>Payer &amp; Provider Services</option>
+              <option>Client Accounting Services</option>
               <option>AI Training &amp; Data Services</option>
               <option>Something else / not sure yet</option>
             </select>
@@ -559,7 +597,7 @@
           <input type="hidden" name="loaded_at" value="">
           <button type="submit" class="btn">Send message</button>
           <p class="form-note">We reply within one business day. No pitch deck, no obligation.</p>
-          <p class="form-status">Thanks &mdash; we&rsquo;ll be in touch within one business day. &#10003;</p>
+          <p class="form-status">Thanks - we&rsquo;ll be in touch within one business day.</p>
           <p class="form-error">Something went wrong. Please email <a href="mailto:support@pansolve.com">support@pansolve.com</a>.</p>
         </form>
         <div class="contact-detail">
@@ -577,7 +615,7 @@
           </div>
           <div class="block">
             <h4>Response time</h4>
-            <p>One business day &mdash; every inquiry, every time.</p>
+            <p>One business day - every inquiry, every time.</p>
           </div>
         </div>
       </div>
@@ -590,8 +628,14 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="wordmark" href="index.html">Pansolve<span class="dot">.</span></a>
-        <p>A global consulting firm deploying expert human teams &mdash; the human layer behind AI.</p>
+        <a class="brand" href="index.html">
+          <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="3" y="5" width="24" height="24" rx="10" fill="none" stroke="#F5F8FC" stroke-width="2.2"/>
+            <rect x="14" y="14" width="23" height="23" rx="9" fill="#12B7C6"/>
+          </svg>
+          <span class="word">Pan<span>solve</span></span>
+        </a>
+        <p>A global consulting firm deploying expert human teams - the human layer behind AI.</p>
         <span class="ftag">AI answers. Humans solve.</span>
       </div>
       <div class="foot-col">
@@ -628,7 +672,40 @@
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  // Contact form -> Google Apps Script. Replace YOUR_APPS_SCRIPT_URL in the form action.
+  // Mobile nav toggle
+  const header=document.querySelector('header');
+  const navToggle=document.querySelector('.nav-toggle');
+  if(navToggle){
+    navToggle.addEventListener('click',()=>{
+      const open=header.classList.toggle('menu-open');
+      navToggle.setAttribute('aria-expanded', open?'true':'false');
+      navToggle.querySelector('.icon-menu').style.display = open?'none':'block';
+      navToggle.querySelector('.icon-close').style.display = open?'block':'none';
+    });
+    document.querySelectorAll('.nav-links a').forEach(a=>{
+      a.addEventListener('click',()=>{
+        header.classList.remove('menu-open');
+        navToggle.setAttribute('aria-expanded','false');
+        navToggle.querySelector('.icon-menu').style.display='block';
+        navToggle.querySelector('.icon-close').style.display='none';
+      });
+    });
+  }
+
+  // Desktop dropdown: brief grace period on mouseleave so moving from the
+  // "Services" trigger down into the menu doesn't close it first.
+  document.querySelectorAll('.dropdown').forEach(dd=>{
+    let closeTimer;
+    dd.addEventListener('mouseenter',()=>{
+      clearTimeout(closeTimer);
+      dd.classList.add('open');
+    });
+    dd.addEventListener('mouseleave',()=>{
+      closeTimer=setTimeout(()=>dd.classList.remove('open'),250);
+    });
+  });
+
+  // Contact form -> Google Apps Script (see form's action attribute for the deployed URL).
   const cform=document.querySelector('.cform');
   if(cform){
     // time-trap: record when the page loaded

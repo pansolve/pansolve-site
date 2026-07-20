@@ -3,345 +3,162 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316202E'/%3E%3Ctext x='6.5' y='23' font-family='Georgia,serif' font-size='21' font-weight='700' fill='%23FAFAF7'%3EP%3C/text%3E%3Ccircle cx='24' cy='22' r='2.6' fill='%23C8362B'/%3E%3C/svg%3E">
-<title>Privacy &mdash; Pansolve</title>
-<meta name="description" content="Learn about Pansolve's privacy practices — contact our team for details on how we collect, use, and protect information.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%2316224A'/%3E%3Crect x='11' y='11' width='20' height='20' rx='7' fill='%2312B7C6'/%3E%3C/svg%3E">
+<title>Privacy - Pansolve</title>
+<meta name="description" content="Learn about Pansolve's privacy practices - contact our team for details on how we collect, use, and protect information.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Privacy Policy — Pansolve">
-<meta property="og:description" content="Learn about Pansolve's privacy practices — contact our team for details on how we collect, use, and protect information.">
+<meta property="og:title" content="Privacy Policy - Pansolve">
+<meta property="og:description" content="Learn about Pansolve's privacy practices - contact our team for details on how we collect, use, and protect information.">
 <meta property="og:url" content="https://pansolve.com/privacy.html">
 <meta property="og:image" content="https://pansolve.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FAFAF7;
-    --ink:#16202E;
-    --ink-soft:#4C5666;
-    --pencil:#C8362B;
-    --pencil-soft:#F3D9D6;
-    --highlight:#FFE86B;
-    --line:#DDDDD5;
-    --serif:'Newsreader', Georgia, serif;
-    --sans:'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
-    --mono:'IBM Plex Mono', 'SF Mono', monospace;
-    --hand:'Caveat', cursive;
-    --max:1080px;
+    --navy-950:#0A1122;--navy-900:#0F1830;--navy-800:#16224A;--navy-700:#25335E;--navy-600:#3A4A78;
+    --teal-500:#12B7C6;--teal-400:#3FD3DD;--teal-100:#E4F8F9;
+    --paper:#F6F8FB;--surface:#FFFFFF;--ink:#0F172A;--ink-soft:#4B5768;--line:#E3E8F0;
+    --on-dark:#F5F8FC;--on-dark-soft:#A9B7CC;--on-dark-line:rgba(255,255,255,.14);
+    --display:'Space Grotesk','IBM Plex Sans',sans-serif;
+    --sans:'IBM Plex Sans',-apple-system,'Segoe UI',sans-serif;
+    --mono:'IBM Plex Mono','SF Mono',monospace;
+    --max:1160px;--radius:14px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:var(--sans);
-    font-size:17px;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-  }
-  ::selection{background:var(--highlight);color:var(--ink)}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--teal-100);color:var(--navy-900)}
   a{color:inherit}
-  a:focus-visible, button:focus-visible{outline:2px solid var(--pencil);outline-offset:3px;border-radius:2px}
+  img,svg{display:block;max-width:100%}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--teal-500);outline-offset:3px;border-radius:2px}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  .icon{width:22px;height:22px;flex-shrink:0}
+  h1,h2,h3{font-family:var(--display);font-weight:600;color:inherit}
 
-  /* ---------- header ---------- */
-  header{
-    position:sticky;top:0;z-index:50;
-    background:rgba(250,250,247,.92);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .wordmark{
-    font-family:var(--serif);font-weight:600;font-size:1.5rem;letter-spacing:-.01em;
-    text-decoration:none;display:inline-flex;align-items:baseline;
-  }
-  .wordmark .dot{color:var(--pencil)}
-  .nav-links{display:flex;gap:30px;align-items:center;list-style:none}
-  .nav-links a{
-    text-decoration:none;font-size:.92rem;color:var(--ink-soft);
-    transition:color .15s;
-  }
-  .nav-links a:hover{color:var(--ink)}
-  .btn{
-    display:inline-block;background:var(--ink);color:var(--paper);
-    font-family:var(--sans);font-weight:500;font-size:.95rem;
-    padding:13px 26px;border-radius:3px;text-decoration:none;border:1px solid var(--ink);
-    transition:background .15s,color .15s;
-  }
-  .btn:hover{background:var(--pencil);border-color:var(--pencil)}
-  .btn-ghost{background:transparent;color:var(--ink)}
-  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
-  .nav .btn{padding:9px 18px;font-size:.88rem}
-  .menu-note{display:none}
+  header{position:sticky;top:0;z-index:100;background:rgba(10,17,34,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--on-dark-line);color:var(--on-dark)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+  .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+  .brand .mark{width:32px;height:32px}
+  .brand .word{font-family:var(--display);font-weight:700;font-size:1.18rem;letter-spacing:.02em;color:var(--on-dark);text-transform:uppercase}
+  .brand .word span{color:var(--teal-400)}
+  .nav-links{display:flex;gap:6px;align-items:center;list-style:none}
+  .nav-links>li>a:not(.btn){text-decoration:none;font-size:.94rem;color:var(--on-dark-soft);transition:color .15s;padding:10px 14px;border-radius:8px;display:inline-flex;align-items:center;gap:4px}
+  .nav-links>li>a:not(.btn):hover{color:var(--on-dark);background:rgba(255,255,255,.06)}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal-500);color:var(--navy-950);font-weight:600;font-size:.95rem;padding:12px 22px;border-radius:9px;text-decoration:none;border:1px solid var(--teal-500);transition:background .15s,transform .15s,box-shadow .15s;cursor:pointer}
+  .btn:hover{background:var(--teal-400);border-color:var(--teal-400);transform:translateY(-1px);box-shadow:0 8px 20px rgba(18,183,198,.25)}
+  .nav .btn{padding:10px 18px;font-size:.88rem}
+  .caret{width:11px;height:11px;transition:transform .15s}
   .dropdown{position:relative}
-  .dropdown > a::after{content:" ▾";font-size:.7em;color:var(--pencil)}
-  .dropdown-menu{
-    position:absolute;top:calc(100% + 6px);left:-14px;background:#fff;
-    border:1px solid var(--line);border-radius:3px;min-width:264px;padding:8px 0;
-    display:none;box-shadow:0 10px 28px rgba(22,32,46,.10);
-  }
-  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:block}
-  .dropdown-menu a{display:block;padding:10px 18px;font-size:.9rem;color:var(--ink-soft)}
-  .dropdown-menu a:hover{background:var(--paper);color:var(--pencil)}
+  .dropdown-menu{position:absolute;top:calc(100% + 10px);left:0;background:var(--navy-800);border:1px solid var(--on-dark-line);border-radius:12px;min-width:340px;padding:10px;display:none;box-shadow:0 24px 48px rgba(5,9,20,.45)}
+  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu,.dropdown.open .dropdown-menu{display:block}
+  .dropdown-menu a{display:flex;gap:12px;align-items:flex-start;text-decoration:none;color:var(--on-dark);padding:11px 12px;border-radius:8px;transition:background .15s}
+  .dropdown-menu a:hover{background:rgba(255,255,255,.06)}
+  .dropdown-menu .icon{color:var(--teal-400);margin-top:2px}
+  .dropdown-menu strong{display:block;font-size:.93rem;font-weight:600}
+  .dropdown-menu small{display:block;color:var(--on-dark-soft);font-size:.8rem;margin-top:2px}
+  .nav-toggle{display:none;background:none;border:none;color:var(--on-dark);cursor:pointer;padding:8px}
 
-  /* ---------- hero ---------- */
-  .hero{padding:104px 0 88px;border-bottom:1px solid var(--line)}
-  .eyebrow{
-    font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:26px;
-  }
-  .eyebrow .tick{color:var(--pencil)}
-  h1{
-    font-family:var(--serif);font-weight:500;letter-spacing:-.02em;
-    font-size:clamp(2.6rem,6.4vw,4.6rem);line-height:1.06;max-width:15ch;
-  }
-  h1 .machine{color:var(--ink-soft)}
-  .underlined{position:relative;display:inline-block;white-space:nowrap}
-  .underlined svg{
-    position:absolute;left:-2%;bottom:-.14em;width:104%;height:.32em;overflow:visible;
-  }
-  .underlined path{
-    fill:none;stroke:var(--pencil);stroke-width:5;stroke-linecap:round;
-    stroke-dasharray:900;stroke-dashoffset:900;
-    animation:draw 1s ease-out .5s forwards;
-  }
-  @keyframes draw{to{stroke-dashoffset:0}}
-  .hero p.lede{
-    margin-top:34px;max-width:56ch;font-size:1.16rem;color:var(--ink-soft);
-  }
-  mark{
-    background:linear-gradient(104deg, transparent 2%, var(--highlight) 6%, var(--highlight) 94%, transparent 98%);
-    padding:.05em .15em;color:var(--ink);border-radius:1px;
-  }
-  .hero-cta{margin-top:42px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-  .hero-note{
-    font-family:var(--hand);font-size:1.35rem;color:var(--pencil);
-    transform:rotate(-2deg);margin-left:6px;
-  }
+  .hero{background:linear-gradient(180deg,var(--navy-900),var(--navy-950));color:var(--on-dark);padding:64px 0 56px}
+  .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-400);display:inline-flex;align-items:center;gap:8px;margin-bottom:20px}
+  .eyebrow a{color:var(--on-dark-soft);text-decoration:none}
+  .eyebrow a:hover{color:var(--on-dark)}
+  h1{font-weight:600;letter-spacing:-.02em;font-size:clamp(2.1rem,4.4vw,3.2rem);line-height:1.12}
 
-  /* ---------- correction strip ---------- */
-  .strip{padding:74px 0;border-bottom:1px solid var(--line)}
-  .strip-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-  .correction{
-    font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.35;font-weight:400;
-  }
-  .strike{position:relative;color:var(--ink-soft);white-space:nowrap}
-  .strike::after{
-    content:"";position:absolute;left:-1%;right:-1%;top:52%;
-    height:3px;background:var(--pencil);transform:rotate(-1.2deg);border-radius:2px;
-  }
-  .rewrite{
-    font-family:var(--hand);color:var(--pencil);font-weight:600;
-    font-size:1.15em;white-space:nowrap;
-  }
-  .strip p{color:var(--ink-soft);font-size:1.02rem}
-  .strip p + p{margin-top:16px}
+  .legal{padding:72px 0 96px}
+  .legal .lead{max-width:70ch;color:var(--ink-soft);font-size:1.08rem;margin-bottom:8px}
+  .legal p{color:var(--ink-soft);font-size:1rem;margin-bottom:14px;max-width:74ch}
+  .legal .disclaimer{border-left:3px solid var(--teal-500);background:var(--surface);padding:20px 24px;margin:32px 0;font-size:.98rem;color:var(--ink-soft);max-width:74ch;border-radius:0 10px 10px 0}
+  .legal .disclaimer strong{color:var(--navy-900);display:block;margin-bottom:8px;font-family:var(--display);font-size:1.02rem}
+  .legal .disclaimer a{color:var(--navy-900);text-decoration-color:var(--teal-500);text-underline-offset:3px}
 
-  /* ---------- sections ---------- */
-  section{padding:92px 0;border-bottom:1px solid var(--line)}
-  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:52px;flex-wrap:wrap}
-  h2{
-    font-family:var(--serif);font-weight:500;letter-spacing:-.015em;
-    font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.15;max-width:22ch;
-  }
-  .sec-head .eyebrow{margin-bottom:12px}
-
-  /* services */
-  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-  .svc{
-    background:var(--paper);padding:38px 34px 42px;position:relative;
-    transition:background .2s;display:block;text-decoration:none;color:inherit;
-  }
-  .svc:hover{background:#FFFFFF}
-  .svc .more{
-    font-family:var(--mono);font-size:.78rem;color:var(--pencil);
-    display:inline-block;margin-top:20px;
-  }
-  .svc:hover .more{text-decoration:underline;text-underline-offset:3px}
-  .svc .tag{
-    font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;
-    color:var(--pencil);display:block;margin-bottom:18px;
-  }
-  .svc h3{font-family:var(--serif);font-weight:600;font-size:1.42rem;letter-spacing:-.01em;margin-bottom:12px}
-  .svc p{color:var(--ink-soft);font-size:.98rem;max-width:46ch}
-  .svc ul{list-style:none;margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
-  .svc li{
-    font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);
-    border:1px solid var(--line);border-radius:20px;padding:4px 12px;background:var(--paper);
-  }
-
-  /* approach */
-  .approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px}
-  .approach h3{
-    font-family:var(--serif);font-weight:600;font-size:1.5rem;margin-bottom:14px;
-    display:flex;align-items:baseline;gap:12px;
-  }
-  .approach h3 .check{
-    font-family:var(--hand);color:var(--pencil);font-size:1.6rem;line-height:1;
-  }
-  .approach p{color:var(--ink-soft);font-size:.98rem}
-
-  /* about */
-  .about-grid{display:grid;grid-template-columns:5fr 4fr;gap:64px;align-items:start}
-  .about-copy p{margin-bottom:18px;font-size:1.05rem;color:var(--ink-soft)}
-  .about-copy p strong{color:var(--ink);font-weight:600}
-  .margin-note{
-    border-left:3px solid var(--pencil);padding:6px 0 6px 22px;margin-top:8px;
-  }
-  .margin-note .hand{
-    font-family:var(--hand);font-size:1.5rem;color:var(--pencil);line-height:1.3;display:block;
-  }
-  .margin-note .who{
-    font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;
-    color:var(--ink-soft);margin-top:10px;display:block;
-  }
-  .route{
-    margin-top:34px;font-family:var(--mono);font-size:.8rem;color:var(--ink-soft);
-    letter-spacing:.06em;
-  }
-  .route .arrow{color:var(--pencil)}
-
-  /* cta */
-  .cta{padding:110px 0;text-align:center;border-bottom:none}
-  .cta h2{margin:0 auto 20px}
-  .cta p{max-width:52ch;margin:0 auto 40px;color:var(--ink-soft);font-size:1.08rem}
-  .cta-mail{
-    font-family:var(--serif);font-size:1.25rem;margin-top:28px;display:block;color:var(--ink-soft)
-  }
-  .cta-mail a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:4px}
-
-  footer{border-top:1px solid var(--line);padding:34px 0;background:var(--paper)}
-  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-  .foot span{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft)}
-
-  /* reveal on scroll */
-  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
-  .reveal.in{opacity:1;transform:none}
-
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto}
-    .underlined path{animation:none;stroke-dashoffset:0}
-    .reveal{opacity:1;transform:none;transition:none}
-  }
-
-  @media (max-width:860px){
-    .strip-inner,.about-grid{grid-template-columns:1fr;gap:36px}
-    .approach-grid{grid-template-columns:1fr;gap:36px}
-    .svc-grid{grid-template-columns:1fr}
-    .nav-links li:not(.keep){display:none}
-    section,.hero{padding:70px 0}
-  }
-
-  /* ===== added: rich footer ===== */
-  .site-footer{border-top:1px solid var(--line);background:var(--paper);padding:64px 0 30px}
+  footer{border-top:1px solid var(--on-dark-line);padding:34px 0;background:var(--navy-950)}
+  .site-footer{padding:64px 0 30px;color:var(--on-dark)}
   .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:40px}
-  .foot-brand .wordmark{font-size:1.4rem}
-  .foot-brand p{margin-top:14px;color:var(--ink-soft);font-size:.92rem;max-width:32ch}
-  .foot-brand .ftag{font-family:var(--hand);color:var(--pencil);font-size:1.3rem;display:block;margin-top:12px}
-  .foot-col h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:16px}
-  .foot-col a{display:block;text-decoration:none;color:var(--ink-soft);font-size:.9rem;margin-bottom:11px;transition:color .15s}
-  .foot-col a:hover{color:var(--pencil)}
-  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--line)}
-  .foot-bottom span,.foot-bottom a{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);text-decoration:none}
-  .foot-bottom a:hover{color:var(--pencil)}
-  @media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;gap:30px}}
+  .foot-brand p{margin-top:14px;color:var(--on-dark-soft);font-size:.92rem;max-width:32ch}
+  .foot-brand .ftag{font-family:var(--mono);color:var(--teal-400);font-size:.85rem;display:block;margin-top:14px;letter-spacing:.04em}
+  .foot-col h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark);margin-bottom:16px}
+  .foot-col a{display:block;text-decoration:none;color:var(--on-dark-soft);font-size:.9rem;margin-bottom:11px;transition:color .15s}
+  .foot-col a:hover{color:var(--teal-400)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--on-dark-line)}
+  .foot-bottom span,.foot-bottom a{font-family:var(--mono);font-size:.76rem;color:var(--on-dark-soft);text-decoration:none}
+  .foot-bottom a:hover{color:var(--teal-400)}
 
-  /* ===== added: contact form ===== */
-  .contact-grid{display:grid;grid-template-columns:3fr 2fr;gap:56px;text-align:left;margin-top:8px}
-  .cform{display:flex;flex-direction:column;gap:16px}
-  .cform .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .cform label{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:6px}
-  .cform input,.cform select,.cform textarea{width:100%;font-family:var(--sans);font-size:.98rem;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:3px;padding:11px 13px;transition:border-color .15s}
-  .cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-color:var(--pencil)}
-  .cform textarea{resize:vertical;min-height:120px}
-  .cform button{align-self:flex-start;cursor:pointer;margin-top:4px}
-  .form-note{font-size:.82rem;color:var(--ink-soft)}
-  .form-status{font-family:var(--hand);font-size:1.5rem;color:var(--pencil);display:none}
-  .contact-detail .block{margin-bottom:24px}
-  .contact-detail h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:0 0 6px}
-  .contact-detail a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:3px}
-  .contact-detail p{color:var(--ink-soft);font-size:.95rem}
-  .contact-detail .big{font-family:var(--serif);font-size:1.15rem;color:var(--ink)}
-  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px}.cform .row{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 
-  /* ===== added: process steps ===== */
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-  .step{background:var(--paper);padding:32px 26px 36px;transition:background .2s}
-  .step:hover{background:#fff}
-  .step .n{font-family:var(--mono);font-size:.8rem;color:var(--pencil);letter-spacing:.12em}
-  .step h3{font-family:var(--serif);font-weight:600;font-size:1.22rem;margin:14px 0 8px}
-  .step p{color:var(--ink-soft);font-size:.92rem}
-  @media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
-
-  /* ===== added: trust / security ===== */
-  .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:38px}
-  .trust h3{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin-bottom:10px;display:flex;align-items:baseline;gap:10px}
-  .trust h3 .lock{font-family:var(--hand);color:var(--pencil);font-size:1.35rem;line-height:1}
-  .trust p{color:var(--ink-soft);font-size:.94rem}
-  @media(max-width:860px){.trust-grid{grid-template-columns:1fr;gap:28px}}
-
-  /* ===== added: faq ===== */
-  .faq-list{border-top:1px solid var(--line);max-width:860px}
-  .faq-list details{border-bottom:1px solid var(--line)}
-  .faq-list summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--serif);font-size:1.18rem;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px}
-  .faq-list summary::-webkit-details-marker{display:none}
-  .faq-list summary::after{content:"+";font-family:var(--mono);color:var(--pencil);font-size:1.3rem;flex-shrink:0}
-  .faq-list details[open] summary::after{content:"\2013"}
-  .faq-list .ans{padding:0 0 24px;color:var(--ink-soft);font-size:1rem;max-width:72ch}
-
-  /* ===== added: about-teaser link + legal prose ===== */
-  .story-link{display:inline-block;margin-top:26px;font-family:var(--mono);font-size:.82rem;color:var(--pencil);text-decoration:none}
-  .story-link:hover{text-decoration:underline;text-underline-offset:3px}
-  .legal{padding:64px 0 90px}
-  .legal .lead{max-width:70ch;color:var(--ink-soft);font-size:1.05rem;margin-bottom:8px}
-  .legal h2{margin:40px 0 12px;font-size:1.5rem}
-  .legal h3{font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:24px 0 8px}
-  .legal p,.legal li{color:var(--ink-soft);font-size:1rem;margin-bottom:12px;max-width:74ch}
-  .legal ul{padding-left:22px;margin-bottom:12px}
-  .legal .updated{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft);letter-spacing:.06em;margin-bottom:26px}
-  .legal .disclaimer{border-left:3px solid var(--pencil);padding:14px 0 14px 20px;margin:30px 0;font-size:.92rem;color:var(--ink-soft);max-width:74ch}
-
+  @media (max-width:980px){
+    .nav-toggle{display:block}
+    .nav-links{position:fixed;top:76px;left:0;width:100vw;height:calc(100vh - 76px);background:var(--navy-950);flex-direction:column;align-items:stretch;gap:2px;padding:18px;overflow:auto;box-sizing:border-box;display:none}
+    header.menu-open .nav-links{display:flex}
+    .nav-links>li{width:100%}
+    .nav-links>li>a:not(.btn){width:100%;padding:14px 12px;font-size:1rem}
+    .nav .btn{width:100%;justify-content:center;padding:14px}
+    .dropdown-menu{position:static;display:block;box-shadow:none;background:rgba(255,255,255,.03);margin-top:4px;min-width:0}
+  }
+  @media (max-width:560px){.foot-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <a class="wordmark" href="index.html">Pansolve<span class="dot">.</span></a>
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="3" y="5" width="24" height="24" rx="10" fill="none" stroke="#F5F8FC" stroke-width="2.2"/>
+        <rect x="14" y="14" width="23" height="23" rx="9" fill="#12B7C6"/>
+      </svg>
+      <span class="word">Pan<span>solve</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="icon icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" style="display:none"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
     <ul class="nav-links">
-      <li class="dropdown"><a href="index.html#services">Services</a>
+      <li class="dropdown">
+        <a href="index.html#services">Services
+          <svg class="caret icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
         <div class="dropdown-menu">
-          <a href="payer-provider.html">Payer &amp; Provider Solutions</a>
-          <a href="accounting.html">Accounting &amp; Finance Operations</a>
-          <a href="ai-training.html">AI Training &amp; Data Services</a>
+          <a href="payer-provider.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 8.6c0 5.4-8.8 10.4-8.8 10.4S3.2 14 3.2 8.6a4.6 4.6 0 0 1 8.8-1.9 4.6 4.6 0 0 1 8.8 1.9Z"/><path d="M4 12h3l1.5-3 2 5 1.5-3H18"/></svg>
+            <span><strong>Payer &amp; Provider Services</strong><small>RCM, payer operations &amp; compliance</small></span>
+          </a>
+          <a href="accounting.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-8"/><path d="M15 8h5v5"/></svg>
+            <span><strong>Client Accounting Services</strong><small>Procure-to-Pay, Order-to-Cash &amp; Record-to-Report</small></span>
+          </a>
+          <a href="ai-training.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>
+            <span><strong>AI Training &amp; Data Services</strong><small>Annotation, evaluation &amp; RLHF</small></span>
+          </a>
         </div>
       </li>
       <li><a href="index.html#approach">Approach</a></li>
       <li><a href="about.html">About</a></li>
-      <li class="keep"><a class="btn" href="index.html#contact">Book a consultation</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a class="btn" href="index.html#contact">Book a consultation</a></li>
     </ul>
   </div>
 </header>
 
 <main>
-  <div class="hero" style="padding-bottom:40px">
+  <div class="hero">
     <div class="wrap">
-      <span class="eyebrow"><a href="index.html" style="text-decoration:none;color:inherit">Home</a> <span class="tick">/</span> Privacy</span>
-      <h1 style="font-size:clamp(2.2rem,5vw,3.4rem)">Privacy at Pansolve</h1>
+      <span class="eyebrow"><a href="index.html">Home</a> / Privacy</span>
+      <h1>Privacy at Pansolve</h1>
     </div>
   </div>
   <section class="legal">
     <div class="wrap">
-      <p class="lead">Your privacy and the security of your data matter deeply to us &mdash; it&rsquo;s the foundation our business is built on. Our privacy practices are tailored to each engagement and shared directly with our clients and partners as part of every agreement.</p>
-      <p class="lead" style="margin-top:14px">To learn about our privacy practices, how we collect, use, and protect information, or to make a privacy-related request, please reach out &mdash; we respond within one business day.</p>
-      <div class="disclaimer" style="margin-top:34px">
-        <strong>Contact us about privacy</strong><br>
-        Email: <a href="mailto:support@pansolve.com" style="color:var(--ink)">support@pansolve.com</a><br>
-        Phone: <a href="tel:+18483275842" style="color:var(--ink)">+1 (848) 327-5842</a>
+      <p class="lead">Your privacy and the security of your data matter deeply to us - it&rsquo;s the foundation our business is built on. Our privacy practices are tailored to each engagement and shared directly with our clients and partners as part of every agreement.</p>
+      <p class="lead" style="margin-top:14px">To learn about our privacy practices, how we collect, use, and protect information, or to make a privacy-related request, please reach out - we respond within one business day.</p>
+      <div class="disclaimer">
+        <strong>Contact us about privacy</strong>
+        Email: <a href="mailto:support@pansolve.com">support@pansolve.com</a><br>
+        Phone: <a href="tel:+18483275842">+1 (848) 327-5842</a>
       </div>
-      <p style="margin-top:26px">Client engagements involving sensitive data &mdash; including protected health information and financial records &mdash; are governed by written agreements with appropriate confidentiality, security, and compliance terms, developed with our security and compliance advisors.</p>
+      <p>Client engagements involving sensitive data - including protected health information and financial records - are governed by written agreements with appropriate confidentiality, security, and compliance terms, developed with our security and compliance advisors.</p>
     </div>
   </section>
 </main>
@@ -350,8 +167,14 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="wordmark" href="index.html">Pansolve<span class="dot">.</span></a>
-        <p>A global consulting firm deploying expert human teams &mdash; the human layer behind AI.</p>
+        <a class="brand" href="index.html">
+          <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="3" y="5" width="24" height="24" rx="10" fill="none" stroke="#F5F8FC" stroke-width="2.2"/>
+            <rect x="14" y="14" width="23" height="23" rx="9" fill="#12B7C6"/>
+          </svg>
+          <span class="word">Pan<span>solve</span></span>
+        </a>
+        <p>A global consulting firm deploying expert human teams - the human layer behind AI.</p>
         <span class="ftag">AI answers. Humans solve.</span>
       </div>
       <div class="foot-col">
@@ -382,10 +205,37 @@
 </footer>
 
 <script>
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-  },{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const header=document.querySelector('header');
+  const navToggle=document.querySelector('.nav-toggle');
+  if(navToggle){
+    navToggle.addEventListener('click',()=>{
+      const open=header.classList.toggle('menu-open');
+      navToggle.setAttribute('aria-expanded', open?'true':'false');
+      navToggle.querySelector('.icon-menu').style.display = open?'none':'block';
+      navToggle.querySelector('.icon-close').style.display = open?'block':'none';
+    });
+    document.querySelectorAll('.nav-links a').forEach(a=>{
+      a.addEventListener('click',()=>{
+        header.classList.remove('menu-open');
+        navToggle.setAttribute('aria-expanded','false');
+        navToggle.querySelector('.icon-menu').style.display='block';
+        navToggle.querySelector('.icon-close').style.display='none';
+      });
+    });
+  }
+
+  // Desktop dropdown: brief grace period on mouseleave so moving from the
+  // "Services" trigger down into the menu doesn't close it first.
+  document.querySelectorAll('.dropdown').forEach(dd=>{
+    let closeTimer;
+    dd.addEventListener('mouseenter',()=>{
+      clearTimeout(closeTimer);
+      dd.classList.add('open');
+    });
+    dd.addEventListener('mouseleave',()=>{
+      closeTimer=setTimeout(()=>dd.classList.remove('open'),250);
+    });
+  });
 </script>
 </body>
 </html>

@@ -3,519 +3,395 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316202E'/%3E%3Ctext x='6.5' y='23' font-family='Georgia,serif' font-size='21' font-weight='700' fill='%23FAFAF7'%3EP%3C/text%3E%3Ccircle cx='24' cy='22' r='2.6' fill='%23C8362B'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%2316224A'/%3E%3Crect x='11' y='11' width='20' height='20' rx='7' fill='%2312B7C6'/%3E%3C/svg%3E">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Payer & Provider Solutions — Pansolve">
-<meta property="og:description" content="Expert human teams for medical coding, accounting, and AI data services. The human layer behind AI.">
+<meta property="og:title" content="Payer &amp; Provider Services - Pansolve">
+<meta property="og:description" content="Pansolve partners with healthcare providers, payers, and healthcare technology organizations to improve financial performance, operational excellence, and regulatory compliance.">
 <meta property="og:url" content="https://pansolve.com/payer-provider.html">
 <meta property="og:image" content="https://pansolve.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<title>Payer &amp; Provider Solutions — Pansolve</title>
-<meta name="description" content="Pansolve's payer and provider services: payment integrity, risk adjustment, chart review, and coding audits — expert human review behind every clean claim.">
+<title>Payer &amp; Provider Services - Pansolve</title>
+<meta name="description" content="Pansolve's payer and provider services: revenue cycle management, payer operations, health information management, revenue integrity, compliance, and AI-enabled automation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FAFAF7;
-    --ink:#16202E;
-    --ink-soft:#4C5666;
-    --pencil:#C8362B;
-    --pencil-soft:#F3D9D6;
-    --highlight:#FFE86B;
-    --line:#DDDDD5;
-    --serif:'Newsreader', Georgia, serif;
-    --sans:'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
-    --mono:'IBM Plex Mono', 'SF Mono', monospace;
-    --hand:'Caveat', cursive;
-    --max:1080px;
+    --navy-950:#0A1122;--navy-900:#0F1830;--navy-800:#16224A;--navy-700:#25335E;--navy-600:#3A4A78;
+    --teal-500:#12B7C6;--teal-400:#3FD3DD;--teal-100:#E4F8F9;
+    --paper:#F6F8FB;--surface:#FFFFFF;--ink:#0F172A;--ink-soft:#4B5768;--line:#E3E8F0;
+    --on-dark:#F5F8FC;--on-dark-soft:#A9B7CC;--on-dark-line:rgba(255,255,255,.14);
+    --display:'Space Grotesk','IBM Plex Sans',sans-serif;
+    --sans:'IBM Plex Sans',-apple-system,'Segoe UI',sans-serif;
+    --mono:'IBM Plex Mono','SF Mono',monospace;
+    --max:1160px;--radius:14px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
-  ::selection{background:var(--highlight);color:var(--ink)}
+  ::selection{background:var(--teal-100);color:var(--navy-900)}
   a{color:inherit}
-  a:focus-visible,button:focus-visible{outline:2px solid var(--pencil);outline-offset:3px;border-radius:2px}
+  img,svg{display:block;max-width:100%}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--teal-500);outline-offset:3px;border-radius:2px}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  .icon{width:22px;height:22px;flex-shrink:0}
+  h1,h2,h3{font-family:var(--display);font-weight:600;color:inherit}
 
-  header{position:sticky;top:0;z-index:50;background:rgba(250,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .wordmark{font-family:var(--serif);font-weight:600;font-size:1.5rem;letter-spacing:-.01em;text-decoration:none}
-  .wordmark .dot{color:var(--pencil)}
-  .nav-links{display:flex;gap:30px;align-items:center;list-style:none}
-  .nav-links a{text-decoration:none;font-size:.92rem;color:var(--ink-soft);transition:color .15s}
-  .nav-links a:hover{color:var(--ink)}
-  .btn{display:inline-block;background:var(--ink);color:var(--paper);font-weight:500;font-size:.95rem;padding:13px 26px;border-radius:3px;text-decoration:none;border:1px solid var(--ink);transition:background .15s,color .15s}
-  .btn:hover{background:var(--pencil);border-color:var(--pencil)}
-  .btn-ghost{background:transparent;color:var(--ink)}
-  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
-  .nav .btn{padding:9px 18px;font-size:.88rem}
+  /* header */
+  header{position:sticky;top:0;z-index:100;background:rgba(10,17,34,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--on-dark-line);color:var(--on-dark)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+  .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+  .brand .mark{width:32px;height:32px}
+  .brand .word{font-family:var(--display);font-weight:700;font-size:1.18rem;letter-spacing:.02em;color:var(--on-dark);text-transform:uppercase}
+  .brand .word span{color:var(--teal-400)}
+  .nav-links{display:flex;gap:6px;align-items:center;list-style:none}
+  .nav-links>li>a:not(.btn){text-decoration:none;font-size:.94rem;color:var(--on-dark-soft);transition:color .15s;padding:10px 14px;border-radius:8px;display:inline-flex;align-items:center;gap:4px}
+  .nav-links>li>a:not(.btn):hover{color:var(--on-dark);background:rgba(255,255,255,.06)}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal-500);color:var(--navy-950);font-weight:600;font-size:.95rem;padding:12px 22px;border-radius:9px;text-decoration:none;border:1px solid var(--teal-500);transition:background .15s,transform .15s,box-shadow .15s;cursor:pointer}
+  .btn:hover{background:var(--teal-400);border-color:var(--teal-400);transform:translateY(-1px);box-shadow:0 8px 20px rgba(18,183,198,.25)}
+  .btn-ghost{background:transparent;color:var(--on-dark);border-color:var(--on-dark-line)}
+  .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3);box-shadow:none;transform:none}
+  .nav .btn{padding:10px 18px;font-size:.88rem}
+  .caret{width:11px;height:11px;transition:transform .15s}
   .dropdown{position:relative}
-  .dropdown > a::after{content:" ▾";font-size:.7em;color:var(--pencil)}
-  .dropdown-menu{
-    position:absolute;top:calc(100% + 6px);left:-14px;background:#fff;
-    border:1px solid var(--line);border-radius:3px;min-width:264px;padding:8px 0;
-    display:none;box-shadow:0 10px 28px rgba(22,32,46,.10);
-  }
-  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:block}
-  .dropdown-menu a{display:block;padding:10px 18px;font-size:.9rem;color:var(--ink-soft)}
-  .dropdown-menu a:hover{background:var(--paper);color:var(--pencil)}
-
-  .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:22px}
-  .eyebrow .tick{color:var(--pencil)}
-  .eyebrow a{text-decoration:none;color:var(--ink-soft)}
-  .eyebrow a:hover{color:var(--pencil)}
-  mark{background:linear-gradient(104deg,transparent 2%,var(--highlight) 6%,var(--highlight) 94%,transparent 98%);padding:.05em .15em;color:var(--ink);border-radius:1px}
+  .dropdown-menu{position:absolute;top:calc(100% + 10px);left:0;background:var(--navy-800);border:1px solid var(--on-dark-line);border-radius:12px;min-width:340px;padding:10px;display:none;box-shadow:0 24px 48px rgba(5,9,20,.45)}
+  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu,.dropdown.open .dropdown-menu{display:block}
+  .dropdown-menu a{display:flex;gap:12px;align-items:flex-start;text-decoration:none;color:var(--on-dark);padding:11px 12px;border-radius:8px;transition:background .15s}
+  .dropdown-menu a:hover{background:rgba(255,255,255,.06)}
+  .dropdown-menu .icon{color:var(--teal-400);margin-top:2px}
+  .dropdown-menu strong{display:block;font-size:.93rem;font-weight:600}
+  .dropdown-menu small{display:block;color:var(--on-dark-soft);font-size:.8rem;margin-top:2px}
+  .nav-toggle{display:none;background:none;border:none;color:var(--on-dark);cursor:pointer;padding:8px}
 
   /* hero */
-  .hero{padding:96px 0 80px;border-bottom:1px solid var(--line)}
-  h1{font-family:var(--serif);font-weight:500;letter-spacing:-.02em;font-size:clamp(2.3rem,5.6vw,4rem);line-height:1.08;max-width:18ch}
-  .hero p.lede{margin-top:30px;max-width:60ch;font-size:1.14rem;color:var(--ink-soft)}
-  .hero-cta{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-  .hero-note{font-family:var(--hand);font-size:1.3rem;color:var(--pencil);transform:rotate(-2deg)}
+  .hero{background:radial-gradient(1100px 480px at 85% -10%,rgba(18,183,198,.18),transparent 60%),linear-gradient(180deg,var(--navy-900),var(--navy-950));color:var(--on-dark);padding:88px 0 76px}
+  .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-400);display:inline-flex;align-items:center;gap:8px;margin-bottom:22px}
+  .eyebrow a{color:var(--on-dark-soft);text-decoration:none}
+  .eyebrow a:hover{color:var(--on-dark)}
+  h1{font-weight:600;letter-spacing:-.02em;font-size:clamp(2.2rem,4.8vw,3.6rem);line-height:1.1;max-width:19ch}
+  .hero p.lede{margin-top:24px;max-width:64ch;font-size:1.13rem;color:var(--on-dark-soft)}
+  .hero-cta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 
-  /* flow diagram */
-  .flow-section{padding:84px 0;border-bottom:1px solid var(--line)}
-  h2{font-family:var(--serif);font-weight:500;letter-spacing:-.015em;font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.15;max-width:26ch}
-  .sec-head{margin-bottom:48px}
-  .flow{display:flex;flex-direction:column;align-items:center;gap:0}
-  .flow-node{
-    border:1px solid var(--ink);background:#fff;border-radius:3px;
-    padding:14px 30px;font-family:var(--mono);font-size:.86rem;letter-spacing:.04em;
-    text-align:center;
-  }
-  .flow-arrow{font-family:var(--mono);color:var(--pencil);font-size:1.1rem;padding:8px 0;line-height:1}
-  .flow-branches{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:14px;width:100%;margin-top:6px;
-  }
-  .flow-q{
-    border:1px solid var(--line);border-top:3px solid var(--pencil);background:var(--paper);
-    padding:18px 16px;text-align:center;border-radius:3px;text-decoration:none;
-    transition:background .15s, transform .15s;
-  }
-  .flow-q:hover{background:#fff;transform:translateY(-2px)}
-  .flow-q .name{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pencil);display:block;margin-bottom:8px}
-  .flow-q .q{font-family:var(--serif);font-size:1.02rem;line-height:1.35;color:var(--ink)}
-  .flow-connector{width:100%;display:flex;justify-content:center}
-  .flow-connector svg{width:76%;height:34px;overflow:visible}
-  .flow-connector path{fill:none;stroke:var(--line);stroke-width:1.5}
-  .flow-connector .drop{stroke:var(--pencil)}
+  /* section base */
+  h2{font-weight:600;letter-spacing:-.015em;font-size:clamp(1.7rem,3vw,2.25rem);line-height:1.2;max-width:30ch;color:var(--navy-900)}
+  .sec-head{margin-bottom:44px}
+  .sec-head .eyebrow{color:var(--teal-500);margin-bottom:12px}
 
-  /* service detail sections */
-  .svc-detail{padding:92px 0;border-bottom:1px solid var(--line)}
-  .svc-detail .num{
-    font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;color:var(--pencil);
-    text-transform:uppercase;display:block;margin-bottom:18px;
-  }
-  .svc-grid{display:grid;grid-template-columns:5fr 4fr;gap:64px;align-items:start;margin-top:44px}
-  .svc-copy h3{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin:30px 0 10px}
-  .svc-copy h3:first-child{margin-top:0}
-  .svc-copy p{color:var(--ink-soft);font-size:1rem;margin-bottom:8px}
-  .svc-copy ul{list-style:none;margin:6px 0 0}
-  .svc-copy li{
-    color:var(--ink-soft);font-size:.98rem;padding-left:26px;position:relative;margin-bottom:8px;
-  }
-  .svc-copy li::before{
-    content:"✓";font-family:var(--hand);color:var(--pencil);font-size:1.25rem;
-    position:absolute;left:0;top:-2px;
-  }
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-  .chips span{font-family:var(--mono);font-size:.74rem;color:var(--ink-soft);border:1px solid var(--line);border-radius:20px;padding:4px 12px}
+  /* service detail */
+  .svc-detail{padding:84px 0;border-bottom:1px solid var(--line)}
+  .svc-detail.on-paper{background:var(--paper)}
+  .svc-detail.on-white{background:var(--surface)}
+  .num{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;color:var(--teal-500);text-transform:uppercase;display:block;margin-bottom:16px}
+  .svc-lead{margin-top:14px;color:var(--ink-soft);font-size:1.08rem;max-width:62ch}
+  .cap-head{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-500);display:block;margin:36px 0 18px}
+  .cap-grid{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px 28px}
+  .cap-grid li{color:var(--ink-soft);font-size:.97rem;padding-left:28px;position:relative}
+  .cap-grid li::before{content:"";position:absolute;left:0;top:4px;width:16px;height:16px;border-radius:50%;background:var(--teal-100)}
+  .cap-grid li::after{content:"";position:absolute;left:4.5px;top:7.5px;width:7px;height:4px;border-left:2px solid var(--teal-500);border-bottom:2px solid var(--teal-500);transform:rotate(-45deg)}
 
-  /* example card = the signature "worked example" annotation */
-  .example{
-    border:1px solid var(--line);border-left:3px solid var(--pencil);
-    background:#fff;border-radius:3px;padding:28px 28px 24px;position:relative;
-  }
-  .example .ex-tag{
-    font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
-    color:var(--pencil);display:block;margin-bottom:16px;
-  }
-  .example .line{font-size:.98rem;color:var(--ink-soft);margin-bottom:10px}
-  .example .line strong{color:var(--ink);font-weight:600}
-  .strike{position:relative;color:var(--ink-soft);white-space:nowrap}
-  .strike::after{content:"";position:absolute;left:-1%;right:-1%;top:52%;height:2.5px;background:var(--pencil);transform:rotate(-1.4deg);border-radius:2px}
-  .rewrite{font-family:var(--hand);color:var(--pencil);font-weight:600;font-size:1.25em;white-space:nowrap}
-  .example .verdict{
-    margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);
-    font-family:var(--hand);font-size:1.35rem;color:var(--pencil);line-height:1.3;
-  }
+  /* specialty chips */
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+  .chips span{font-family:var(--mono);font-size:.78rem;color:var(--navy-800);border:1px solid var(--line);border-radius:20px;padding:7px 16px;background:var(--surface)}
+  .svc-detail.on-white .chips span{background:var(--paper)}
 
-  /* outcomes strip */
-  .outcomes{padding:80px 0;border-bottom:1px solid var(--line)}
-  .out-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:44px}
-  .out h3{font-family:var(--serif);font-weight:600;font-size:1.35rem;margin-bottom:10px}
-  .out p{color:var(--ink-soft);font-size:.97rem}
+  /* why grid */
+  .why{padding:84px 0;border-bottom:1px solid var(--line);background:var(--surface)}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+  .why-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px 20px;display:flex;align-items:flex-start;gap:12px}
+  .why-card .icon{color:var(--teal-500);width:22px;height:22px;margin-top:2px}
+  .why-card span{color:var(--navy-900);font-weight:600;font-size:.97rem;line-height:1.4}
 
   /* cta */
-  .cta{padding:104px 0;text-align:center}
-  .cta h2{margin:0 auto 20px}
-  .cta p{max-width:54ch;margin:0 auto 38px;color:var(--ink-soft);font-size:1.06rem}
-  .cta-mail{font-family:var(--serif);font-size:1.2rem;margin-top:26px;display:block;color:var(--ink-soft)}
-  .cta-mail a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:4px}
+  .cta{padding:104px 0;text-align:center;background:linear-gradient(180deg,var(--navy-900),var(--navy-950));color:var(--on-dark)}
+  .cta h2{margin:0 auto 20px;color:var(--on-dark)}
+  .cta p{max-width:54ch;margin:0 auto 34px;color:var(--on-dark-soft);font-size:1.06rem}
+  .cta-mail{font-size:1rem;margin-top:24px;display:block;color:var(--on-dark-soft)}
+  .cta-mail a{color:var(--on-dark);text-decoration-color:var(--teal-500);text-underline-offset:4px}
+  .cta .eyebrow{color:var(--teal-400)}
 
-  footer{border-top:1px solid var(--line);padding:34px 0}
-  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-  .foot span{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft)}
+  /* footer */
+  footer{border-top:1px solid var(--on-dark-line);padding:34px 0;background:var(--navy-950)}
+  .site-footer{padding:64px 0 30px;color:var(--on-dark)}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:40px}
+  .foot-brand p{margin-top:14px;color:var(--on-dark-soft);font-size:.92rem;max-width:32ch}
+  .foot-brand .ftag{font-family:var(--mono);color:var(--teal-400);font-size:.85rem;display:block;margin-top:14px;letter-spacing:.04em}
+  .foot-col h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark);margin-bottom:16px}
+  .foot-col a{display:block;text-decoration:none;color:var(--on-dark-soft);font-size:.9rem;margin-bottom:11px;transition:color .15s}
+  .foot-col a:hover{color:var(--teal-400)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--on-dark-line)}
+  .foot-bottom span,.foot-bottom a{font-family:var(--mono);font-size:.76rem;color:var(--on-dark-soft);text-decoration:none}
+  .foot-bottom a:hover{color:var(--teal-400)}
 
   .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
   .reveal.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto}
-    .reveal{opacity:1;transform:none;transition:none}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+
+  @media (max-width:980px){
+    .cap-grid{grid-template-columns:1fr 1fr}
+    .why-grid{grid-template-columns:1fr 1fr}
+    .svc-detail,.why{padding:64px 0}
+    .nav-toggle{display:block}
+    .nav-links{position:fixed;top:76px;left:0;width:100vw;height:calc(100vh - 76px);background:var(--navy-950);flex-direction:column;align-items:stretch;gap:2px;padding:18px;overflow:auto;box-sizing:border-box;display:none}
+    header.menu-open .nav-links{display:flex}
+    .nav-links>li{width:100%}
+    .nav-links>li>a:not(.btn){width:100%;padding:14px 12px;font-size:1rem}
+    .nav .btn{width:100%;justify-content:center;padding:14px}
+    .dropdown-menu{position:static;display:block;box-shadow:none;background:rgba(255,255,255,.03);margin-top:4px;min-width:0}
   }
-  @media (max-width:900px){
-    .flow-branches{grid-template-columns:1fr 1fr}
-    .flow-connector{display:none}
-    .flow-branches{margin-top:14px}
-  }
-  @media (max-width:860px){
-    .svc-grid{grid-template-columns:1fr;gap:36px}
-    .out-grid{grid-template-columns:1fr;gap:32px}
-    .nav-links li:not(.keep){display:none}
-    .svc-detail,.flow-section,.outcomes{padding:66px 0}
-  }
-
-  /* ===== added: rich footer ===== */
-  .site-footer{border-top:1px solid var(--line);background:var(--paper);padding:64px 0 30px}
-  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:40px}
-  .foot-brand .wordmark{font-size:1.4rem}
-  .foot-brand p{margin-top:14px;color:var(--ink-soft);font-size:.92rem;max-width:32ch}
-  .foot-brand .ftag{font-family:var(--hand);color:var(--pencil);font-size:1.3rem;display:block;margin-top:12px}
-  .foot-col h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:16px}
-  .foot-col a{display:block;text-decoration:none;color:var(--ink-soft);font-size:.9rem;margin-bottom:11px;transition:color .15s}
-  .foot-col a:hover{color:var(--pencil)}
-  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--line)}
-  .foot-bottom span,.foot-bottom a{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);text-decoration:none}
-  .foot-bottom a:hover{color:var(--pencil)}
-  @media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;gap:30px}}
-
-  /* ===== added: contact form ===== */
-  .contact-grid{display:grid;grid-template-columns:3fr 2fr;gap:56px;text-align:left;margin-top:8px}
-  .cform{display:flex;flex-direction:column;gap:16px}
-  .cform .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .cform label{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:6px}
-  .cform input,.cform select,.cform textarea{width:100%;font-family:var(--sans);font-size:.98rem;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:3px;padding:11px 13px;transition:border-color .15s}
-  .cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-color:var(--pencil)}
-  .cform textarea{resize:vertical;min-height:120px}
-  .cform button{align-self:flex-start;cursor:pointer;margin-top:4px}
-  .form-note{font-size:.82rem;color:var(--ink-soft)}
-  .form-status{font-family:var(--hand);font-size:1.5rem;color:var(--pencil);display:none}
-  .contact-detail .block{margin-bottom:24px}
-  .contact-detail h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:0 0 6px}
-  .contact-detail a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:3px}
-  .contact-detail p{color:var(--ink-soft);font-size:.95rem}
-  .contact-detail .big{font-family:var(--serif);font-size:1.15rem;color:var(--ink)}
-  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px}.cform .row{grid-template-columns:1fr}}
-
-  /* ===== added: process steps ===== */
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-  .step{background:var(--paper);padding:32px 26px 36px;transition:background .2s}
-  .step:hover{background:#fff}
-  .step .n{font-family:var(--mono);font-size:.8rem;color:var(--pencil);letter-spacing:.12em}
-  .step h3{font-family:var(--serif);font-weight:600;font-size:1.22rem;margin:14px 0 8px}
-  .step p{color:var(--ink-soft);font-size:.92rem}
-  @media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
-
-  /* ===== added: trust / security ===== */
-  .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:38px}
-  .trust h3{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin-bottom:10px;display:flex;align-items:baseline;gap:10px}
-  .trust h3 .lock{font-family:var(--hand);color:var(--pencil);font-size:1.35rem;line-height:1}
-  .trust p{color:var(--ink-soft);font-size:.94rem}
-  @media(max-width:860px){.trust-grid{grid-template-columns:1fr;gap:28px}}
-
-  /* ===== added: faq ===== */
-  .faq-list{border-top:1px solid var(--line);max-width:860px}
-  .faq-list details{border-bottom:1px solid var(--line)}
-  .faq-list summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--serif);font-size:1.18rem;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px}
-  .faq-list summary::-webkit-details-marker{display:none}
-  .faq-list summary::after{content:"+";font-family:var(--mono);color:var(--pencil);font-size:1.3rem;flex-shrink:0}
-  .faq-list details[open] summary::after{content:"\2013"}
-  .faq-list .ans{padding:0 0 24px;color:var(--ink-soft);font-size:1rem;max-width:72ch}
-
-  /* ===== added: about-teaser link + legal prose ===== */
-  .story-link{display:inline-block;margin-top:26px;font-family:var(--mono);font-size:.82rem;color:var(--pencil);text-decoration:none}
-  .story-link:hover{text-decoration:underline;text-underline-offset:3px}
-  .legal{padding:64px 0 90px}
-  .legal .lead{max-width:70ch;color:var(--ink-soft);font-size:1.05rem;margin-bottom:8px}
-  .legal h2{margin:40px 0 12px;font-size:1.5rem}
-  .legal h3{font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:24px 0 8px}
-  .legal p,.legal li{color:var(--ink-soft);font-size:1rem;margin-bottom:12px;max-width:74ch}
-  .legal ul{padding-left:22px;margin-bottom:12px}
-  .legal .updated{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft);letter-spacing:.06em;margin-bottom:26px}
-  .legal .disclaimer{border-left:3px solid var(--pencil);padding:14px 0 14px 20px;margin:30px 0;font-size:.92rem;color:var(--ink-soft);max-width:74ch}
-
+  @media (max-width:620px){.cap-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <a class="wordmark" href="index.html">Pansolve<span class="dot">.</span></a>
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="3" y="5" width="24" height="24" rx="10" fill="none" stroke="#F5F8FC" stroke-width="2.2"/>
+        <rect x="14" y="14" width="23" height="23" rx="9" fill="#12B7C6"/>
+      </svg>
+      <span class="word">Pan<span>solve</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="icon icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" style="display:none"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
     <ul class="nav-links">
-      <li class="dropdown"><a href="index.html#services">Services</a>
+      <li class="dropdown">
+        <a href="index.html#services">Services
+          <svg class="caret icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
         <div class="dropdown-menu">
-          <a href="payer-provider.html">Payer &amp; Provider Solutions</a>
-          <a href="accounting.html">Accounting &amp; Finance Operations</a>
-          <a href="ai-training.html">AI Training &amp; Data Services</a>
+          <a href="payer-provider.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 8.6c0 5.4-8.8 10.4-8.8 10.4S3.2 14 3.2 8.6a4.6 4.6 0 0 1 8.8-1.9 4.6 4.6 0 0 1 8.8 1.9Z"/><path d="M4 12h3l1.5-3 2 5 1.5-3H18"/></svg>
+            <span><strong>Payer &amp; Provider Services</strong><small>RCM, payer operations &amp; compliance</small></span>
+          </a>
+          <a href="accounting.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-8"/><path d="M15 8h5v5"/></svg>
+            <span><strong>Client Accounting Services</strong><small>Procure-to-Pay, Order-to-Cash &amp; Record-to-Report</small></span>
+          </a>
+          <a href="ai-training.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>
+            <span><strong>AI Training &amp; Data Services</strong><small>Annotation, evaluation &amp; RLHF</small></span>
+          </a>
         </div>
       </li>
       <li><a href="index.html#approach">Approach</a></li>
       <li><a href="about.html">About</a></li>
-      <li class="keep"><a class="btn" href="#contact">Book a consultation</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a class="btn" href="#contact">Book a consultation</a></li>
     </ul>
   </div>
 </header>
 
 <main>
-
-  <!-- HERO -->
   <div class="hero">
     <div class="wrap">
-      <span class="eyebrow"><a href="index.html#services">Services</a> <span class="tick">/</span> Payer &amp; Provider Solutions</span>
-      <h1>The four checks behind every clean claim.</h1>
-      <p class="lede">
-        Between a patient's chart and a paid claim sit thousands of rules — and millions of
-        chances to get it wrong. Pansolve deploys <mark>certified coders and clinical reviewers</mark>
-        across the four disciplines that keep payers and providers accurate, compliant, and correctly paid.
-      </p>
+      <span class="eyebrow"><a href="index.html#services">Services</a> / Payer &amp; Provider Services</span>
+      <h1>Payer &amp; Provider Services</h1>
+      <p class="lede">Pansolve partners with healthcare providers, payers, and healthcare technology organizations to improve financial performance, operational excellence, and regulatory compliance through domain-led services, intelligent automation, and healthcare expertise.</p>
       <div class="hero-cta">
         <a class="btn" href="#contact">Talk to our team</a>
-        <a class="btn btn-ghost" href="#payment-integrity">Explore the services</a>
-        <span class="hero-note">humans check the math ↗</span>
+        <a class="btn btn-ghost" href="#provider-rcm">Explore the services</a>
       </div>
     </div>
   </div>
 
-  <!-- FLOW -->
-  <section class="flow-section" aria-label="How the four services connect">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">The pipeline</span>
-        <h2>One record, four questions.</h2>
-      </div>
-      <div class="flow reveal">
-        <div class="flow-node">MEDICAL RECORD (CHART)</div>
-        <div class="flow-arrow">▼</div>
-        <div class="flow-node">CODING PROCESS</div>
-        <div class="flow-arrow">▼</div>
-        <div class="flow-node">INSURANCE CLAIM SUBMITTED</div>
-        <div class="flow-connector" aria-hidden="true">
-          <svg viewBox="0 0 600 34" preserveAspectRatio="none">
-            <path d="M300 0 L300 12 M300 12 L38 12 L38 34 M300 12 L212 12 L212 34 M300 12 L388 12 L388 34 M300 12 L562 12 L562 34" class="drop"/>
-          </svg>
-        </div>
-        <div class="flow-branches">
-          <a class="flow-q" href="#payment-integrity">
-            <span class="name">Payment integrity</span>
-            <span class="q">"Did we pay correctly?"</span>
-          </a>
-          <a class="flow-q" href="#risk-adjustment">
-            <span class="name">Risk adjustment</span>
-            <span class="q">"Did we capture how sick the patient is?"</span>
-          </a>
-          <a class="flow-q" href="#chart-review">
-            <span class="name">Chart review</span>
-            <span class="q">"Does documentation support the claim?"</span>
-          </a>
-          <a class="flow-q" href="#coding-audits">
-            <span class="name">Coding audits</span>
-            <span class="q">"Was coding done correctly?"</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 1. PAYMENT INTEGRITY -->
-  <section class="svc-detail" id="payment-integrity">
+  <section class="svc-detail on-white" id="provider-rcm">
     <div class="wrap">
       <div class="reveal">
-        <span class="num">01 / Payment Integrity</span>
-        <h2>Pay what's owed. Not more, not less, not twice.</h2>
+        <span class="num">01 / Provider Revenue Cycle Management</span>
+        <h2>End-to-end RCM that optimizes reimbursements and accelerates cash flow.</h2>
+        <p class="svc-lead">Comprehensive end-to-end Revenue Cycle Management services that optimize reimbursements, reduce denials, and accelerate cash flow.</p>
       </div>
-      <div class="svc-grid">
-        <div class="svc-copy reveal">
-          <h3>What it is</h3>
-          <p>Payment integrity ensures a claim was billed correctly and paid according to
-          policy rules — before or after the money moves.</p>
-          <h3>Why it matters</h3>
-          <p>Payers process millions of claims, and errors are routine: duplicate billing,
-          wrong procedure codes, upcoded services, unbundled procedures billed separately,
-          and non-covered services paid by mistake. Each one is money leaking from the system.</p>
-          <h3>What our team does</h3>
-          <ul>
-            <li>Verifies the claim was billed correctly against coding standards</li>
-            <li>Checks the payment amount against policy and contract rules</li>
-            <li>Flags duplicates, unbundling, upcoding, and non-covered services</li>
-            <li>Identifies patterns that suggest fraud, waste, or abuse</li>
-          </ul>
-          <div class="chips">
-            <span>Pre-pay review</span><span>Post-pay recovery</span><span>FWA detection</span><span>Contract compliance</span>
-          </div>
-        </div>
-        <div class="example reveal">
-          <span class="ex-tag">Worked example</span>
-          <p class="line">Hospital bills for a surgery:</p>
-          <p class="line"><strong><span class="strike">$2,000</span></strong> &nbsp;<span class="rewrite">$1,500 per policy</span></p>
-          <p class="line">The plan's rules allow $1,500 for this procedure. Automated systems paid the full billed amount.</p>
-          <p class="verdict">Overpayment of $500 identified and recovered. ✓</p>
-        </div>
+      <div class="reveal">
+        <span class="cap-head">Key capabilities</span>
+        <ul class="cap-grid">
+          <li>Patient Access &amp; Financial Clearance</li>
+          <li>Insurance Eligibility &amp; Benefits Verification</li>
+          <li>Prior Authorization</li>
+          <li>Medical Coding (ICD-10, CPT, HCPCS, HCC)</li>
+          <li>Clinical Documentation Improvement (CDI)</li>
+          <li>Medical Billing &amp; Charge Capture</li>
+          <li>Claims Management</li>
+          <li>Payment Posting</li>
+          <li>Denial Prevention &amp; Appeals</li>
+          <li>Accounts Receivable Management</li>
+          <li>Patient Collections</li>
+          <li>Revenue Recovery</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 2. RISK ADJUSTMENT -->
-  <section class="svc-detail" id="risk-adjustment">
+  <section class="svc-detail on-paper" id="payer-operations">
     <div class="wrap">
       <div class="reveal">
-        <span class="num">02 / Risk Adjustment</span>
-        <h2>Sicker patients cost more. Prove it, properly.</h2>
+        <span class="num">02 / Payer Operations</span>
+        <h2>Scalable services for claims accuracy and member experience.</h2>
+        <p class="svc-lead">Scalable business process services that enhance claims accuracy, payment integrity, provider operations, and member experience.</p>
       </div>
-      <div class="svc-grid">
-        <div class="svc-copy reveal">
-          <h3>What it is</h3>
-          <p>Risk adjustment is how insurers — especially Medicare Advantage plans — get paid
-          accurately for how sick their members actually are. Documented chronic conditions
-          translate into risk scores, and risk scores translate into payment.</p>
-          <h3>Why it matters</h3>
-          <p>If a condition isn't documented and coded, the plan is underpaid for that member's
-          real cost of care. If it's coded without support, the plan is exposed in an audit.
-          Accuracy has to cut both ways.</p>
-          <h3>What our team does</h3>
-          <ul>
-            <li>Reviews medical records for chronic conditions — diabetes, hypertension, COPD, kidney disease, heart failure, and more</li>
-            <li>Confirms each condition is properly documented and supported by physician notes</li>
-            <li>Assigns the correct ICD-10 codes mapped to the right HCC categories</li>
-            <li>Flags unsupported codes before they become audit findings</li>
-          </ul>
-          <div class="chips">
-            <span>Medicare Advantage</span><span>ICD-10 / HCC</span><span>Retrospective review</span><span>RADV readiness</span>
-          </div>
-        </div>
-        <div class="example reveal">
-          <span class="ex-tag">Worked example</span>
-          <p class="line">Physician's note reads:</p>
-          <p class="line"><strong>"Patient has Type 2 Diabetes with complications."</strong></p>
-          <p class="line">But the submitted claim missed the diagnosis entirely — the member's risk score doesn't reflect their real condition.</p>
-          <p class="verdict">Coder adds the supported ICD-10 code. Payment now matches the patient. ✓</p>
-        </div>
+      <div class="reveal">
+        <span class="cap-head">Key capabilities</span>
+        <ul class="cap-grid">
+          <li>Claims Processing Support</li>
+          <li>Claims Adjudication</li>
+          <li>Payment Integrity</li>
+          <li>Medical Necessity Review</li>
+          <li>Coding Validation</li>
+          <li>Fraud, Waste &amp; Abuse Support</li>
+          <li>Provider Enrollment &amp; Credentialing</li>
+          <li>Provider Data Management</li>
+          <li>Member Services</li>
+          <li>Utilization Management</li>
+          <li>Appeals &amp; Grievances</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 3. CHART REVIEW -->
-  <section class="svc-detail" id="chart-review">
+  <section class="svc-detail on-white" id="him">
     <div class="wrap">
       <div class="reveal">
-        <span class="num">03 / Chart Review</span>
-        <h2>The claim says one thing. What does the chart say?</h2>
+        <span class="num">03 / Health Information Management (HIM)</span>
+        <h2>Documentation quality, coding accuracy, and compliance.</h2>
+        <p class="svc-lead">Improve documentation quality, coding accuracy, compliance, and reimbursement through comprehensive HIM services.</p>
       </div>
-      <div class="svc-grid">
-        <div class="svc-copy reveal">
-          <h3>What it is</h3>
-          <p>Chart review is the careful reading of a patient's full medical record — doctor
-          notes, lab reports, diagnoses, procedures, and medications — to verify that what was
-          claimed is what actually happened.</p>
-          <h3>Why it matters</h3>
-          <p>Documentation is the evidence behind every claim. When the chart and the claim
-          disagree, someone is being paid for care that isn't supported — or a patient's record
-          is missing something that matters.</p>
-          <h3>What our team does</h3>
-          <ul>
-            <li>Validates diagnosis and procedure accuracy against the full record</li>
-            <li>Confirms medical necessity for services billed</li>
-            <li>Identifies missing or contradictory documentation</li>
-            <li>Ensures compliance with payer and regulatory rules</li>
-          </ul>
-          <div class="chips">
-            <span>Clinical validation</span><span>Medical necessity</span><span>Documentation gaps</span><span>Compliance</span>
-          </div>
-        </div>
-        <div class="example reveal">
-          <span class="ex-tag">Worked example</span>
-          <p class="line">The claim states:</p>
-          <p class="line"><strong><span class="strike">Patient had pneumonia</span></strong> &nbsp;<span class="rewrite">suspected, not confirmed</span></p>
-          <p class="line">The chart shows only suspected pneumonia — no confirming imaging or lab result in the record.</p>
-          <p class="verdict">Inconsistency flagged before it becomes a compliance problem. ✓</p>
-        </div>
+      <div class="reveal">
+        <span class="cap-head">Key capabilities</span>
+        <ul class="cap-grid">
+          <li>Medical Coding</li>
+          <li>Coding Audits</li>
+          <li>Clinical Documentation Improvement</li>
+          <li>Documentation Quality Reviews</li>
+          <li>Risk Adjustment Coding</li>
+          <li>HCC Coding</li>
+          <li>Coding Education</li>
+          <li>Compliance Reviews</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 4. CODING AUDITS -->
-  <section class="svc-detail" id="coding-audits">
+  <section class="svc-detail on-paper" id="revenue-integrity">
     <div class="wrap">
       <div class="reveal">
-        <span class="num">04 / Coding Audits</span>
-        <h2>Who checks the coders? We do.</h2>
+        <span class="num">04 / Revenue Integrity &amp; Financial Optimization</span>
+        <h2>Proactive revenue cycle optimization and analytics.</h2>
+        <p class="svc-lead">Strengthen financial performance through proactive revenue cycle optimization and analytics.</p>
       </div>
-      <div class="svc-grid">
-        <div class="svc-copy reveal">
-          <h3>What it is</h3>
-          <p>A coding audit is a structured quality check on coding itself — whether done by
-          your in-house team, a vendor, or an AI tool. Even trained coders make mistakes:
-          wrong ICD-10 codes, missed secondary diagnoses, incorrect CPT codes, upcoding and undercoding.</p>
-          <h3>Why it matters</h3>
-          <p>Coding errors compound. A pattern of small mistakes becomes denied revenue,
-          overpayment liability, or an external audit finding. Measuring accuracy is the only
-          way to improve it.</p>
-          <h3>What our team does</h3>
-          <ul>
-            <li>Independently recodes a statistically meaningful sample of claims</li>
-            <li>Compares results against the original coding and measures the error rate</li>
-            <li>Identifies patterns — by coder, code family, or service line</li>
-            <li>Delivers targeted coder training and process fixes to prevent repeats</li>
-          </ul>
-          <div class="chips">
-            <span>Sample recoding</span><span>Error-rate reporting</span><span>Coder education</span><span>AI-output audits</span>
-          </div>
-        </div>
-        <div class="example reveal">
-          <span class="ex-tag">Worked example</span>
-          <p class="line">Audit sample: <strong>100 records</strong> independently recoded.</p>
-          <p class="line"><strong>92 correct · 8 incorrect → 8% error rate</strong></p>
-          <p class="line">Six of the eight errors trace to one code family — a training gap, not a people problem.</p>
-          <p class="verdict">Coders retrained, process fixed, next audit: cleaner. ✓</p>
+      <div class="reveal">
+        <span class="cap-head">Key capabilities</span>
+        <ul class="cap-grid">
+          <li>Charge Integrity</li>
+          <li>Revenue Leakage Assessment</li>
+          <li>Denial Analytics</li>
+          <li>Underpayment Recovery</li>
+          <li>Revenue Cycle Assessments</li>
+          <li>KPI Dashboards</li>
+          <li>Financial Analytics</li>
+          <li>Operational Reporting</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-detail on-white" id="compliance-advisory">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="num">05 / Healthcare Compliance &amp; Advisory</span>
+        <h2>Governance, regulatory compliance, and cybersecurity.</h2>
+        <p class="svc-lead">Protect healthcare organizations through governance, regulatory compliance, cybersecurity, and operational consulting.</p>
+      </div>
+      <div class="reveal">
+        <span class="cap-head">Key capabilities</span>
+        <ul class="cap-grid">
+          <li>HIPAA Compliance</li>
+          <li>HITRUST Readiness</li>
+          <li>SOC 2 Readiness</li>
+          <li>Internal Compliance Audits</li>
+          <li>Healthcare Cybersecurity</li>
+          <li>Third-Party Risk Management</li>
+          <li>Revenue Cycle Consulting</li>
+          <li>Process Transformation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-detail on-paper" id="ai-automation">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="num">06 / AI &amp; Intelligent Automation</span>
+        <h2>AI-enabled solutions for productivity, quality, and efficiency.</h2>
+        <p class="svc-lead">Transform healthcare operations through AI-enabled solutions that improve productivity, quality, and operational efficiency.</p>
+      </div>
+      <div class="reveal">
+        <span class="cap-head">Key capabilities</span>
+        <ul class="cap-grid">
+          <li>AI-Assisted Medical Coding</li>
+          <li>Intelligent Document Processing</li>
+          <li>Revenue Cycle Automation</li>
+          <li>Workflow Automation</li>
+          <li>Predictive Denial Analytics</li>
+          <li>Quality Assurance Automation</li>
+          <li>OCR &amp; Data Extraction</li>
+          <li>Business Intelligence &amp; Dashboards</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-detail on-white" id="specialty">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="num">Specialty Solutions</span>
+        <h2>Specialized delivery teams supporting diverse healthcare organizations.</h2>
+      </div>
+      <div class="reveal">
+        <span class="cap-head">Expertise</span>
+        <div class="chips" style="margin-top:0">
+          <span>Hospitals &amp; Health Systems</span>
+          <span>Physician Groups</span>
+          <span>Ambulatory Surgery Centers</span>
+          <span>Multi-specialty Practices</span>
+          <span>Radiology</span>
+          <span>Emergency Medicine</span>
+          <span>Cardiology</span>
+          <span>Orthopedics</span>
+          <span>Oncology</span>
+          <span>Pathology</span>
+          <span>Behavioral Health</span>
+          <span>Home Health &amp; DME</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- OUTCOMES -->
-  <section class="outcomes">
+  <section class="why">
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="eyebrow">Why Pansolve</span>
-        <h2>Built for the era of AI-assisted claims.</h2>
+        <h2>Built for healthcare's hardest operational work.</h2>
       </div>
-      <div class="out-grid">
-        <div class="out reveal">
-          <h3>Credentialed reviewers</h3>
-          <p>Certified coding professionals and clinically experienced reviewers — people who
-          can read a chart, not just run a rule set.</p>
-        </div>
-        <div class="out reveal">
-          <h3>Human + AI, honestly</h3>
-          <p>We use technology to work faster, and humans to be right. Every finding is
-          reviewed by a person who signs their name to it.</p>
-        </div>
-        <div class="out reveal">
-          <h3>Flexible engagement</h3>
-          <p>Project-based audits, ongoing dedicated teams, or overflow capacity during peak
-          season — scaled to payers and provider groups of any size.</p>
-        </div>
+      <div class="why-grid">
+        <div class="why-card reveal"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg><span>End-to-End Revenue Cycle Expertise</span></div>
+        <div class="why-card reveal"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg><span>Certified Healthcare Professionals</span></div>
+        <div class="why-card reveal"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg><span>AI-Enabled Delivery Model</span></div>
+        <div class="why-card reveal"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg><span>Compliance-First Approach</span></div>
+        <div class="why-card reveal"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg><span>Cybersecurity &amp; Risk Advisory</span></div>
+        <div class="why-card reveal"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg><span>Flexible Engagement Models</span></div>
+        <div class="why-card reveal"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg><span>Outcome-Focused Delivery</span></div>
+        <div class="why-card reveal"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg><span>Scalable Global Operations</span></div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="cta" id="contact">
     <div class="wrap reveal">
-      <span class="eyebrow"><span class="tick">●</span>&nbsp; Start here</span>
+      <span class="eyebrow"><span style="width:7px;height:7px;border-radius:50%;background:var(--teal-400);display:inline-block"></span>&nbsp; Start here</span>
       <h2>Show us a sample of your claims.</h2>
-      <p>We'll review a small batch, walk you through what we find, and you decide if it's
-      worth going further. No obligation — just a clear look at your accuracy.</p>
+      <p>We'll review a small batch, walk you through what we find, and you decide if it's worth going further. No obligation - just a clear look at your accuracy.</p>
       <a class="btn" href="index.html#contact">Book a consultation</a>
       <span class="cta-mail">or write to <a href="mailto:support@pansolve.com">support@pansolve.com</a></span>
     </div>
@@ -527,8 +403,14 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="wordmark" href="index.html">Pansolve<span class="dot">.</span></a>
-        <p>A global consulting firm deploying expert human teams &mdash; the human layer behind AI.</p>
+        <a class="brand" href="index.html">
+          <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="3" y="5" width="24" height="24" rx="10" fill="none" stroke="#F5F8FC" stroke-width="2.2"/>
+            <rect x="14" y="14" width="23" height="23" rx="9" fill="#12B7C6"/>
+          </svg>
+          <span class="word">Pan<span>solve</span></span>
+        </a>
+        <p>A global consulting firm deploying expert human teams - the human layer behind AI.</p>
         <span class="ftag">AI answers. Humans solve.</span>
       </div>
       <div class="foot-col">
@@ -563,6 +445,38 @@
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  const header=document.querySelector('header');
+  const navToggle=document.querySelector('.nav-toggle');
+  if(navToggle){
+    navToggle.addEventListener('click',()=>{
+      const open=header.classList.toggle('menu-open');
+      navToggle.setAttribute('aria-expanded', open?'true':'false');
+      navToggle.querySelector('.icon-menu').style.display = open?'none':'block';
+      navToggle.querySelector('.icon-close').style.display = open?'block':'none';
+    });
+    document.querySelectorAll('.nav-links a').forEach(a=>{
+      a.addEventListener('click',()=>{
+        header.classList.remove('menu-open');
+        navToggle.setAttribute('aria-expanded','false');
+        navToggle.querySelector('.icon-menu').style.display='block';
+        navToggle.querySelector('.icon-close').style.display='none';
+      });
+    });
+  }
+
+  // Desktop dropdown: brief grace period on mouseleave so moving from the
+  // "Services" trigger down into the menu doesn't close it first.
+  document.querySelectorAll('.dropdown').forEach(dd=>{
+    let closeTimer;
+    dd.addEventListener('mouseenter',()=>{
+      clearTimeout(closeTimer);
+      dd.classList.add('open');
+    });
+    dd.addEventListener('mouseleave',()=>{
+      closeTimer=setTimeout(()=>dd.classList.remove('open'),250);
+    });
+  });
 </script>
 
 </body>

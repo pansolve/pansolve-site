@@ -3,380 +3,197 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316202E'/%3E%3Ctext x='6.5' y='23' font-family='Georgia,serif' font-size='21' font-weight='700' fill='%23FAFAF7'%3EP%3C/text%3E%3Ccircle cx='24' cy='22' r='2.6' fill='%23C8362B'/%3E%3C/svg%3E">
-<title>About &mdash; Pansolve</title>
-<meta name="description" content="Meet the team behind Pansolve — a family-run global consulting firm built on the belief that expert humans, not automation alone, solve hard problems.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%2316224A'/%3E%3Crect x='11' y='11' width='20' height='20' rx='7' fill='%2312B7C6'/%3E%3C/svg%3E">
+<title>About - Pansolve</title>
+<meta name="description" content="Meet the team behind Pansolve - a global expert-services firm where accuracy and accountability come first, and AI supports expert human judgment rather than replacing it.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="About — Pansolve">
-<meta property="og:description" content="Meet the team behind Pansolve — a family-run global consulting firm built on the belief that expert humans, not automation alone, solve hard problems.">
+<meta property="og:title" content="About - Pansolve">
+<meta property="og:description" content="Meet the team behind Pansolve - a global expert-services firm where accuracy and accountability come first, and AI supports expert human judgment rather than replacing it.">
 <meta property="og:url" content="https://pansolve.com/about.html">
 <meta property="og:image" content="https://pansolve.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FAFAF7;
-    --ink:#16202E;
-    --ink-soft:#4C5666;
-    --pencil:#C8362B;
-    --pencil-soft:#F3D9D6;
-    --highlight:#FFE86B;
-    --line:#DDDDD5;
-    --serif:'Newsreader', Georgia, serif;
-    --sans:'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
-    --mono:'IBM Plex Mono', 'SF Mono', monospace;
-    --hand:'Caveat', cursive;
-    --max:1080px;
+    --navy-950:#0A1122;--navy-900:#0F1830;--navy-800:#16224A;--navy-700:#25335E;--navy-600:#3A4A78;
+    --teal-500:#12B7C6;--teal-400:#3FD3DD;--teal-100:#E4F8F9;
+    --paper:#F6F8FB;--surface:#FFFFFF;--ink:#0F172A;--ink-soft:#4B5768;--line:#E3E8F0;
+    --on-dark:#F5F8FC;--on-dark-soft:#A9B7CC;--on-dark-line:rgba(255,255,255,.14);
+    --display:'Space Grotesk','IBM Plex Sans',sans-serif;
+    --sans:'IBM Plex Sans',-apple-system,'Segoe UI',sans-serif;
+    --mono:'IBM Plex Mono','SF Mono',monospace;
+    --max:1160px;--radius:14px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:var(--sans);
-    font-size:17px;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-  }
-  ::selection{background:var(--highlight);color:var(--ink)}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--teal-100);color:var(--navy-900)}
   a{color:inherit}
-  a:focus-visible, button:focus-visible{outline:2px solid var(--pencil);outline-offset:3px;border-radius:2px}
+  img,svg{display:block;max-width:100%}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--teal-500);outline-offset:3px;border-radius:2px}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  .icon{width:22px;height:22px;flex-shrink:0}
+  h1,h2,h3{font-family:var(--display);font-weight:600;color:inherit}
 
-  /* ---------- header ---------- */
-  header{
-    position:sticky;top:0;z-index:50;
-    background:rgba(250,250,247,.92);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .wordmark{
-    font-family:var(--serif);font-weight:600;font-size:1.5rem;letter-spacing:-.01em;
-    text-decoration:none;display:inline-flex;align-items:baseline;
-  }
-  .wordmark .dot{color:var(--pencil)}
-  .nav-links{display:flex;gap:30px;align-items:center;list-style:none}
-  .nav-links a{
-    text-decoration:none;font-size:.92rem;color:var(--ink-soft);
-    transition:color .15s;
-  }
-  .nav-links a:hover{color:var(--ink)}
-  .btn{
-    display:inline-block;background:var(--ink);color:var(--paper);
-    font-family:var(--sans);font-weight:500;font-size:.95rem;
-    padding:13px 26px;border-radius:3px;text-decoration:none;border:1px solid var(--ink);
-    transition:background .15s,color .15s;
-  }
-  .btn:hover{background:var(--pencil);border-color:var(--pencil)}
-  .btn-ghost{background:transparent;color:var(--ink)}
-  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
-  .nav .btn{padding:9px 18px;font-size:.88rem}
-  .menu-note{display:none}
+  header{position:sticky;top:0;z-index:100;background:rgba(10,17,34,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--on-dark-line);color:var(--on-dark)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+  .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+  .brand .mark{width:32px;height:32px}
+  .brand .word{font-family:var(--display);font-weight:700;font-size:1.18rem;letter-spacing:.02em;color:var(--on-dark);text-transform:uppercase}
+  .brand .word span{color:var(--teal-400)}
+  .nav-links{display:flex;gap:6px;align-items:center;list-style:none}
+  .nav-links>li>a:not(.btn){text-decoration:none;font-size:.94rem;color:var(--on-dark-soft);transition:color .15s;padding:10px 14px;border-radius:8px;display:inline-flex;align-items:center;gap:4px}
+  .nav-links>li>a:not(.btn):hover{color:var(--on-dark);background:rgba(255,255,255,.06)}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal-500);color:var(--navy-950);font-weight:600;font-size:.95rem;padding:12px 22px;border-radius:9px;text-decoration:none;border:1px solid var(--teal-500);transition:background .15s,transform .15s,box-shadow .15s;cursor:pointer}
+  .btn:hover{background:var(--teal-400);border-color:var(--teal-400);transform:translateY(-1px);box-shadow:0 8px 20px rgba(18,183,198,.25)}
+  .nav .btn{padding:10px 18px;font-size:.88rem}
+  .caret{width:11px;height:11px;transition:transform .15s}
   .dropdown{position:relative}
-  .dropdown > a::after{content:" ▾";font-size:.7em;color:var(--pencil)}
-  .dropdown-menu{
-    position:absolute;top:calc(100% + 6px);left:-14px;background:#fff;
-    border:1px solid var(--line);border-radius:3px;min-width:264px;padding:8px 0;
-    display:none;box-shadow:0 10px 28px rgba(22,32,46,.10);
-  }
-  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:block}
-  .dropdown-menu a{display:block;padding:10px 18px;font-size:.9rem;color:var(--ink-soft)}
-  .dropdown-menu a:hover{background:var(--paper);color:var(--pencil)}
+  .dropdown-menu{position:absolute;top:calc(100% + 10px);left:0;background:var(--navy-800);border:1px solid var(--on-dark-line);border-radius:12px;min-width:340px;padding:10px;display:none;box-shadow:0 24px 48px rgba(5,9,20,.45)}
+  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu,.dropdown.open .dropdown-menu{display:block}
+  .dropdown-menu a{display:flex;gap:12px;align-items:flex-start;text-decoration:none;color:var(--on-dark);padding:11px 12px;border-radius:8px;transition:background .15s}
+  .dropdown-menu a:hover{background:rgba(255,255,255,.06)}
+  .dropdown-menu .icon{color:var(--teal-400);margin-top:2px}
+  .dropdown-menu strong{display:block;font-size:.93rem;font-weight:600}
+  .dropdown-menu small{display:block;color:var(--on-dark-soft);font-size:.8rem;margin-top:2px}
+  .nav-toggle{display:none;background:none;border:none;color:var(--on-dark);cursor:pointer;padding:8px}
 
-  /* ---------- hero ---------- */
-  .hero{padding:104px 0 88px;border-bottom:1px solid var(--line)}
-  .eyebrow{
-    font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:26px;
-  }
-  .eyebrow .tick{color:var(--pencil)}
-  h1{
-    font-family:var(--serif);font-weight:500;letter-spacing:-.02em;
-    font-size:clamp(2.6rem,6.4vw,4.6rem);line-height:1.06;max-width:15ch;
-  }
-  h1 .machine{color:var(--ink-soft)}
-  .underlined{position:relative;display:inline-block;white-space:nowrap}
-  .underlined svg{
-    position:absolute;left:-2%;bottom:-.14em;width:104%;height:.32em;overflow:visible;
-  }
-  .underlined path{
-    fill:none;stroke:var(--pencil);stroke-width:5;stroke-linecap:round;
-    stroke-dasharray:900;stroke-dashoffset:900;
-    animation:draw 1s ease-out .5s forwards;
-  }
-  @keyframes draw{to{stroke-dashoffset:0}}
-  .hero p.lede{
-    margin-top:34px;max-width:56ch;font-size:1.16rem;color:var(--ink-soft);
-  }
-  mark{
-    background:linear-gradient(104deg, transparent 2%, var(--highlight) 6%, var(--highlight) 94%, transparent 98%);
-    padding:.05em .15em;color:var(--ink);border-radius:1px;
-  }
-  .hero-cta{margin-top:42px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-  .hero-note{
-    font-family:var(--hand);font-size:1.35rem;color:var(--pencil);
-    transform:rotate(-2deg);margin-left:6px;
-  }
+  .hero{background:radial-gradient(1100px 480px at 85% -10%,rgba(18,183,198,.18),transparent 60%),linear-gradient(180deg,var(--navy-900),var(--navy-950));color:var(--on-dark);padding:88px 0 76px}
+  .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-400);display:inline-flex;align-items:center;gap:8px;margin-bottom:22px}
+  .eyebrow a{color:var(--on-dark-soft);text-decoration:none}
+  .eyebrow a:hover{color:var(--on-dark)}
+  h1{font-weight:600;letter-spacing:-.02em;font-size:clamp(2.3rem,5vw,3.8rem);line-height:1.1;max-width:17ch}
+  .hero p.lede{margin-top:28px;max-width:64ch;font-size:1.13rem;color:var(--on-dark-soft)}
 
-  /* ---------- correction strip ---------- */
-  .strip{padding:74px 0;border-bottom:1px solid var(--line)}
-  .strip-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-  .correction{
-    font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.35;font-weight:400;
-  }
-  .strike{position:relative;color:var(--ink-soft);white-space:nowrap}
-  .strike::after{
-    content:"";position:absolute;left:-1%;right:-1%;top:52%;
-    height:3px;background:var(--pencil);transform:rotate(-1.2deg);border-radius:2px;
-  }
-  .rewrite{
-    font-family:var(--hand);color:var(--pencil);font-weight:600;
-    font-size:1.15em;white-space:nowrap;
-  }
-  .strip p{color:var(--ink-soft);font-size:1.02rem}
-  .strip p + p{margin-top:16px}
+  section{padding:88px 0;border-bottom:1px solid var(--line)}
+  section.on-paper{background:var(--paper)}
+  section.on-white{background:var(--surface)}
+  h2{font-weight:600;letter-spacing:-.015em;font-size:clamp(1.7rem,3vw,2.25rem);line-height:1.2;max-width:26ch;color:var(--navy-900)}
+  .sec-head{margin-bottom:44px}
+  .sec-head .eyebrow{color:var(--teal-500);margin-bottom:12px}
 
-  /* ---------- sections ---------- */
-  section{padding:92px 0;border-bottom:1px solid var(--line)}
-  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:52px;flex-wrap:wrap}
-  h2{
-    font-family:var(--serif);font-weight:500;letter-spacing:-.015em;
-    font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.15;max-width:22ch;
-  }
-  .sec-head .eyebrow{margin-bottom:12px}
-
-  /* services */
-  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-  .svc{
-    background:var(--paper);padding:38px 34px 42px;position:relative;
-    transition:background .2s;display:block;text-decoration:none;color:inherit;
-  }
-  .svc:hover{background:#FFFFFF}
-  .svc .more{
-    font-family:var(--mono);font-size:.78rem;color:var(--pencil);
-    display:inline-block;margin-top:20px;
-  }
-  .svc:hover .more{text-decoration:underline;text-underline-offset:3px}
-  .svc .tag{
-    font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;
-    color:var(--pencil);display:block;margin-bottom:18px;
-  }
-  .svc h3{font-family:var(--serif);font-weight:600;font-size:1.42rem;letter-spacing:-.01em;margin-bottom:12px}
-  .svc p{color:var(--ink-soft);font-size:.98rem;max-width:46ch}
-  .svc ul{list-style:none;margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
-  .svc li{
-    font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);
-    border:1px solid var(--line);border-radius:20px;padding:4px 12px;background:var(--paper);
-  }
-
-  /* approach */
-  .approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px}
-  .approach h3{
-    font-family:var(--serif);font-weight:600;font-size:1.5rem;margin-bottom:14px;
-    display:flex;align-items:baseline;gap:12px;
-  }
-  .approach h3 .check{
-    font-family:var(--hand);color:var(--pencil);font-size:1.6rem;line-height:1;
-  }
-  .approach p{color:var(--ink-soft);font-size:.98rem}
-
-  /* about */
-  .about-grid{display:grid;grid-template-columns:5fr 4fr;gap:64px;align-items:start}
+  /* about story */
+  .about-grid{display:grid;grid-template-columns:5fr 4fr;gap:56px;align-items:start}
   .about-copy p{margin-bottom:18px;font-size:1.05rem;color:var(--ink-soft)}
-  .about-copy p strong{color:var(--ink);font-weight:600}
-  .margin-note{
-    border-left:3px solid var(--pencil);padding:6px 0 6px 22px;margin-top:8px;
-  }
-  .margin-note .hand{
-    font-family:var(--hand);font-size:1.5rem;color:var(--pencil);line-height:1.3;display:block;
-  }
-  .margin-note .who{
-    font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;
-    color:var(--ink-soft);margin-top:10px;display:block;
-  }
-  .route{
-    margin-top:34px;font-family:var(--mono);font-size:.8rem;color:var(--ink-soft);
-    letter-spacing:.06em;
-  }
-  .route .arrow{color:var(--pencil)}
-  /* founders */
-  .founders{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:4px}
-  .founder{border-top:3px solid var(--pencil);padding-top:22px}
-  .founder .name{font-family:var(--serif);font-weight:600;font-size:1.5rem;letter-spacing:-.01em}
-  .founder .role{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pencil);display:block;margin:6px 0 16px}
-  .founder p{color:var(--ink-soft);font-size:.98rem;margin-bottom:12px}
-  .founder .creds{list-style:none;margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
-  .founder .creds li{font-family:var(--mono);font-size:.72rem;color:var(--ink-soft);border:1px solid var(--line);border-radius:20px;padding:4px 12px}
-  @media(max-width:860px){.founders{grid-template-columns:1fr;gap:36px}}
-  /* mission band */
-  .mission-grid{display:grid;grid-template-columns:5fr 4fr;gap:56px;align-items:center}
-  .mission-copy p{color:var(--ink-soft);font-size:1.05rem;margin-bottom:16px}
-  .mission-copy p strong{color:var(--ink)}
-  .mission-note{border-left:3px solid var(--pencil);padding:8px 0 8px 22px}
-  .mission-note .hand{font-family:var(--hand);font-size:1.55rem;color:var(--pencil);line-height:1.3;display:block}
-  .mission-note .who{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;display:block}
-  @media(max-width:860px){.mission-grid{grid-template-columns:1fr;gap:32px}}
-
-  /* cta */
-  .cta{padding:110px 0;text-align:center;border-bottom:none}
-  .cta h2{margin:0 auto 20px}
-  .cta p{max-width:52ch;margin:0 auto 40px;color:var(--ink-soft);font-size:1.08rem}
-  .cta-mail{
-    font-family:var(--serif);font-size:1.25rem;margin-top:28px;display:block;color:var(--ink-soft)
-  }
-  .cta-mail a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:4px}
-
-  footer{border-top:1px solid var(--line);padding:34px 0;background:var(--paper)}
-  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-  .foot span{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft)}
-
-  /* reveal on scroll */
-  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
-  .reveal.in{opacity:1;transform:none}
-
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto}
-    .underlined path{animation:none;stroke-dashoffset:0}
-    .reveal{opacity:1;transform:none;transition:none}
-  }
-
-  @media (max-width:860px){
-    .strip-inner,.about-grid{grid-template-columns:1fr;gap:36px}
-    .approach-grid{grid-template-columns:1fr;gap:36px}
-    .svc-grid{grid-template-columns:1fr}
-    .nav-links li:not(.keep){display:none}
-    section,.hero{padding:70px 0}
-  }
-
-  /* ===== added: rich footer ===== */
-  .site-footer{border-top:1px solid var(--line);background:var(--paper);padding:64px 0 30px}
-  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:40px}
-  .foot-brand .wordmark{font-size:1.4rem}
-  .foot-brand p{margin-top:14px;color:var(--ink-soft);font-size:.92rem;max-width:32ch}
-  .foot-brand .ftag{font-family:var(--hand);color:var(--pencil);font-size:1.3rem;display:block;margin-top:12px}
-  .foot-col h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:16px}
-  .foot-col a{display:block;text-decoration:none;color:var(--ink-soft);font-size:.9rem;margin-bottom:11px;transition:color .15s}
-  .foot-col a:hover{color:var(--pencil)}
-  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--line)}
-  .foot-bottom span,.foot-bottom a{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);text-decoration:none}
-  .foot-bottom a:hover{color:var(--pencil)}
-  @media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;gap:30px}}
-
-  /* ===== added: contact form ===== */
-  .contact-grid{display:grid;grid-template-columns:3fr 2fr;gap:56px;text-align:left;margin-top:8px}
-  .cform{display:flex;flex-direction:column;gap:16px}
-  .cform .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .cform label{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:6px}
-  .cform input,.cform select,.cform textarea{width:100%;font-family:var(--sans);font-size:.98rem;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:3px;padding:11px 13px;transition:border-color .15s}
-  .cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-color:var(--pencil)}
-  .cform textarea{resize:vertical;min-height:120px}
-  .cform button{align-self:flex-start;cursor:pointer;margin-top:4px}
-  .form-note{font-size:.82rem;color:var(--ink-soft)}
-  .form-status{font-family:var(--hand);font-size:1.5rem;color:var(--pencil);display:none}
-  .contact-detail .block{margin-bottom:24px}
-  .contact-detail h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:0 0 6px}
-  .contact-detail a{color:var(--ink);text-decoration-color:var(--pencil);text-underline-offset:3px}
-  .contact-detail p{color:var(--ink-soft);font-size:.95rem}
-  .contact-detail .big{font-family:var(--serif);font-size:1.15rem;color:var(--ink)}
-  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px}.cform .row{grid-template-columns:1fr}}
-
-  /* ===== added: process steps ===== */
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-  .step{background:var(--paper);padding:32px 26px 36px;transition:background .2s}
-  .step:hover{background:#fff}
-  .step .n{font-family:var(--mono);font-size:.8rem;color:var(--pencil);letter-spacing:.12em}
-  .step h3{font-family:var(--serif);font-weight:600;font-size:1.22rem;margin:14px 0 8px}
-  .step p{color:var(--ink-soft);font-size:.92rem}
-  @media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
-
-  /* ===== added: trust / security ===== */
-  .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:38px}
-  .trust h3{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin-bottom:10px;display:flex;align-items:baseline;gap:10px}
-  .trust h3 .lock{font-family:var(--hand);color:var(--pencil);font-size:1.35rem;line-height:1}
-  .trust p{color:var(--ink-soft);font-size:.94rem}
-  @media(max-width:860px){.trust-grid{grid-template-columns:1fr;gap:28px}}
-
-  /* ===== added: faq ===== */
-  .faq-list{border-top:1px solid var(--line);max-width:860px}
-  .faq-list details{border-bottom:1px solid var(--line)}
-  .faq-list summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--serif);font-size:1.18rem;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px}
-  .faq-list summary::-webkit-details-marker{display:none}
-  .faq-list summary::after{content:"+";font-family:var(--mono);color:var(--pencil);font-size:1.3rem;flex-shrink:0}
-  .faq-list details[open] summary::after{content:"\2013"}
-  .faq-list .ans{padding:0 0 24px;color:var(--ink-soft);font-size:1rem;max-width:72ch}
-
-  /* ===== added: about-teaser link + legal prose ===== */
-  .story-link{display:inline-block;margin-top:26px;font-family:var(--mono);font-size:.82rem;color:var(--pencil);text-decoration:none}
+  .about-copy p strong{color:var(--navy-900);font-weight:600}
+  .route{margin-top:30px;font-family:var(--mono);font-size:.8rem;color:var(--ink-soft);letter-spacing:.05em;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .route .arrow{color:var(--teal-500)}
+  .quote-card{background:var(--navy-900);color:var(--on-dark);border-radius:var(--radius);padding:34px 30px;position:relative}
+  .quote-card .icon{width:30px;height:30px;color:var(--teal-400);margin-bottom:16px}
+  .quote-card p{font-family:var(--display);font-weight:500;font-size:1.22rem;line-height:1.45;color:var(--on-dark)}
+  .quote-card .who{font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--on-dark-soft);margin-top:18px;display:block}
+  .story-link{display:inline-flex;align-items:center;gap:6px;margin-top:26px;font-family:var(--mono);font-size:.82rem;color:var(--teal-500);text-decoration:none;font-weight:500}
   .story-link:hover{text-decoration:underline;text-underline-offset:3px}
-  .legal{padding:64px 0 90px}
-  .legal .lead{max-width:70ch;color:var(--ink-soft);font-size:1.05rem;margin-bottom:8px}
-  .legal h2{margin:40px 0 12px;font-size:1.5rem}
-  .legal h3{font-family:var(--serif);font-weight:600;font-size:1.15rem;margin:24px 0 8px}
-  .legal p,.legal li{color:var(--ink-soft);font-size:1rem;margin-bottom:12px;max-width:74ch}
-  .legal ul{padding-left:22px;margin-bottom:12px}
-  .legal .updated{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft);letter-spacing:.06em;margin-bottom:26px}
-  .legal .disclaimer{border-left:3px solid var(--pencil);padding:14px 0 14px 20px;margin:30px 0;font-size:.92rem;color:var(--ink-soft);max-width:74ch}
 
-  /* advisors & india leadership */
-  .adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-  .adv{border-top:3px solid var(--pencil);padding-top:18px}
-  .adv .name{font-family:var(--serif);font-weight:600;font-size:1.28rem}
-  .adv .role{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pencil);display:block;margin:5px 0 12px}
-  .adv p{color:var(--ink-soft);font-size:.93rem;margin-bottom:10px}
-  .adv .creds{list-style:none;margin-top:10px;display:flex;flex-wrap:wrap;gap:7px;padding:0}
-  .adv .creds li{font-family:var(--mono);font-size:.68rem;color:var(--ink-soft);border:1px solid var(--line);border-radius:20px;padding:3px 10px}
-  .lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:44px}
-  .lead{border-left:3px solid var(--line);padding-left:20px}
-  .lead .name{font-family:var(--serif);font-weight:600;font-size:1.15rem}
-  .lead .role{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pencil);display:block;margin:4px 0 8px}
-  .lead p{color:var(--ink-soft);font-size:.9rem}
-  @media(max-width:860px){.adv-grid,.lead-grid{grid-template-columns:1fr;gap:30px}}
-
-  /* leadership cards + modal */
-  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-  .tcard{background:#fff;border:1px solid var(--line);border-radius:4px;padding:30px 26px 24px;text-align:left;cursor:pointer;transition:transform .18s,box-shadow .18s,border-color .18s;position:relative}
-  .tcard:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(22,32,46,.09);border-color:var(--pencil)}
-  .tcard .mono-av{width:56px;height:56px;border-radius:50%;background:var(--ink);color:var(--paper);font-family:var(--serif);font-weight:600;font-size:1.25rem;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-  .tcard:hover .mono-av{background:var(--pencil)}
-  .tcard .name{font-family:var(--serif);font-weight:600;font-size:1.22rem;color:var(--ink)}
-  .tcard .role{font-family:var(--mono);font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--pencil);display:block;margin:5px 0 10px;min-height:2.2em}
+  /* leadership */
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .tcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px 26px;text-align:left;cursor:pointer;transition:transform .18s,box-shadow .18s,border-color .18s;position:relative;font-family:inherit;width:100%}
+  .tcard:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(15,23,42,.08);border-color:var(--teal-500)}
+  .tcard .av{width:52px;height:52px;border-radius:50%;background:var(--navy-900);color:var(--teal-400);font-family:var(--display);font-weight:600;font-size:1.1rem;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:background .18s}
+  .tcard:hover .av{background:var(--teal-500);color:var(--navy-950)}
+  .tcard .name{font-weight:600;font-size:1.14rem;color:var(--navy-900);display:block}
+  .tcard .role{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-500);display:block;margin:6px 0 10px;min-height:2.2em}
   .tcard .teaser{color:var(--ink-soft);font-size:.9rem;min-height:2.6em}
-  .tcard .rm{font-family:var(--mono);font-size:.76rem;color:var(--pencil);margin-top:14px;display:inline-block}
-  .tcard:hover .rm{text-decoration:underline;text-underline-offset:3px}
+  .tcard .rm{font-family:var(--mono);font-size:.76rem;color:var(--teal-500);margin-top:14px;display:inline-flex;align-items:center;gap:6px}
   @media(max-width:900px){.team-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:620px){.team-grid{grid-template-columns:1fr}}
-  .bio-overlay{position:fixed;inset:0;background:rgba(22,32,46,.55);display:none;align-items:center;justify-content:center;z-index:100;padding:24px}
+
+  .bio-overlay{position:fixed;inset:0;background:rgba(10,17,34,.65);display:none;align-items:center;justify-content:center;z-index:200;padding:24px}
   .bio-overlay.open{display:flex}
-  .bio-modal{background:var(--paper);border-radius:6px;max-width:640px;width:100%;max-height:85vh;overflow-y:auto;padding:40px 42px;position:relative;border-top:4px solid var(--pencil)}
-  .bio-modal .bm-name{font-family:var(--serif);font-weight:600;font-size:1.7rem;color:var(--ink)}
-  .bio-modal .bm-role{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pencil);display:block;margin:8px 0 20px}
+  .bio-modal{background:var(--surface);border-radius:16px;max-width:640px;width:100%;max-height:85vh;overflow-y:auto;padding:40px 42px;position:relative;border-top:4px solid var(--teal-500)}
+  .bio-modal .bm-name{font-family:var(--display);font-weight:600;font-size:1.6rem;color:var(--navy-900)}
+  .bio-modal .bm-role{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-500);display:block;margin:8px 0 20px}
   .bio-modal .bm-body p{color:var(--ink-soft);font-size:.98rem;margin-bottom:14px;line-height:1.65}
   .bio-modal .creds{list-style:none;margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;padding:0}
-  .bio-modal .creds li{font-family:var(--mono);font-size:.7rem;color:var(--ink-soft);border:1px solid var(--line);border-radius:20px;padding:4px 12px}
-  .bio-close{position:absolute;top:16px;right:18px;background:none;border:none;font-size:1.6rem;color:var(--ink-soft);cursor:pointer;line-height:1;padding:6px}
-  .bio-close:hover{color:var(--pencil)}
+  .bio-modal .creds li{font-family:var(--mono);font-size:.7rem;color:var(--navy-800);border:1px solid var(--line);border-radius:20px;padding:4px 12px}
+  .bio-close{position:absolute;top:16px;right:16px;background:var(--paper);border:none;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;color:var(--ink-soft);cursor:pointer}
+  .bio-close:hover{color:var(--teal-500)}
   @media(max-width:620px){.bio-modal{padding:30px 24px}}
+
+  /* values */
+  .approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px}
+  .approach h3{font-weight:600;font-size:1.32rem;margin-bottom:14px;display:flex;align-items:center;gap:12px;color:var(--navy-900)}
+  .approach h3 .icon{width:26px;height:26px;color:var(--teal-500)}
+  .approach p{color:var(--ink-soft);font-size:.98rem}
+
+  .cta{padding:104px 0;text-align:center;background:linear-gradient(180deg,var(--navy-900),var(--navy-950));color:var(--on-dark);border-bottom:none}
+  .cta h2{margin:0 auto 20px;color:var(--on-dark)}
+  .cta p{max-width:54ch;margin:0 auto 34px;color:var(--on-dark-soft);font-size:1.06rem}
+  .cta-mail{font-size:1rem;margin-top:24px;display:block;color:var(--on-dark-soft)}
+  .cta-mail a{color:var(--on-dark);text-decoration-color:var(--teal-500);text-underline-offset:4px}
+
+  footer{border-top:1px solid var(--on-dark-line);padding:34px 0;background:var(--navy-950)}
+  .site-footer{padding:64px 0 30px;color:var(--on-dark)}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:40px}
+  .foot-brand p{margin-top:14px;color:var(--on-dark-soft);font-size:.92rem;max-width:32ch}
+  .foot-brand .ftag{font-family:var(--mono);color:var(--teal-400);font-size:.85rem;display:block;margin-top:14px;letter-spacing:.04em}
+  .foot-col h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark);margin-bottom:16px}
+  .foot-col a{display:block;text-decoration:none;color:var(--on-dark-soft);font-size:.9rem;margin-bottom:11px;transition:color .15s}
+  .foot-col a:hover{color:var(--teal-400)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--on-dark-line)}
+  .foot-bottom span,.foot-bottom a{font-family:var(--mono);font-size:.76rem;color:var(--on-dark-soft);text-decoration:none}
+  .foot-bottom a:hover{color:var(--teal-400)}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+
+  @media (max-width:980px){
+    .about-grid{grid-template-columns:1fr;gap:32px}
+    .approach-grid{grid-template-columns:1fr;gap:32px}
+    section{padding:64px 0}
+    .nav-toggle{display:block}
+    .nav-links{position:fixed;top:76px;left:0;width:100vw;height:calc(100vh - 76px);background:var(--navy-950);flex-direction:column;align-items:stretch;gap:2px;padding:18px;overflow:auto;box-sizing:border-box;display:none}
+    header.menu-open .nav-links{display:flex}
+    .nav-links>li{width:100%}
+    .nav-links>li>a:not(.btn){width:100%;padding:14px 12px;font-size:1rem}
+    .nav .btn{width:100%;justify-content:center;padding:14px}
+    .dropdown-menu{position:static;display:block;box-shadow:none;background:rgba(255,255,255,.03);margin-top:4px;min-width:0}
+  }
+  @media (max-width:560px){.foot-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <a class="wordmark" href="index.html">Pansolve<span class="dot">.</span></a>
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="3" y="5" width="24" height="24" rx="10" fill="none" stroke="#F5F8FC" stroke-width="2.2"/>
+        <rect x="14" y="14" width="23" height="23" rx="9" fill="#12B7C6"/>
+      </svg>
+      <span class="word">Pan<span>solve</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="icon icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" style="display:none"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
     <ul class="nav-links">
-      <li class="dropdown"><a href="index.html#services">Services</a>
+      <li class="dropdown">
+        <a href="index.html#services">Services
+          <svg class="caret icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
         <div class="dropdown-menu">
-          <a href="payer-provider.html">Payer &amp; Provider Solutions</a>
-          <a href="accounting.html">Accounting &amp; Finance Operations</a>
-          <a href="ai-training.html">AI Training &amp; Data Services</a>
+          <a href="payer-provider.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 8.6c0 5.4-8.8 10.4-8.8 10.4S3.2 14 3.2 8.6a4.6 4.6 0 0 1 8.8-1.9 4.6 4.6 0 0 1 8.8 1.9Z"/><path d="M4 12h3l1.5-3 2 5 1.5-3H18"/></svg>
+            <span><strong>Payer &amp; Provider Services</strong><small>RCM, payer operations &amp; compliance</small></span>
+          </a>
+          <a href="accounting.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-8"/><path d="M15 8h5v5"/></svg>
+            <span><strong>Client Accounting Services</strong><small>Procure-to-Pay, Order-to-Cash &amp; Record-to-Report</small></span>
+          </a>
+          <a href="ai-training.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>
+            <span><strong>AI Training &amp; Data Services</strong><small>Annotation, evaluation &amp; RLHF</small></span>
+          </a>
         </div>
       </li>
       <li><a href="index.html#approach">Approach</a></li>
       <li><a href="about.html">About</a></li>
-      <li class="keep"><a class="btn" href="index.html#contact">Book a consultation</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a class="btn" href="index.html#contact">Book a consultation</a></li>
     </ul>
   </div>
 </header>
@@ -384,99 +201,99 @@
 <main>
   <div class="hero">
     <div class="wrap">
-      <span class="eyebrow"><a href="index.html" style="text-decoration:none;color:inherit">Home</a> <span class="tick">/</span> About</span>
-      <h1>A family firm, built to go anywhere.</h1>
-      <p class="lede">Pansolve began the way it operates: with two people who take problems personally &mdash; and who believe the human element is the whole point, not the part to automate away.</p>
+      <span class="eyebrow"><a href="index.html">Home</a> / About</span>
+      <h1>Expert-led services, built to scale with AI.</h1>
     </div>
   </div>
 
-  <section id="story">
+  <section class="on-white" id="story">
     <div class="wrap">
       <div class="about-grid">
         <div class="about-copy reveal">
-          <p><strong>Pansolve is family-built &mdash; founded by Anu, with Vikram as principal advisor, a wife-and-husband team.</strong> We started our working lives in the New York&ndash;New Jersey corridor, learning the kind of rigor that busy, high-stakes industries demand. Along the way we fell for California, and we&rsquo;ve carried both coasts&rsquo; habits with us ever since: East Coast discipline, West Coast optimism.</p>
-          <p>We built Pansolve because we kept seeing the same thing happen. Companies were promised that software and AI would make the hard, detailed work disappear &mdash; the medical coding, the reconciliations, the data quality. Then the denials piled up, the books didn&rsquo;t tie out, and the models shipped confident, wrong answers. The work hadn&rsquo;t disappeared. It had just lost its humans.</p>
-          <p>The name says what we believe. <em>Pan</em> is Greek for &ldquo;all&rdquo; &mdash; all problems, solved by people. We&rsquo;re the human layer: trained specialists who verify, correct, and improve the work that machines start.</p>
-          <p><strong>As we grow into a global firm, that stays the founding rule.</strong> A family-run standard of care, delivered at whatever scale the work demands &mdash; whether that&rsquo;s one careful reviewer or a dedicated team of fifty.</p>
-          <div class="route" style="margin-top:30px">NEW YORK / NEW JERSEY <span class="arrow">&#10230;</span> CALIFORNIA <span class="arrow">&#10230;</span> WORLDWIDE</div>
+          <p><strong>People-first. AI-enhanced. Accuracy always.</strong></p>
+          <p>Everyone&rsquo;s been sold the same story: automate it, and the hard work disappears. In reality? Claims get denied. Books don&rsquo;t reconcile. Models sound confident and get it wrong.</p>
+          <p>Pansolve takes a deliberate approach - expert human judgment first, with AI introduced selectively and always subject to expert review, applied only where it adds genuine value.</p>
+          <p>We&rsquo;re a global expert-services firm working across payer and provider operations, accounting and finance, and AI training and data services. Every engagement is handled by trained specialists who verify, correct, and refine the work at every stage. We&rsquo;re building AI-enabled capabilities to make that expert-led model faster and more scalable, but never to replace the judgment at its core.</p>
+          <p style="margin-bottom:6px"><strong>Why &ldquo;Pansolve&rdquo;?</strong></p>
+          <p><em>Pan</em> is Greek for &ldquo;all&rdquo; - it reflects our belief that complex operational challenges are best solved with qualified people at the center, not automated out of the process. It&rsquo;s also our direction as a firm: built to grow across practices, not stay confined to one.</p>
         </div>
-        <div class="margin-note reveal">
-          <span class="hand">&ldquo;AI is a brilliant first draft. We&rsquo;re the people who make it final.&rdquo;</span>
-          <span class="who">&mdash; The Pansolve founding team</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="team">
-    <div class="wrap">
-      <div class="sec-head reveal"><div>
-        <span class="eyebrow">Our team</span>
-        <h2>Global reach, with purpose behind it.</h2>
-      </div></div>
-      <div class="mission-grid">
-        <div class="mission-copy reveal">
-          <p><strong>Pansolve&rsquo;s delivery is powered by a support team we built in India</strong> &mdash; anchored in Chennai and extending into a smaller, second-tier city beyond it. That second location was a deliberate choice, not a cost calculation.</p>
-          <p>We wanted to elevate and create real opportunity for talented people in cities that global firms usually overlook &mdash; to bring meaningful, skilled work to where it&rsquo;s rarely offered, and to invest in the people who do it.</p>
-          <p><strong>Wherever we operate, we carry our family values with us:</strong> respect for the people doing the work, and an unwavering commitment to the clients who depend on it.</p>
-        </div>
-        <div class="mission-note reveal">
-          <span class="hand">Quality and client satisfaction aren&rsquo;t targets. They&rsquo;re the whole point.</span>
-          <span class="who">&mdash; Our core vision</span>
+        <div class="quote-card reveal">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V18h6.83v-6.83H4.83A2.17 2.17 0 0 1 7 9c.35 0 .69.09 1 .24V6Zm11 0A5.17 5.17 0 0 0 13 11.17V18h6.83v-6.83h-4A2.17 2.17 0 0 1 18 9c.35 0 .69.09 1 .24V6Z"/></svg>
+          <p>AI produces a fast first draft. Our people make it final.</p>
+          <span class="who">- Pansolve Leadership</span>
         </div>
       </div>
     </div>
   </section>
 
-
-  <section id="leadership">
+  <section class="on-paper" id="team">
     <div class="wrap">
-      <div class="sec-head reveal"><div>
+      <div class="sec-head reveal">
+        <span class="eyebrow">Our Team</span>
+        <h2>Global delivery, built for quality.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>Pansolve&rsquo;s delivery capability spans the US and India, anchored by operations in Chennai and an expanding presence in a second, tier-two city. Our India footprint reflects a deliberate investment strategy: building skilled delivery capacity in markets larger providers often overlook, and developing the professionals who power our clients&rsquo; operations.</p>
+          <p>One standard applies everywhere we operate - every location, every practice: rigorous training, strong quality controls, and real accountability to the clients who depend on us.</p>
+        </div>
+        <div class="quote-card reveal">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V18h6.83v-6.83H4.83A2.17 2.17 0 0 1 7 9c.35 0 .69.09 1 .24V6Zm11 0A5.17 5.17 0 0 0 13 11.17V18h6.83v-6.83h-4A2.17 2.17 0 0 1 18 9c.35 0 .69.09 1 .24V6Z"/></svg>
+          <p>Quality and client satisfaction aren't targets. They're the whole point.</p>
+          <span class="who">- Our core vision</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="on-white" id="leadership">
+    <div class="wrap">
+      <div class="sec-head reveal">
         <span class="eyebrow">Leadership team &amp; advisors</span>
         <h2>The people behind the promise.</h2>
-      </div></div>
+      </div>
       <div class="team-grid">
         <button class="tcard reveal" data-bio="bio-anu" aria-haspopup="dialog">
-          <span class="mono-av">AV</span>
+          <span class="av">AV</span>
           <span class="name">Anu V</span>
           <span class="role">President &amp; Chief Operating Officer</span>
           <span class="teaser">Clinical expertise meets technology leadership.</span>
-          <span class="rm">Read more &rarr;</span>
+          <span class="rm">Read more <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </button>
         <button class="tcard reveal" data-bio="bio-vikram" aria-haspopup="dialog">
-          <span class="mono-av">VK</span>
+          <span class="av">VK</span>
           <span class="name">Vikram K</span>
           <span class="role">Principal Advisor &middot; Product, Cybersecurity, Technology &amp; AI</span>
-          <span class="teaser">Secure, responsible AI &mdash; from strategy to architecture.</span>
-          <span class="rm">Read more &rarr;</span>
+          <span class="teaser">Secure, responsible AI - from strategy to architecture.</span>
+          <span class="rm">Read more <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </button>
         <button class="tcard reveal" data-bio="bio-prasath" aria-haspopup="dialog">
-          <span class="mono-av">PK</span>
+          <span class="av">PK</span>
           <span class="name">Prasath K</span>
           <span class="role">Head of Delivery &amp; Chief Financial Officer</span>
           <span class="teaser">Two decades of finance, governance, and delivery excellence.</span>
-          <span class="rm">Read more &rarr;</span>
+          <span class="rm">Read more <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </button>
         <button class="tcard reveal" data-bio="bio-saranya" aria-haspopup="dialog">
-          <span class="mono-av">SP</span>
+          <span class="av">SP</span>
           <span class="name">Saranya P</span>
           <span class="role">Chief People &amp; Compliance Officer</span>
           <span class="teaser">People, training, and a culture of compliance.</span>
-          <span class="rm">Read more &rarr;</span>
+          <span class="rm">Read more <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </button>
         <button class="tcard reveal" data-bio="bio-saravanan" aria-haspopup="dialog">
-          <span class="mono-av">SS</span>
+          <span class="av">SS</span>
           <span class="name">Saravanan S</span>
           <span class="role">Board Advisor</span>
           <span class="teaser">Cyber risk, HIPAA, HITRUST &amp; SOC assurance.</span>
-          <span class="rm">Read more &rarr;</span>
+          <span class="rm">Read more <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </button>
         <button class="tcard reveal" data-bio="bio-vaishnavi" aria-haspopup="dialog">
-          <span class="mono-av">VS</span>
+          <span class="av">VS</span>
           <span class="name">Vaishnavi S</span>
           <span class="role">Board Advisor</span>
           <span class="teaser">Audit, enterprise risk &amp; technology governance.</span>
-          <span class="rm">Read more &rarr;</span>
+          <span class="rm">Read more <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </button>
       </div>
     </div>
@@ -487,12 +304,12 @@
     <div id="bio-anu" data-name="Anu V" data-role="President &amp; Chief Operating Officer">
       <p>Anu brings a distinctive combination of clinical expertise and technology leadership to Pansolve. Trained as a dentist, she has firsthand experience in patient care and understands the critical role that accurate clinical documentation, coding, and compliance play in both quality outcomes and financial performance.</p>
       <p>She earned a Master&rsquo;s in Business Information Systems from the New Jersey Institute of Technology (NJIT) with a specialization in Data Mining, equipping her with deep expertise in data analytics and AI-driven solutions. By combining clinical insight with advanced information systems, Anu helps shape Pansolve&rsquo;s vision of delivering intelligent, technology-enabled revenue cycle management solutions that improve operational efficiency and financial outcomes for healthcare organizations.</p>
-      <ul class="creds"><li>Doctor of Dental Surgery</li><li>MS, Business Information Systems &mdash; NJIT</li><li>Data mining &amp; AI</li></ul>
+      <ul class="creds"><li>Doctor of Dental Surgery</li><li>MS, Business Information Systems - NJIT</li><li>Data mining &amp; AI</li></ul>
     </div>
     <div id="bio-vikram" data-name="Vikram K" data-role="Principal Advisor &middot; Product Development, Cybersecurity, Technology &amp; AI">
       <p>Vikram brings extensive expertise in product development, cybersecurity, enterprise technology, and artificial intelligence to Pansolve. He has advised organizations across industries on technology strategy, digital transformation, cybersecurity resilience, and the responsible adoption of AI. His ability to align emerging technologies with business objectives enables Pansolve to deliver secure, scalable, and innovative solutions for the healthcare sector.</p>
       <p>Vikram holds a Master&rsquo;s degree in Cybersecurity from Carnegie Mellon University and a Ph.D. in Cybersecurity and Artificial Intelligence. His expertise spans secure technology architecture, data protection, AI governance, and regulatory compliance. He plays a key role in ensuring that Pansolve&rsquo;s solutions are built on a foundation of security, privacy, and trust, empowering healthcare organizations to confidently adopt AI while protecting sensitive clinical and financial data.</p>
-      <ul class="creds"><li>MS, Cybersecurity &mdash; Carnegie Mellon</li><li>PhD, Cybersecurity &amp; AI</li><li>AI governance &amp; product</li></ul>
+      <ul class="creds"><li>MS, Cybersecurity - Carnegie Mellon</li><li>PhD, Cybersecurity &amp; AI</li><li>AI governance &amp; product</li></ul>
     </div>
     <div id="bio-prasath" data-name="Prasath K" data-role="Head of Delivery &amp; Chief Financial Officer">
       <p>Prasath serves as Chief Financial Officer and Head of Delivery at Pansolve, bringing nearly two decades of leadership in finance, governance, and professional services. A Fellow Chartered Accountant (FCA) with CISA and DISA credentials, he founded his own chartered accountancy practice in 2007 and has since advised businesses on audit, taxation, financial reporting, risk management, and regulatory compliance.</p>
@@ -511,7 +328,7 @@
     </div>
     <div id="bio-vaishnavi" data-name="Vaishnavi S" data-role="Board Advisor &middot; Chennai">
       <p>Vaishnavi is an audit, risk, and technology leader with more than 14 years of experience strengthening governance, internal controls, and assurance frameworks across global enterprises including Infosys, Cisco, and Verizon. She is passionate about digital transformation and emerging technologies, with a strong focus on aligning innovation with robust governance.</p>
-      <p>As Board Advisor, she brings a governance-first perspective to Pansolve&rsquo;s healthcare services &mdash; strategic oversight on technology adoption, cybersecurity, risk management, and operational excellence. She holds a Master&rsquo;s degree in Information Technology from Anna University.</p>
+      <p>As Board Advisor, she brings a governance-first perspective to Pansolve&rsquo;s healthcare services - strategic oversight on technology adoption, cybersecurity, risk management, and operational excellence. She holds a Master&rsquo;s degree in Information Technology from Anna University.</p>
       <ul class="creds"><li>Audit &amp; governance</li><li>Enterprise risk</li><li>Digital transformation</li></ul>
     </div>
   </div>
@@ -519,34 +336,43 @@
   <!-- Modal shell -->
   <div class="bio-overlay" id="bioOverlay" role="dialog" aria-modal="true" aria-labelledby="bmName">
     <div class="bio-modal">
-      <button class="bio-close" aria-label="Close">&times;</button>
+      <button class="bio-close" aria-label="Close"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
       <div class="bm-name" id="bmName"></div>
       <span class="bm-role" id="bmRole"></span>
       <div class="bm-body" id="bmBody"></div>
     </div>
   </div>
 
-  <section id="values">
+  <section class="on-paper" id="values">
     <div class="wrap">
-      <div class="sec-head reveal"><div>
+      <div class="sec-head reveal">
         <span class="eyebrow">What we value</span>
         <h2>The principles behind every engagement.</h2>
-      </div></div>
+      </div>
       <div class="approach-grid">
-        <div class="approach reveal"><h3><span class="check">&#10003;</span>People over automation</h3><p>We use technology to work faster and humans to be right. When the two conflict, judgment wins &mdash; and a person signs their name to the result.</p></div>
-        <div class="approach reveal"><h3><span class="check">&#10003;</span>Care at any scale</h3><p>A family firm&rsquo;s attention to detail doesn&rsquo;t have to end when you grow. We keep the standard the same whether the job is small or enormous.</p></div>
-        <div class="approach reveal"><h3><span class="check">&#10003;</span>Honesty as policy</h3><p>Transparent pricing, honest quality metrics, and clear answers about who does your work and how. We&rsquo;d rather earn trust slowly than lose it fast.</p></div>
+        <div class="approach reveal">
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>People over automation</h3>
+          <p>We use technology to work faster and humans to be right. When the two conflict, judgment wins - and a person signs their name to the result.</p>
+        </div>
+        <div class="approach reveal">
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>Care at any scale</h3>
+          <p>A family firm&rsquo;s attention to detail doesn&rsquo;t have to end when you grow. We keep the standard the same whether the job is small or enormous.</p>
+        </div>
+        <div class="approach reveal">
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>Honesty as policy</h3>
+          <p>Transparent pricing, honest quality metrics, and clear answers about who does your work and how. We&rsquo;d rather earn trust slowly than lose it fast.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="cta" id="cta">
-    <div class="wrap reveal" style="text-align:center">
-      <span class="eyebrow"><span class="tick">&#9679;</span>&nbsp; Let&rsquo;s talk</span>
-      <h2 style="margin:0 auto 20px">Bring us something hard.</h2>
-      <p style="max-width:52ch;margin:0 auto 38px;color:var(--ink-soft);font-size:1.06rem">We started this firm to solve exactly the problems everyone else wants to automate and walk away from. Tell us yours.</p>
+    <div class="wrap reveal">
+      <span class="eyebrow"><span style="width:7px;height:7px;border-radius:50%;background:var(--teal-400);display:inline-block"></span>&nbsp; Let's talk</span>
+      <h2>Bring us something hard.</h2>
+      <p>We started this firm to solve exactly the problems everyone else wants to automate and walk away from. Tell us yours.</p>
       <a class="btn" href="index.html#contact">Book a consultation</a>
-      <span class="cta-mail" style="font-family:var(--serif);font-size:1.2rem;margin-top:26px;display:block;color:var(--ink-soft)">or write to <a href="mailto:support@pansolve.com" style="color:var(--ink)">support@pansolve.com</a></span>
+      <span class="cta-mail">or write to <a href="mailto:support@pansolve.com">support@pansolve.com</a></span>
     </div>
   </section>
 </main>
@@ -555,8 +381,14 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="wordmark" href="index.html">Pansolve<span class="dot">.</span></a>
-        <p>A global consulting firm deploying expert human teams &mdash; the human layer behind AI.</p>
+        <a class="brand" href="index.html">
+          <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="3" y="5" width="24" height="24" rx="10" fill="none" stroke="#F5F8FC" stroke-width="2.2"/>
+            <rect x="14" y="14" width="23" height="23" rx="9" fill="#12B7C6"/>
+          </svg>
+          <span class="word">Pan<span>solve</span></span>
+        </a>
+        <p>A global consulting firm deploying expert human teams - the human layer behind AI.</p>
         <span class="ftag">AI answers. Humans solve.</span>
       </div>
       <div class="foot-col">
@@ -592,6 +424,38 @@
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
+  const header=document.querySelector('header');
+  const navToggle=document.querySelector('.nav-toggle');
+  if(navToggle){
+    navToggle.addEventListener('click',()=>{
+      const open=header.classList.toggle('menu-open');
+      navToggle.setAttribute('aria-expanded', open?'true':'false');
+      navToggle.querySelector('.icon-menu').style.display = open?'none':'block';
+      navToggle.querySelector('.icon-close').style.display = open?'block':'none';
+    });
+    document.querySelectorAll('.nav-links a').forEach(a=>{
+      a.addEventListener('click',()=>{
+        header.classList.remove('menu-open');
+        navToggle.setAttribute('aria-expanded','false');
+        navToggle.querySelector('.icon-menu').style.display='block';
+        navToggle.querySelector('.icon-close').style.display='none';
+      });
+    });
+  }
+
+  // Desktop dropdown: brief grace period on mouseleave so moving from the
+  // "Services" trigger down into the menu doesn't close it first.
+  document.querySelectorAll('.dropdown').forEach(dd=>{
+    let closeTimer;
+    dd.addEventListener('mouseenter',()=>{
+      clearTimeout(closeTimer);
+      dd.classList.add('open');
+    });
+    dd.addEventListener('mouseleave',()=>{
+      closeTimer=setTimeout(()=>dd.classList.remove('open'),250);
+    });
+  });
+
   // Leadership bio modal
   const overlay=document.getElementById('bioOverlay');
   if(overlay){
@@ -613,7 +477,6 @@
     overlay.addEventListener('click',e=>{if(e.target===overlay)closeBio();});
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('open'))closeBio();});
   }
-
 </script>
 </body>
 </html>
