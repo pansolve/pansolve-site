@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%2316224A'/%3E%3Crect x='11' y='11' width='20' height='20' rx='7' fill='%2312B7C6'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%2316224A'/%3E%3Crect x='11' y='11' width='20' height='20' rx='5' fill='%2312B7C6'/%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Pansolve - AI answers. Humans solve.">
 <meta property="og:description" content="Expert human teams for medical coding, accounting, and AI data services. The human layer behind AI.">
@@ -14,7 +14,7 @@
 <meta name="description" content="Pansolve is a global consulting firm that deploys expert human teams to solve business problems - and to make AI solutions actually work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
     --navy-950:#0A1122;
@@ -33,7 +33,7 @@
     --on-dark:#F5F8FC;
     --on-dark-soft:#A9B7CC;
     --on-dark-line:rgba(255,255,255,.14);
-    --display:'Space Grotesk', 'IBM Plex Sans', sans-serif;
+    --display:'Poppins', 'IBM Plex Sans', sans-serif;
     --sans:'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
     --mono:'IBM Plex Mono', 'SF Mono', monospace;
     --max:1160px;
@@ -146,15 +146,13 @@
   }
   .hero-tagline .icon{color:var(--teal-400);width:16px;height:16px}
 
-  /* hero visual: squircle cluster */
+  /* hero visual: the two logo shapes fly in from opposite corners,
+     assemble into the brand mark, then hold static */
   .hero-visual{position:relative;height:380px;display:block}
-  .sq{position:absolute;border-radius:26%;box-shadow:0 30px 60px rgba(5,9,20,.5)}
-  .sq1{width:190px;height:190px;top:6%;right:8%;background:linear-gradient(155deg,var(--teal-500),#0C8A96);animation:float1 7s ease-in-out infinite}
-  .sq2{width:130px;height:130px;top:42%;right:46%;border:2px solid rgba(255,255,255,.5);background:rgba(255,255,255,.03);animation:float2 8s ease-in-out infinite}
-  .sq3{width:112px;height:112px;bottom:6%;right:14%;background:var(--navy-700);border:1px solid var(--on-dark-line);animation:float3 6.5s ease-in-out infinite}
-  @keyframes float1{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(3deg)}}
-  @keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(14px)}}
-  @keyframes float3{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(-4deg)}}
+  .lm-white{position:absolute;width:210px;height:210px;border-radius:58px;border:9px solid rgba(245,248,252,.92);top:38px;right:168px;animation:lmInWhite 4s cubic-bezier(.22,.7,.3,1) both}
+  .lm-teal{position:absolute;width:200px;height:200px;border-radius:54px;background:linear-gradient(155deg,var(--teal-500),#0C8A96);top:134px;right:68px;box-shadow:0 30px 60px rgba(5,9,20,.45);animation:lmInTeal 4s cubic-bezier(.22,.7,.3,1) .3s both}
+  @keyframes lmInWhite{from{transform:translate(-340px,-260px) rotate(-16deg);opacity:0}to{transform:translate(0,0) rotate(0);opacity:1}}
+  @keyframes lmInTeal{from{transform:translate(300px,280px) rotate(14deg);opacity:0}to{transform:translate(0,0) rotate(0);opacity:1}}
   @media (max-width:980px){.hero-visual{display:none}.hero-grid{grid-template-columns:1fr}}
 
   /* ---------- correction strip ---------- */
@@ -253,7 +251,7 @@
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto}
     .reveal{opacity:1;transform:none;transition:none}
-    .sq1,.sq2,.sq3{animation:none}
+    .lm-white,.lm-teal{animation:none}
   }
 
   @media (max-width:980px){
@@ -352,8 +350,8 @@
   <div class="wrap nav">
     <a class="brand" href="#top">
       <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
-        <rect x="3" y="5" width="24" height="24" rx="10" fill="none" stroke="#F5F8FC" stroke-width="2.2"/>
-        <rect x="14" y="14" width="23" height="23" rx="9" fill="#12B7C6"/>
+        <rect x="3" y="5" width="24" height="24" rx="6.5" fill="none" stroke="#F5F8FC" stroke-width="2.2"/>
+        <rect x="14" y="14" width="23" height="23" rx="6" fill="#12B7C6"/>
       </svg>
       <span class="word">Pan<span>solve</span></span>
     </a>
@@ -415,9 +413,8 @@
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
-        <div class="sq sq1"></div>
-        <div class="sq sq2"></div>
-        <div class="sq sq3"></div>
+        <div class="lm-white"></div>
+        <div class="lm-teal"></div>
       </div>
     </div>
   </div>
@@ -630,8 +627,8 @@
       <div class="foot-brand">
         <a class="brand" href="index.html">
           <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
-            <rect x="3" y="5" width="24" height="24" rx="10" fill="none" stroke="#F5F8FC" stroke-width="2.2"/>
-            <rect x="14" y="14" width="23" height="23" rx="9" fill="#12B7C6"/>
+            <rect x="3" y="5" width="24" height="24" rx="6.5" fill="none" stroke="#F5F8FC" stroke-width="2.2"/>
+            <rect x="14" y="14" width="23" height="23" rx="6" fill="#12B7C6"/>
           </svg>
           <span class="word">Pan<span>solve</span></span>
         </a>
